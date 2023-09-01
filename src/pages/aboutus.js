@@ -51,6 +51,62 @@ const aboutus = [
   },
 ];
 
+const whySvm = [
+  {
+    content:
+      "SVM Builders & Developers maintain a guiding principle focused on customer satisfaction",
+  },
+  {
+    content:
+      "Their primary intent is to create homes that align with customer aspirations and sentiments",
+  },
+  {
+    content: "They aim to offer value for buyers investments",
+  },
+  {
+    content: `The company's products are developed by the same people who use them`,
+  },
+  {
+    content: `Expertise in land acquisition, architecture, design, construction, and after-sales service`,
+  },
+  {
+    content: `Offers innovative ideas and solutions globally within 24 hours`,
+  },
+  {
+    content: `Aims to provide affordable housing and gated community amenities, even in smaller projects`,
+  },
+  {
+    content: `Plans to expand real estate activities to other cities`,
+  },
+  {
+    content: `Strives to provide value for money to customers.`,
+  },
+  {
+    content: `Positioned to fulfill financing and investment needs for various people and classes.`,
+  },
+];
+
+const mission = [
+  {
+    content: `Our aim to continuously expand their role as leading developers in the construction industry.`,
+  },
+  {
+    content: `We emphasize building long-lasting relationships with clients and stakeholders.`,
+  },
+  {
+    content: `SVM seeks to earn the hearts, loyalty, and appreciation of both clients and visitors.`,
+  },
+  {
+    content: `Our mission is to develop quality properties with realistic values for owners and joint venture partners.`,
+  },
+  {
+    content: `Quality is a top priority for SVM, reflected in their uncompromising approach.`,
+  },
+  {
+    content: `They use world-class technology in construction and land development for all their projects.`,
+  },
+];
+
 export default function Aboutus() {
   return (
     <>
@@ -88,12 +144,16 @@ export default function Aboutus() {
         </div>
       </div>
       {/* <!-- End Hero --> */}
-      <div className="flex flex-col justify-center items-center w-full py-24">
+
+      <div
+        className="flex flex-col justify-center items-center w-full "
+        style={{ paddingTop: "6rem" }}
+      >
         <h3 className="mb-4 md:text-3xl md:leading-normal text-2xl leading-normal font-semibold">
           Who we are & Why ?
         </h3>
 
-        <ul className="list-unstyled text-slate-400 mt-4">
+        <ul className="list-unstyled text-slate-400 mt-4 w-[60%]">
           {aboutus?.map((cont, ind) => {
             return (
               <li className="flex mt-2 items-center text-xl" key={ind}>
@@ -105,10 +165,55 @@ export default function Aboutus() {
         </ul>
       </div>
 
-      <section className="relative md:pb-24 pb-16">
-        {/* <About /> */}
+      <div
+        className="flex flex-col justify-center items-center w-full "
+        style={{ paddingTop: "6rem" }}
+      >
+        <h3 className="mb-4 md:text-3xl md:leading-normal text-2xl leading-normal font-semibold">
+          Why Choose SVM ?
+        </h3>
+
+        <ul className="list-unstyled text-slate-400 mt-4 w-1/2">
+          {whySvm?.map((cont, ind) => {
+            return (
+              <li className="flex mt-2 items-center text-xl" key={ind}>
+                <LuArrowRight className="text-green-600  align-middle me-2" />
+                {cont?.content}
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+      <div className="flex flex-col justify-center items-center w-full py-24">
+        <h3 className="mb-4 md:text-3xl md:leading-normal text-2xl leading-normal font-semibold">
+          Our Mission & Vision
+        </h3>
+
+        <ul className="list-unstyled text-slate-400 mt-4 w-[60%]">
+          {mission?.map((cont, ind) => {
+            return (
+              <li className="flex mt-2 items-center text-xl" key={ind}>
+                <LuArrowRight className="text-green-600  align-middle me-2" />
+                {cont?.content}
+              </li>
+            );
+          })}
+        </ul>
+
+        <div className="mt-6">
+          <Link2
+            to="#"
+            className="btn bg-green-600 hover:bg-green-700 text-white rounded-md w-full flex items-center justify-center"
+          >
+            Know More About Us &nbsp;
+            <LuArrowRight className="text-white  align-middle me-2" />
+          </Link2>
+        </div>
+      </div>
+
+      {/* <section className="relative md:pb-24 pb-16">
         <Feature />
-      </section>
+      </section> */}
       {/* <!-- Start CTA --> */}
       <section
         style={{ backgroundImage: `url(${BackgroudImage})` }}
@@ -178,8 +283,9 @@ export default function Aboutus() {
             </h3>
 
             <p className="text-slate-400 max-w-xl mx-auto">
-              A great plateform to buy, sell and rent your properties without
-              any agent or commisions.
+              Introduce the dedicated team of real estate agents, highlighting
+              their qualifications, specialties, and commitment to serving
+              clients effectively.
             </p>
           </div>
 

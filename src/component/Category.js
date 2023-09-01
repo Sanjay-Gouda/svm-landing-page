@@ -81,9 +81,10 @@ const Category = () => {
               Our Services
             </h3>
 
-            <p className="text-slate-400  text-center">
-              A great plateform to buy, sell and rent your properties without
-              any agent or commisions.
+            <p className="text-slate-400  max-w-xl mx-auto">
+              Offering real estate services such as property buying, selling,
+              leasing, and consulting, tailored to clients' needs, backed by
+              expertise and experience.
             </p>
           </div>
 
