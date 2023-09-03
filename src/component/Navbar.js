@@ -3,7 +3,7 @@ import { NavLink, Link } from "react-router-dom";
 
 import LogoLight from "../assets/images/logo-light.png";
 import LogoDark from "../assets/images/logo-dark.png";
-import Svmlogo from "../assets/images/svm-logo.png";
+import Svmlogo from "../assets/images/svm-head-logo.png";
 import { User } from "react-feather";
 
 export default function Navbar(props) {
@@ -168,6 +168,14 @@ export default function Navbar(props) {
           {/* <!-- Logo container--> */}
           {navClass === "" || navClass === undefined ? (
             <Link className="logo" to="/">
+              {/* <div style={{ width: "160px" }}>
+                <img
+                  src={Svmlogo}
+                  className="l-dark w-full h-full object-contain"
+                  height="24"
+                  alt=""
+                />
+              </div> */}
               <img src={LogoDark} className="inline-block dark:hidden" alt="" />
               <img
                 src={LogoLight}
@@ -177,18 +185,18 @@ export default function Navbar(props) {
             </Link>
           ) : (
             <Link className="logo" to="#">
-              {/* <div className="w-[160px]">
+              <div style={{ width: "160px" }}>
                 <img
                   src={Svmlogo}
                   className="l-dark w-full h-full object-contain"
                   height="24"
                   alt=""
                 />
-              </div> */}
-              <span className="inline-block dark:hidden">
-                <img src={LogoDark} className="l-dark" height="24" alt="" />
-                <img src={LogoLight} className="l-light" height="24" alt="" />
-              </span>
+              </div>
+              {/* <span className="inline-block dark:hidden">
+                <img src={Svmlogo} className="l-dark" height="24" alt="" />
+                <img src={Svmlogo} className="l-light" height="24" alt="" />
+              </span> */}
               <img
                 src={LogoLight}
                 height="24"
