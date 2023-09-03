@@ -477,7 +477,7 @@ export default function Aboutus() {
             </div>
           </div>
         </div>
-        <ClientTwo />
+        {/* <ClientTwo /> */}
         <GetInTuch />
       </section>
       <Footer />

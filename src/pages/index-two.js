@@ -74,12 +74,19 @@ export default function IndexTwo() {
               </h1> */}
               <h1 class="font-semibold text-white lg:leading-normal leading-normal text-4xl lg:text-6xl mb-6">
                 SVM Builder & Developers
+                <br />
+                <span className="text-green-600">"</span>We Build Your
+                <span className="text-green-600"> Dreams</span>,
+                <br />
+                To Make Your
+                <span className="text-green-600"> Dreams</span> Come True
+                <span className="text-green-600">"</span>
                 {/* <TypeAnimation
                   sequence={[
                     // Same substring at the start will only be typed out once, initially
-                    "Buildres",
+                    " Dreams,",
                     1000, // wait 1s before replacing "Mice" with "Hamsters"
-                    "& Developers",
+                    " Come True please",
                     1000,
                   ]}
                   wrapper="span"
@@ -87,11 +94,8 @@ export default function IndexTwo() {
                   style={{ fontSize: "1ren", display: "inline-block" }}
                   repeat={Infinity}
                   cursor={false}
-                />{" "} */}
+                /> */}
               </h1>
-              <p className="text-white/70 text-xl max-w-xl mx-auto">
-                We Build Your Dreams, To Make Your Dreams Come True
-              </p>
             </div>
             {/* <ul
               className="inline-block mx-auto sm:w-fit w-full flex-wrap justify-center text-center p-4 mt-10 bg-white dark:bg-slate-900 rounded-t-xl border-b dark:border-gray-800"
