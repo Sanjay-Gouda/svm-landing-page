@@ -197,12 +197,12 @@ export default function Navbar(props) {
                 <img src={Svmlogo} className="l-dark" height="24" alt="" />
                 <img src={Svmlogo} className="l-light" height="24" alt="" />
               </span> */}
-              <img
+              {/* <img
                 src={LogoLight}
                 height="24"
                 className="hidden dark:inline-block"
                 alt=""
-              />
+              /> */}
             </Link>
           )}
           {/* <!-- End Logo container--> */}

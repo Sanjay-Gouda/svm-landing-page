@@ -124,7 +124,8 @@ export default function Aboutus() {
             </h3>
             <p className="text-white/70 text-xl max-w-xl mx-auto">
               SVM Builders & Developers, is achieving milestones under the
-              dynamic leadership of, Mr. Babulal .L. Kumawat.
+              dynamic leadership of,{" "}
+              <span className="text-green-600"> Mr. Babulal .L. Kumawat.</span>
             </p>
           </div>
         </div>
@@ -289,8 +290,56 @@ export default function Aboutus() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-12 grid-cols-1 mt-8 gap-[30px]">
+          <div className="w-full flex justify-center">
             <div className="lg:col-span-3 md:col-span-6">
+              <div className="group text-center">
+                <div className="relative inline-block mx-auto h-52 w-52 rounded-full overflow-hidden">
+                  <img src={Founder} className="" alt="" />
+                  <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black h-52 w-52 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out"></div>
+
+                  <ul className="list-none absolute start-0 end-0 -bottom-20 group-hover:bottom-5 transition-all duration-500 ease-in-out">
+                    <li className="inline ms-1">
+                      <Link2
+                        to="#"
+                        className="btn btn-icon btn-sm rounded-full border border-green-600 bg-green-600 hover:border-green-600 hover:bg-green-600 text-white"
+                      >
+                        <Facebook className="h-4 w-4" />
+                      </Link2>
+                    </li>
+                    <li className="inline ms-1">
+                      <Link2
+                        to="#"
+                        className="btn btn-icon btn-sm rounded-full border border-green-600 bg-green-600 hover:border-green-600 hover:bg-green-600 text-white"
+                      >
+                        <Instagram className="h-4 w-4" />
+                      </Link2>
+                    </li>
+                    <li className="inline ms-1">
+                      <Link2
+                        to="#"
+                        className="btn btn-icon btn-sm rounded-full border border-green-600 bg-green-600 hover:border-green-600 hover:bg-green-600 text-white"
+                      >
+                        <Linkedin className="h-4 w-4" />
+                      </Link2>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="content mt-3">
+                  <Link2
+                    to="#"
+                    className="text-xl font-medium hover:text-green-600 transition-all duration-500 ease-in-out"
+                  >
+                    Mr. B.L. Kumawat
+                  </Link2>
+                  <p className="text-slate-400">Founder / Chairman</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-12 grid-cols-1 mt-8 gap-[30px]">
+            {/* <div className="lg:col-span-3 md:col-span-6">
               <div className="group text-center">
                 <div className="relative inline-block mx-auto h-52 w-52 rounded-full overflow-hidden">
                   <img src={Founder} className="" alt="" />
@@ -334,9 +383,9 @@ export default function Aboutus() {
                   <p className="text-slate-400">Designer</p>
                 </div>
               </div>
-            </div>
+            </div> */}
 
-            <div className="lg:col-span-3 md:col-span-6">
+            <div className="lg:col-span-4 md:col-span-6">
               <div className="group text-center">
                 <div className="relative inline-block mx-auto h-52 w-52 rounded-full overflow-hidden">
                   <img src={MDirector} className="" alt="" />
@@ -382,7 +431,7 @@ export default function Aboutus() {
               </div>
             </div>
 
-            <div className="lg:col-span-3 md:col-span-6">
+            <div className="lg:col-span-4 md:col-span-6">
               <div className="group text-center">
                 <div className="relative inline-block mx-auto h-52 w-52 rounded-full overflow-hidden">
                   <img src={DDirector} className="" alt="" />
@@ -430,7 +479,7 @@ export default function Aboutus() {
               </div>
             </div>
 
-            <div className="lg:col-span-3 md:col-span-6">
+            <div className="lg:col-span-4 md:col-span-6">
               <div className="group text-center">
                 <div className="relative inline-block mx-auto h-52 w-52 rounded-full overflow-hidden">
                   <img src={HRD} className="" alt="" />
