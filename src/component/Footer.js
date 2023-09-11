@@ -78,7 +78,7 @@ export default function Footer() {
                 <p className="mt-6 text-gray-300">
                   "We Build Your <span className="text-green-600">Dreams</span>,
                   To Make Your <span className="text-green-600">Dreams</span>{" "}
-                  Come True please"
+                  Come True"
                 </p>
               </div>
 

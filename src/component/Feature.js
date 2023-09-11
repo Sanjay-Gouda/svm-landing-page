@@ -8,7 +8,7 @@ export default function Feature() {
       <div className="container lg:mt-24 mt-16">
         <div className="grid grid-cols-1 pb-8 text-center">
           <h3 className="mb-4 md:text-3xl md:leading-normal text-2xl leading-normal font-semibold">
-            How We Works
+            How We Work
           </h3>
 
           <p className="text-slate-400 max-w-xl mx-auto">

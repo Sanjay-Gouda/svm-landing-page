@@ -373,7 +373,7 @@ export default function Navbar(props) {
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="sub-menu-item">
+                <Link to="/features" className="sub-menu-item">
                   Our Services
                 </Link>
               </li>
