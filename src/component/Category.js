@@ -7,25 +7,24 @@ import InvestmentImage from "../assets/images/property/investment.jpg";
 import IndustrialImage from "../assets/images/property/industrial.jpg";
 import TinySlider from "tiny-slider-react";
 import "tiny-slider/dist/tiny-slider.css";
+
 const settings = {
-  controls: true,
+  controls: false,
   mouseDrag: true,
   loop: true,
-  rewind: true,
+  rewind: false,
+
+  item: 5,
+  // mode: "gallery",
   autoplay: true,
   autoplayButtonOutput: false,
-  autoplayTimeout: 3000,
+  autoplayTimeout: 5000,
   navPosition: "bottom",
-  controlsText: [
-    '<i class="mdi mdi-chevron-left "></i>',
-    '<i class="mdi mdi-chevron-right"></i>',
-  ],
-  nav: false,
-  speed: 400,
-  gutter: 0,
+  speed: 800,
+  gutter: 14,
   responsive: {
     992: {
-      items: 3,
+      items: 5,
     },
 
     767: {
@@ -37,6 +36,37 @@ const settings = {
     },
   },
 };
+
+// const settings = {
+//   controls: true,
+//   mouseDrag: true,
+//   loop: true,
+//   rewind: true,
+//   autoplay: true,
+//   autoplayButtonOutput: false,
+//   autoplayTimeout: 3000,
+//   navPosition: "bottom",
+//   controlsText: [
+//     '<i class="mdi mdi-chevron-left "></i>',
+//     '<i class="mdi mdi-chevron-right"></i>',
+//   ],
+//   nav: false,
+//   speed: 400,
+//   gutter: 0,
+//   responsive: {
+//     992: {
+//       items: 3,
+//     },
+
+//     767: {
+//       items: 2,
+//     },
+
+//     320: {
+//       items: 1,
+//     },
+//   },
+// };
 
 const SERVICES = [
   {
@@ -69,6 +99,18 @@ const SERVICES = [
     name: "Investment",
     listing: 12,
   },
+  {
+    id: 6,
+    imgURL: InvestmentImage,
+    name: "Investment",
+    listing: 12,
+  },
+  {
+    id: 7,
+    imgURL: InvestmentImage,
+    name: "Investment",
+    listing: 12,
+  },
 ];
 
 const Category = () => {
@@ -88,31 +130,30 @@ const Category = () => {
             </p>
           </div>
 
-          {/* <div className="tiny-home-slide-three"> */}
-          {/* <TinySlider settings={settings}> */}
-          <div className="grid lg:grid-cols-5 md:grid-cols-3 grid-cols-2 mt-8 md:gap-[30px] gap-3">
-            {SERVICES.map((item) => {
-              return (
-                <div className="tiny-slide" key={item.id}>
-                  <div className="group rounded-xl bg-white dark:bg-slate-900 shadow hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700 overflow-hidden ease-in-out duration-500">
-                    <img src={item.imgURL} alt="" />
-                    <div className="p-4">
-                      <Link2
-                        href="#"
-                        className="text-xl font-medium hover:text-green-600"
-                      >
-                        {item.name}
-                      </Link2>
-                      <p className="text-slate-400 text-sm mt-1">
-                        {item.listing} Listings
-                      </p>
+          <div className="grid grid-cols-1 mt-8 relative">
+            <TinySlider settings={settings}>
+              {SERVICES?.map((item) => {
+                return (
+                  <div className="tiny-slide" key={item.id}>
+                    <div className="group rounded-xl bg-white dark:bg-slate-900 shadow hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700 overflow-hidden ease-in-out duration-500">
+                      <img src={item.imgURL} alt="" />
+                      <div className="p-4">
+                        <Link2
+                          href="#"
+                          className="text-xl font-medium hover:text-green-600"
+                        >
+                          {item.name}
+                        </Link2>
+                        <p className="text-slate-400 text-sm mt-1">
+                          {item.listing} Listings
+                        </p>
+                      </div>
                     </div>
                   </div>
-                </div>
-              );
-            })}
+                );
+              })}
+            </TinySlider>
           </div>
-          {/* </TinySlider> */}
         </div>
         {/* </div> */}
       </div>

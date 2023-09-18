@@ -4,6 +4,7 @@ import { NavLink, Link } from "react-router-dom";
 import LogoLight from "../assets/images/logo-light.png";
 import LogoDark from "../assets/images/logo-dark.png";
 import Svmlogo from "../assets/images/svm-head-logo.png";
+import SvmlogoDark from "../assets/images/svm-logo-dark.png";
 import { User } from "react-feather";
 
 export default function Navbar(props) {
@@ -193,7 +194,7 @@ export default function Navbar(props) {
               </div>
               <div style={{ width: "160px" }}>
                 <img
-                  src={Svmlogo}
+                  src={SvmlogoDark}
                   className="l-light w-full h-full object-contain"
                   height="24"
                   alt=""
@@ -210,7 +211,7 @@ export default function Navbar(props) {
                   alt=""
                 />
                 <img
-                  src={Svmlogo}
+                  src={SvmlogoDark}
                   className="l-light w-full h-full object-contain"
                   height="24"
                   alt=""

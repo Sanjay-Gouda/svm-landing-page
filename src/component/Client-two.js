@@ -38,34 +38,39 @@ export default function ClientTwo() {
   const review = [
     {
       id: "1",
-      profile: avatar1,
-      name: "Calvin Carlo",
-      designation: "Manager",
+      profile:
+        "https://lh3.googleusercontent.com/a/ACg8ocJiSZ5iK7UPQlYBRe94zy24l93VPieYHiQ-GYNbnYYd=w67-h67-p-rp-mo-br100",
+      name: "Sanjaysingh Patil",
+      // designation: "Manager",
       description:
-        "Hously made the processes so easy. Hously instantly increased the amount of interest and ultimately saved us over $10,000.",
+        "Excellent and trust worthy work. Received all documents of NA plots systematically. I would be happily interested in further booking",
     },
     {
       id: "2",
-      profile: avatar2,
-      name: "Christa Smith",
+      profile:
+        "https://lh3.googleusercontent.com/a/ACg8ocIf7Y4JED2dX4Eu5bBGhIfldDM0o6cCncQjyMBRiovo=w67-h67-p-rp-mo-br100",
+      name: "Mausam Limbu",
       designation: "Manager",
       description:
-        'I highly recommend Hously as the new way to sell your home "by owner". My home sold in 24 hours for the asking price. Best $400 you could spend to sell your home.',
+        "Best opportunity for investment great to have invested in such great return project.",
     },
     {
       id: "3",
-      profile: avatar3,
-      name: "Christa Smith",
+      profile:
+        "https://lh3.googleusercontent.com/a-/ALV-UjW2PANcfCNQEN7nfvL6ciMUnS0hpuUwfOK5GWLSbv2W-g=w67-h67-p-rp-mo-br100",
+      name: "Pardeep Hardware And Sanitary Store",
       designation: "Manager",
       description:
-        "My favorite part about selling my home myself was that we got to meet and get to know the people personally. This made it so much more enjoyable!",
+        "Schemes for customers and I am the customer from Rajasthan I had in best in their open plotting projects sai residency 1 and 2 great project great location great company in great peoples love to invest",
     },
     {
       id: "4",
-      profile: avatar4,
-      name: "Christa Smith",
+      profile:
+        "https://lh3.googleusercontent.com/a/ACg8ocIqs_78YmqxMwoJkBVYF2fw_kWrxJH9MO7PWCUdgVck=w67-h67-p-rp-mo-br100",
+      name: "Dharam kumar",
       designation: "Manager",
-      description: "Great experience all around! Easy to use and efficient.",
+      description:
+        "Best deal of my life every With SVM Builders and Developers Sai Residency best Project 📣😎",
     },
   ];
 
@@ -91,8 +96,7 @@ export default function ClientTwo() {
                   <div className="tiny-slide" key={index}>
                     <div className="text-center mx-3">
                       <p className="text-lg text-slate-400 italic">
-                        {" "}
-                        " {el.description} "{" "}
+                        " {el.description} "
                       </p>
 
                       <div className="text-center mt-5">
@@ -120,9 +124,9 @@ export default function ClientTwo() {
                           alt=""
                         />
                         <h6 className="mt-2 fw-semibold">{el.name}</h6>
-                        <span className="text-slate-400 text-sm">
+                        {/* <span className="text-slate-400 text-sm">
                           {el.designation}
-                        </span>
+                        </span> */}
                       </div>
                     </div>
                   </div>

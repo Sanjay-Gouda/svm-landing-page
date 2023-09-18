@@ -1,6 +1,7 @@
 import React from "react";
 import { Link as Link2 } from "react-router-dom";
-import LogoLight from "../assets/images/logo-light.png";
+// import LogoLight from "../assets/images/logo-light.png";
+import LogoDark from "../assets/images/svm-logo-dark.png";
 // import LogoLight from "../assets/images/svm-head-logo.png";
 import {
   MapPin,
@@ -73,9 +74,11 @@ export default function Footer() {
             <div className="grid md:grid-cols-12 grid-cols-1 gap-[30px] ">
               <div className="lg:col-span-4 md:col-span-12">
                 <Link2 to="#" className="text-[22px] focus:outline-none">
-                  <img src={LogoLight} alt="" />
+                  <div style={{ width: "160px" }}>
+                    <img src={LogoDark} alt="" />
+                  </div>
                 </Link2>
-                <p className="mt-6 text-gray-300">
+                <p className="mt-4 text-gray-300">
                   "We Build Your <span className="text-green-600">Dreams</span>,
                   To Make Your <span className="text-green-600">Dreams</span>{" "}
                   Come True"
