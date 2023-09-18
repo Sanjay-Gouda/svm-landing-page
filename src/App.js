@@ -1,13 +1,9 @@
 import React, { useEffect } from "react";
-import {
-  BrowserRouter,
-  Route,
-  Routes
-} from "react-router-dom";
-import './App.css';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import "./App.css";
 
-import './assets/css/tailwind.css';
-import './assets/css/icons.css';
+import "./assets/css/tailwind.css";
+import "./assets/css/icons.css";
 
 import Index from "./pages/index.js";
 import PropertyDetail from "./pages/property-detail";
@@ -39,20 +35,19 @@ import BlogDetail from "./pages/blog-detail";
 import Blogs from "./pages/blogs";
 import BlogSidebar from "./pages/blog-sidebar";
 import Faq from "./pages/faq";
-import ScrollToTop from './component/Scroll-top';
+import ScrollToTop from "./component/Scroll-top";
 import IndexSix from "./pages/index-six";
 
 function App() {
   useEffect(() => {
     document.documentElement.setAttribute("dir", "ltr");
-    document.documentElement.classList.add('light');
+    document.documentElement.classList.add("light");
   }, []);
-
 
   return (
     <BrowserRouter>
       <ScrollToTop />
-      <Routes >
+      <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/index" element={<Index />} />
 
@@ -61,8 +56,7 @@ function App() {
 
         <Route path="/index-four" element={<IndexFour />} />
         <Route path="/index-five" element={<IndexFive />} />
-        <Route path="/index-six" element={<IndexSix/>} />
-        
+        <Route path="/index-six" element={<IndexSix />} />
 
         <Route path="/property-detail/:id" element={<PropertyDetail />} />
         <Route path="/buy" element={<Buy />} />
@@ -75,7 +69,8 @@ function App() {
         <Route path="/auth-reset-password" element={<ResetPassword />} />
         <Route path="/comingsoon" element={<Comingsoon />} />
         <Route path="/maintenance" element={<Maintenance />} />
-        <Route path="/grid" element={<Grid />} />
+        {/* <Route path="/grid" element={<Grid />} /> */}
+        <Route path="/grid/:name" element={<Grid />} />
         <Route path="/grid-sidebar" element={<GridSidebar />} />
         <Route path="/grid-map" element={<GridMap />} />
 
@@ -93,8 +88,7 @@ function App() {
         <Route path="/blog-detail" element={<BlogDetail />} />
         <Route path="/blog-sidebar" element={<BlogSidebar />} />
       </Routes>
-    </BrowserRouter >
-  )
-
+    </BrowserRouter>
+  );
 }
 export default App;

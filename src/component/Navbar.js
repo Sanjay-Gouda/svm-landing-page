@@ -176,12 +176,29 @@ export default function Navbar(props) {
                   alt=""
                 />
               </div> */}
-              <img src={LogoDark} className="inline-block dark:hidden" alt="" />
-              <img
+              {/* <img src={LogoDark} className="inline-block dark:hidden" alt="" /> */}
+              {/* <img
                 src={LogoLight}
                 className="hidden dark:inline-block"
                 alt=""
-              />
+              /> */}
+
+              <div style={{ width: "160px" }}>
+                <img
+                  src={Svmlogo}
+                  className="l-dark w-full h-full object-contain"
+                  height="24"
+                  alt=""
+                />
+              </div>
+              <div style={{ width: "160px" }}>
+                <img
+                  src={Svmlogo}
+                  className="l-light w-full h-full object-contain"
+                  height="24"
+                  alt=""
+                />
+              </div>
             </Link>
           ) : (
             <Link className="logo" to="#">
@@ -189,6 +206,12 @@ export default function Navbar(props) {
                 <img
                   src={Svmlogo}
                   className="l-dark w-full h-full object-contain"
+                  height="24"
+                  alt=""
+                />
+                <img
+                  src={Svmlogo}
+                  className="l-light w-full h-full object-contain"
                   height="24"
                   alt=""
                 />
@@ -306,31 +329,6 @@ export default function Navbar(props) {
                             <li><Link to="/sell" className="sub-menu-item">Sell</Link></li> */}
 
               {/* <li className="has-submenu parent-parent-menu-item">
-                                <Link to="#">Listing</Link><span className="menu-arrow"></span>
-                                <ul className="submenu">
-                                    <li className="has-submenu parent-menu-item"><Link to="#"> Grid View </Link><span className="submenu-arrow"></span>
-                                        <ul className="submenu">
-                                            <li><Link to="/grid" className="sub-menu-item">Grid Listing</Link></li>
-                                            <li><Link to="/grid-sidebar" className="sub-menu-item">Grid Sidebar </Link></li>
-                                            <li><Link to="/grid-map" className="sub-menu-item">Grid With Map</Link></li>
-                                        </ul>
-                                    </li>
-                                    <li className="has-submenu parent-menu-item"><Link to="#"> List View </Link><span className="submenu-arrow"></span>
-                                        <ul className="submenu">
-                                            <li><Link to="/list" className="sub-menu-item">List Listing</Link></li>
-                                            <li><Link to="/list-sidebar" className="sub-menu-item">List Sidebar </Link></li>
-                                            <li><Link to="/list-map" className="sub-menu-item">List With Map</Link></li>
-                                        </ul>
-                                    </li>
-                                    <li className="has-submenu parent-menu-item"><Link to="#"> Property Detail </Link><span className="submenu-arrow"></span>
-                                        <ul className="submenu">
-                                            <li><Link to="/property-detail/1" className="sub-menu-item">Property Detail</Link></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li> */}
-
-              {/* <li className="has-submenu parent-parent-menu-item">
                                 <Link to="#">Pages</Link><span className="menu-arrow"></span>
                                 <ul className="submenu">
                                     <li><Link to="/aboutus" className="sub-menu-item">About Us</Link></li>
@@ -376,6 +374,24 @@ export default function Navbar(props) {
                 <Link to="/features" className="sub-menu-item">
                   Our Services
                 </Link>
+              </li>
+              <li className="has-submenu parent-parent-menu-item">
+                <Link to="#">Projects</Link>
+                <span className="menu-arrow"></span>
+                <ul className="submenu">
+                  <li className="has-submenu parent-menu-item">
+                    <Link to="#"> Completed </Link>
+                    <span className="submenu-arrow"></span>
+                  </li>
+                  <li className="has-submenu parent-menu-item">
+                    <Link to="#"> Running </Link>
+                    <span className="submenu-arrow"></span>
+                  </li>
+                  <li className="has-submenu parent-menu-item">
+                    <Link to="#"> Upcoming </Link>
+                    <span className="submenu-arrow"></span>
+                  </li>
+                </ul>
               </li>
               <li>
                 <Link to="/contact" className="sub-menu-item">

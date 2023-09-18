@@ -24,6 +24,7 @@ import {
 import GetInTuch from "../component/Get-in-tuch";
 import Category from "../component/Category";
 import { TypeAnimation } from "react-type-animation";
+import { Card } from "../component/Card";
 
 const Houses = [
   { value: "AF", label: "Apartment" },
@@ -437,6 +438,9 @@ export default function IndexTwo() {
         <Feature />
 
         <PropertyTwo />
+
+        {/* <Card /> */}
+
         <Category />
 
         <ClientTwo />
