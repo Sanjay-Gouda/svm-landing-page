@@ -50,99 +50,15 @@ export default function PropertyTwo() {
       <div className="container lg:mt-24 mt-16">
         <div className="grid grid-cols-1 pb-8 text-center">
           <h3 className="mb-4 md:text-3xl md:leading-normal text-2xl leading-normal font-semibold">
-            Featured Properties
+            Our Projects
           </h3>
 
           <p className="text-slate-400 max-w-xl mx-auto">
-            A great plateform to buy, sell and rent your properties without any
-            agent or commisions.
+            Explore our ongoing or completed projects, and know more about our
+            unique features, locations, and potential for investment or
+            purchase.
           </p>
         </div>
-
-        {/* <div className="grid grid-cols-1 mt-8 relative">
-          <div className="tiny-home-slide-three">
-            <TinySlider settings={settings}>
-              {properties.map((item, index) => (
-                <div className="tiny-slide" key={index}>
-                  <div className="group rounded-xl bg-white dark:bg-slate-900 shadow hover:shadow-md dark:hover:shadow-md dark:shadow-gray-700 dark:hover:shadow-gray-700 overflow-hidden ease-in-out duration-500 m-3">
-                    <div className="relative">
-                      <img src={item.image} alt="" />
-
-                      <div className="absolute top-4 end-4">
-                        <Link
-                          to="#"
-                          className="btn btn-icon bg-white dark:bg-slate-900 shadow dark:shadow-gray-700 rounded-full text-slate-100 dark:text-slate-700 focus:text-red-600 dark:focus:text-red-600 hover:text-red-600 dark:hover:text-red-600"
-                        >
-                          <i className="mdi mdi-heart mdi-18px"></i>
-                        </Link>
-                      </div>
-                    </div>
-
-                    <div className="p-6">
-                      <div className="pb-6">
-                        <Link
-                          to={`/property-detail/${item.id}`}
-                          className="text-lg hover:text-green-600 font-medium ease-in-out duration-500"
-                        >
-                          {item.name}
-                        </Link>
-                      </div>
-
-                      <ul className="py-6 border-y border-slate-100 dark:border-gray-800 flex items-center list-none">
-                        <li className="flex items-center me-4">
-                          <LiaCompressArrowsAltSolid className="text-2xl me-2 text-green-600" />
-                          <span>8000sqf</span>
-                        </li>
-
-                        <li className="flex items-center me-4">
-                          <BiBed className="text-2xl me-2 text-green-600" />
-                          <span>4 Beds</span>
-                        </li>
-
-                        <li className="flex items-center">
-                          <LiaBathSolid className="text-2xl me-2 text-green-600" />
-                          <span>4 Baths</span>
-                        </li>
-                      </ul>
-
-                      <ul className="pt-6 flex justify-between items-center list-none">
-                        <li>
-                          <span className="text-slate-400">Price</span>
-                          <p className="text-lg font-medium">$5000</p>
-                        </li>
-
-                        <li>
-                          <span className="text-slate-400">Rating</span>
-                          <ul className="text-lg font-medium text-amber-400 list-none">
-                            <li className="inline ms-1">
-                              <i className="mdi mdi-star"></i>
-                            </li>
-                            <li className="inline ms-1">
-                              <i className="mdi mdi-star"></i>
-                            </li>
-                            <li className="inline ms-1">
-                              <i className="mdi mdi-star"></i>
-                            </li>
-                            <li className="inline ms-1">
-                              <i className="mdi mdi-star"></i>
-                            </li>
-                            <li className="inline ms-1">
-                              <i className="mdi mdi-star"></i>
-                            </li>
-                            <li className="inline ms-1 text-black dark:text-white">
-                              5.0(30)
-                            </li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                
-                </div>
-              ))}
-            </TinySlider>
-          </div>
-        </div> */}
 
         <div
           className="flex w-full flex-wrap gap-4"
@@ -160,7 +76,7 @@ export default function PropertyTwo() {
                 href="#"
                 className="text-xl font-medium hover:text-green-600"
               >
-                Upcoming
+                Ongoing
               </Link2>
             </div>
           </div>
@@ -168,7 +84,13 @@ export default function PropertyTwo() {
             style={{ width: "350px" }}
             className="group rounded-xl bg-white dark:bg-slate-900 shadow hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700 overflow-hidden ease-in-out duration-500"
           >
-            <img src="https://i.ibb.co/pzGysVS/b.jpg" alt="" />
+            <div style={{ width: "350px", height: "236px" }}>
+              <img
+                src="https://i.ibb.co/pzGysVS/b.jpg"
+                className="w-full h-full object-contain"
+                alt=""
+              />
+            </div>
             <div className="p-4">
               <Link2
                 href="#"
@@ -182,13 +104,24 @@ export default function PropertyTwo() {
             style={{ width: "350px" }}
             className="image-hover group rounded-xl bg-white dark:bg-slate-900 shadow hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700 overflow-hidden ease-in-out duration-500"
           >
-            <img src="https://i.ibb.co/QMrtWT1/c.jpg" alt="" />
+            <div style={{ width: "350px", height: "236px" }}>
+              {/* <img
+                src="https://i.ibb.co/pzGysVS/b.jpg"
+                className="w-full h-full object-contain"
+                alt=""
+              /> */}
+              <img
+                src="https://i.ibb.co/QMrtWT1/c.jpg"
+                className="w-full h-full object-contain"
+                alt=""
+              />
+            </div>
             <div className="p-4 hover:opacity-5 ">
               <Link2
                 href="#"
                 className="text-xl font-medium hover:text-green-600"
               >
-                Upcoming
+                Completed
               </Link2>
             </div>
           </div>
