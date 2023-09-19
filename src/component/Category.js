@@ -7,6 +7,18 @@ import InvestmentImage from "../assets/images/property/investment.jpg";
 import IndustrialImage from "../assets/images/property/industrial.jpg";
 import TinySlider from "tiny-slider-react";
 import "tiny-slider/dist/tiny-slider.css";
+import lb2 from "../assets/images/property/our service/lowRiseBuilding/lb-2.jpg";
+import hb9 from "../assets/images/property/our service/highRise/hb9.png";
+import rh8 from "../assets/images/property/our service/rowHouse/rh8.png";
+import fh5 from "../assets/images/property/our service/farmHouse/fh5.png";
+import bl1 from "../assets/images/property/our service/bunglows/bl1.png";
+import dn4 from "../assets/images/property/our service/developed/dn4.png";
+import pp10 from "../assets/images/property/our service/partyPlot/pp10.png";
+import g10 from "../assets/images/property/our service/gardens/g10.png";
+
+import sp5 from "../assets/images/property/our service/swimingPool/sp5.png";
+import gym2 from "../assets/images/property/our service/gym/gym2.png";
+import pg5 from "../assets/images/property/our service/playArea/pg5.png";
 
 const settings = {
   controls: false,
@@ -37,79 +49,63 @@ const settings = {
   },
 };
 
-// const settings = {
-//   controls: true,
-//   mouseDrag: true,
-//   loop: true,
-//   rewind: true,
-//   autoplay: true,
-//   autoplayButtonOutput: false,
-//   autoplayTimeout: 3000,
-//   navPosition: "bottom",
-//   controlsText: [
-//     '<i class="mdi mdi-chevron-left "></i>',
-//     '<i class="mdi mdi-chevron-right"></i>',
-//   ],
-//   nav: false,
-//   speed: 400,
-//   gutter: 0,
-//   responsive: {
-//     992: {
-//       items: 3,
-//     },
-
-//     767: {
-//       items: 2,
-//     },
-
-//     320: {
-//       items: 1,
-//     },
-//   },
-// };
-
 const SERVICES = [
   {
     id: 1,
-    imgURL: ResidentialImage,
-    name: "Residential",
-    listing: 46,
+    imgURL: lb2,
+    name: "Low Rise Building",
+    // listing: 46,
   },
   {
     id: 2,
-    imgURL: LandImage,
-    name: "Land",
-    listing: 124,
+    imgURL: hb9,
+    name: "High Rise Building",
+    // listing: 124,
   },
   {
     id: 3,
-    imgURL: CommercialImage,
-    name: "Commercial",
-    listing: 265,
+    imgURL: rh8,
+    name: "Raw Houses",
   },
   {
     id: 4,
-    imgURL: IndustrialImage,
-    name: "Industrial",
-    listing: 265,
+    imgURL: fh5,
+    name: "Farm Houses",
   },
   {
     id: 5,
-    imgURL: InvestmentImage,
-    name: "Investment",
-    listing: 12,
+    imgURL: bl1,
+    name: "Banglows",
   },
   {
     id: 6,
-    imgURL: InvestmentImage,
-    name: "Investment",
-    listing: 12,
+    imgURL: dn4,
+    name: "Open Plotting",
   },
   {
     id: 7,
-    imgURL: InvestmentImage,
-    name: "Investment",
-    listing: 12,
+    imgURL: g10,
+    name: "Gardens",
+  },
+  {
+    id: 8,
+    imgURL: pp10,
+    name: "Party Plot",
+  },
+  {
+    id: 9,
+    imgURL: pg5,
+    name: "Play Area",
+  },
+  {
+    id: 10,
+    imgURL: gym2,
+    name: "Gymnasium",
+  },
+  {
+    id: 11,
+    imgURL: sp5,
+    name: "Swimming Pool",
   },
 ];
 
@@ -135,8 +131,14 @@ const Category = () => {
               {SERVICES?.map((item) => {
                 return (
                   <div className="tiny-slide" key={item.id}>
-                    <div className="group rounded-xl bg-white dark:bg-slate-900 shadow hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700 overflow-hidden ease-in-out duration-500">
-                      <img src={item.imgURL} alt="" />
+                    <div className="group rounded-xl cursor-pointer bg-white dark:bg-slate-900 shadow hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700 overflow-hidden ease-in-out duration-500">
+                      <div style={{ width: "213px", height: "146px" }}>
+                        <img
+                          src={item.imgURL}
+                          alt=""
+                          className="w-full h-full object-contain"
+                        />
+                      </div>
                       <div className="p-4">
                         <Link2
                           href="#"
@@ -144,9 +146,6 @@ const Category = () => {
                         >
                           {item.name}
                         </Link2>
-                        <p className="text-slate-400 text-sm mt-1">
-                          {item.listing} Listings
-                        </p>
                       </div>
                     </div>
                   </div>
