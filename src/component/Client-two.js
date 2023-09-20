@@ -79,13 +79,8 @@ export default function ClientTwo() {
       <div className="container lg:mt-24 mt-16">
         <div className="grid grid-cols-1 pb-8 text-center">
           <h3 className="mb-4 md:text-3xl md:leading-normal text-2xl leading-normal font-semibold">
-            What Our Clients Say ?
+            What Our Happy Clients Say!!!
           </h3>
-
-          <p className="text-slate-400 max-w-xl mx-auto">
-            A great plateform to buy, sell and rent your properties without any
-            agent or commisions.
-          </p>
         </div>
 
         <div className="flex justify-center relative mt-8">

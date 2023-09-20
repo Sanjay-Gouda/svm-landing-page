@@ -5,6 +5,7 @@ import Footer from "../component/Footer";
 import BackgroudImage from "../assets/images/bg/01.jpg";
 import Switcher from "../component/Switcher";
 import { LuArrowRight } from "../assets/icons/vander";
+import GetInTuch from "../component/Get-in-tuch";
 
 export default function Privacy() {
   return (
@@ -213,6 +214,7 @@ export default function Privacy() {
         </div>
       </section>
       {/* <!-- End Terms & Conditions --> */}
+      <GetInTuch />
 
       <Footer />
       <Switcher />
