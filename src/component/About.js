@@ -40,17 +40,17 @@ export default function About() {
                 Onam is the most popular festival in the state of Kerala, India.
                 Onam is the official state festival of Kerala. It is celebrated
                 with joy and enthusiasm all over the state by Malayalees
-                regardless of religion, caste or creed
+                regardless of religion, caste or creed.
               </p>
 
-              <div className="mt-4">
+              {/* <div className="mt-4">
                 <Link2
                   to="#"
                   className="btn bg-green-600 hover:bg-green-700 text-white rounded-md mt-3"
                 >
-                  Learn More{" "}
+                  Learn More
                 </Link2>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
