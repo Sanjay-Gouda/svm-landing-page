@@ -100,7 +100,7 @@ export default function Footer() {
                   </li>
                   <li className="mt-[10px]">
                     <Link2
-                      to="/features"
+                      to="/our-services"
                       className="text-slate-300 hover:text-slate-400 duration-500 ease-in-out flex items-center"
                     >
                       <MdKeyboardArrowRight className="me-1 text-xl" /> Our

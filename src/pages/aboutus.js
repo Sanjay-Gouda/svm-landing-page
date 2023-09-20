@@ -203,7 +203,7 @@ export default function Aboutus() {
 
         <div className="mt-6">
           <Link2
-            to="/privacy"
+            to="/knowmore-aboutus"
             className="btn bg-green-600 hover:bg-green-700 text-white rounded-md w-full flex items-center justify-center"
           >
             Know More About Us &nbsp;

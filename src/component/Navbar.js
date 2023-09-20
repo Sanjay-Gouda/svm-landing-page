@@ -286,7 +286,7 @@ export default function Navbar(props) {
               }`}
             >
               <li className="has-submenu parent-menu-item">
-                <Link to="/index-two">Home</Link>
+                <Link to="/">Home</Link>
                 {/* <span className="menu-arrow"></span>
                 <ul className="submenu">
                   <li>
@@ -372,7 +372,7 @@ export default function Navbar(props) {
                 </Link>
               </li>
               <li>
-                <Link to="/features" className="sub-menu-item">
+                <Link to="/our-services" className="sub-menu-item">
                   Our Services
                 </Link>
               </li>
