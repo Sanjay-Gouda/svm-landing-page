@@ -24,6 +24,7 @@ import Blogs from "./pages/blogs";
 
 import ScrollToTop from "./component/Scroll-top";
 import Feature from "./component/Feature";
+import ProfileDetail from "./pages/profile-detail";
 
 function App() {
   useEffect(() => {
@@ -55,7 +56,7 @@ function App() {
         <Route path="/auth-reset-password" element={<ResetPassword />} />
         <Route path="/comingsoon" element={<Comingsoon />} />
         <Route path="/maintenance" element={<Maintenance />} />
-        <Route path="/features" element={<Feature />} />
+        <Route path="/profile-detail" element={<ProfileDetail />} />
       </Routes>
     </BrowserRouter>
   );
