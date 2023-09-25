@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../component/Navbar";
 import Footer from "../component/Footer";
 
@@ -6,7 +6,55 @@ import ContactImage from "../assets/images/svg/contact.svg";
 import Switcher from "../component/Switcher";
 import { Hexagon } from "react-feather";
 import { BsTelephone, MdMailOutline, FiMapPin } from "../assets/icons/vander";
+import { useFormik } from "formik";
+import { httpInstance } from "../constants/httpinstances";
+
+const initialValues = {
+  name: "",
+  email: "",
+  message: "",
+  mono: "",
+  subject: "",
+};
+
 export default function Contact() {
+  const [showAlert, setShowAlert] = useState(false);
+
+  const addData = async (values) => {
+    const { name, email, mono, subject, message } = values;
+
+    const payload = {
+      name: name,
+      email: email,
+      number: mono,
+      message: message,
+      subject: subject,
+    };
+
+    try {
+      const res = await httpInstance.post("website/contact-us", payload);
+      console.log(res, "response");
+
+      if (res.status === 200) {
+        setShowAlert(true);
+      }
+
+      setTimeout(() => {
+        setShowAlert(false);
+      }, 2000);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const formik = useFormik({
+    initialValues: initialValues,
+    onSubmit: (values) => {
+      console.log(values);
+      addData(values);
+    },
+  });
+
   return (
     <>
       <Navbar />
@@ -41,71 +89,122 @@ export default function Contact() {
                     Get in touch !
                   </h3>
 
-                  <form method="post" name="myForm" id="myForm">
-                    <p className="mb-0" id="error-msg"></p>
-                    <div id="simple-msg"></div>
-                    <div className="grid lg:grid-cols-12 lg:gap-6">
-                      <div className="lg:col-span-6 mb-5">
-                        <label htmlFor="name" className="font-medium">
-                          Your Name:
-                        </label>
-                        <input
-                          name="name"
-                          id="name"
-                          type="text"
-                          className="form-input mt-2"
-                          placeholder="Name :"
-                        />
-                      </div>
-
-                      <div className="lg:col-span-6 mb-5">
-                        <label htmlFor="email" className="font-medium">
-                          Your Email:
-                        </label>
-                        <input
-                          name="email"
-                          id="email"
-                          type="email"
-                          className="form-input mt-2"
-                          placeholder="Email :"
-                        />
-                      </div>
-                    </div>
-
-                    <div className="grid grid-cols-1">
-                      <div className="mb-5">
-                        <label htmlFor="subject" className="font-medium">
-                          Your Question:
-                        </label>
-                        <input
-                          name="subject"
-                          id="subject"
-                          className="form-input mt-2"
-                          placeholder="Subject :"
-                        />
-                      </div>
-
-                      <div className="mb-5">
-                        <label htmlFor="comments" className="font-medium">
-                          Your Comment:
-                        </label>
-                        <textarea
-                          name="comments"
-                          id="comments"
-                          className="form-input mt-2 textarea"
-                          placeholder="Message :"
-                        ></textarea>
-                      </div>
-                    </div>
-                    <button
-                      type="submit"
-                      id="submit"
-                      name="send"
-                      className="btn bg-green-600 hover:bg-green-700 text-white rounded-md"
+                  {showAlert && (
+                    <div
+                      className=" mb-3  w-full rounded-lg px-6 py-5 text-base text-success-700"
+                      style={{
+                        background: "#bbf7d0",
+                        padding: "10px",
+                        display: "flex ",
+                        alignItems: "start !important",
+                      }}
+                      role="alert"
                     >
-                      Send Message
-                    </button>
-                  </form>
+                      <span class="mr-2">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                          class="h-5 w-5"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                      </span>
+                      Thank you for reaching out, we will get back to you soon
+                      🙂🙂.
+                    </div>
+                  )}
+
+                  <div className="grid lg:grid-cols-12 lg:gap-6">
+                    <div className="lg:col-span-6 mb-5">
+                      <label htmlFor="name" className="font-medium">
+                        Your Name:
+                      </label>
+                      <input
+                        name="name"
+                        id="name"
+                        value={formik.values.name}
+                        onChange={formik.handleChange}
+                        type="text"
+                        className="form-input mt-2"
+                        placeholder="Name :"
+                      />
+                    </div>
+
+                    <div className="lg:col-span-6 mb-5">
+                      <label htmlFor="email" className="font-medium">
+                        Your Email:
+                      </label>
+                      <input
+                        name="email"
+                        id="email"
+                        value={formik.values.email}
+                        onChange={formik.handleChange}
+                        type="email"
+                        className="form-input mt-2"
+                        placeholder="Email :"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1">
+                    <div className="mb-5">
+                      <label htmlFor="mono" className="font-medium">
+                        Mobile No:
+                      </label>
+                      <input
+                        name="mono"
+                        id="mono"
+                        value={formik.values.mono}
+                        onChange={formik.handleChange}
+                        className="form-input mt-2"
+                        placeholder="Mobile No :"
+                      />
+                    </div>
+                    <div className="mb-5">
+                      <label htmlFor="subject" className="font-medium">
+                        Subject:
+                      </label>
+                      <input
+                        name="subject"
+                        id="subject"
+                        value={formik.values.subject}
+                        onChange={formik.handleChange}
+                        className="form-input mt-2"
+                        placeholder="Subject :"
+                      />
+                    </div>
+
+                    <div className="mb-5">
+                      <label htmlFor="message" className="font-medium">
+                        Your Message:
+                      </label>
+                      <textarea
+                        name="message"
+                        // id="message"
+                        value={formik.values.message}
+                        onChange={formik.handleChange}
+                        className="form-input mt-2 textarea"
+                        placeholder="Message :"
+                      ></textarea>
+                    </div>
+                  </div>
+
+                  <button
+                    // type="submit"
+                    // id="submit"
+                    // name="send"
+                    onClick={formik.handleSubmit}
+                    className="btn bg-green-600 hover:bg-green-700 text-white rounded-md"
+                  >
+                    Send Message
+                  </button>
+
+                  {/* </form> */}
                 </div>
               </div>
             </div>

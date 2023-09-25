@@ -76,11 +76,9 @@ export default function IndexTwo() {
               <h1 class="font-semibold text-white lg:leading-normal leading-normal text-4xl lg:text-6xl mb-6">
                 SVM Builder & Developers
                 <br />
-                <span className="text-green-600">"</span>We Build Your
-                <span className="text-green-600"> Dreams</span>,
-                <br />
-                To Make Your
-                <span className="text-green-600"> Dreams</span> Come True
+                <span className="text-green-600">"</span>Building
+                <span className="text-green-600"> Future </span>With
+                <span className="text-green-600"> Relationships</span>
                 <span className="text-green-600">"</span>
               </h1>
             </div>

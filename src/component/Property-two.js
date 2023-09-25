@@ -66,7 +66,7 @@ export default function PropertyTwo() {
         >
           <div
             style={{ width: "350px" }}
-            onClick={() => navigate("/grid/upcoming")}
+            onClick={() => navigate("/grid/:Running")}
             className="group rounded-xl cursor-pointer  bg-white dark:bg-slate-900 shadow hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700 overflow-hidden ease-in-out duration-500"
           >
             <img src="https://i.ibb.co/ZmtmLGK/a.jpg" alt="" />
@@ -82,6 +82,7 @@ export default function PropertyTwo() {
           </div>
           <div
             style={{ width: "350px" }}
+            onClick={() => navigate("/grid/:Upcoming")}
             className="group rounded-xl bg-white dark:bg-slate-900 shadow hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700 overflow-hidden ease-in-out duration-500"
           >
             <div style={{ width: "350px", height: "236px" }}>
@@ -102,6 +103,7 @@ export default function PropertyTwo() {
           </div>
           <div
             style={{ width: "350px" }}
+            onClick={() => navigate("/grid/:Completed")}
             className="image-hover group rounded-xl bg-white dark:bg-slate-900 shadow hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700 overflow-hidden ease-in-out duration-500"
           >
             <div style={{ width: "350px", height: "236px" }}>

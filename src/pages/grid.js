@@ -12,6 +12,7 @@ import {
   RxHome,
   AiOutlineDollarCircle,
 } from "../assets/icons/vander";
+import { useParams } from "react-router-dom";
 
 const Houses = [
   { value: "AF", label: "Apartment" },
@@ -38,6 +39,8 @@ const maxPrice = [
 ];
 
 export default function Grid() {
+  const params = useParams();
+  console.log(params);
   return (
     <>
       <Navbar navClass="navbar-white" />
@@ -46,7 +49,7 @@ export default function Grid() {
         <div className="container">
           <div className="grid grid-cols-1 text-center mt-10">
             <h3 className="md:text-4xl text-3xl md:leading-normal leading-normal font-medium text-white">
-              Grid View Layout
+              {params.name.split(":")[1]}
             </h3>
           </div>
         </div>

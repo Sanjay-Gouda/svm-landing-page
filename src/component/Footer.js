@@ -12,6 +12,7 @@ import {
   Facebook,
   Twitter,
   Instagram,
+  Youtube,
   ShoppingCart,
 } from "react-feather";
 import {
@@ -248,7 +249,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* <div className="py-[30px] px-0 border-t border-gray-800 dark:border-gray-700">
+        <div className="py-[30px] px-0 border-t border-gray-800 dark:border-gray-700">
           <div className="container text-center">
             <div className="grid md:grid-cols-2 items-center gap-6">
               <div className="ltr:md:text-left rtl:md:text-right text-center">
@@ -263,50 +264,15 @@ export default function Footer() {
                     id="iframe_api"
                     src="https://www.youtube.com/iframe_api"
                   ></script>
-                  {new Date().getFullYear()} Hously. Design & Develop with{" "}
-                  <i className="mdi mdi-heart text-red-600"></i> by{" "}
-                  <Link2
-                    to="https://shreethemes.in/"
-                    target="_blank"
-                    className="text-reset"
-                  >
-                    Shreethemes
-                  </Link2>
-                  .
+                  {new Date().getFullYear()} SVM Builder & Developers All Rights
+                  Reserved.
                 </p>
               </div>
 
               <ul className="list-none ltr:md:text-right rtl:md:text-left text-center">
                 <li className="inline ms-1">
                   <Link2
-                    to="https://1.envato.market/hously-react"
-                    target="_blank"
-                    className="btn btn-icon btn-sm text-gray-400 hover:text-white border border-gray-800 dark:border-gray-700 rounded-md hover:border-green-600 dark:hover:border-green-600 hover:bg-green-600 dark:hover:bg-green-600"
-                  >
-                    <ShoppingCart className="h-4 w-4"></ShoppingCart>
-                  </Link2>
-                </li>
-                <li className="inline ms-1">
-                  <Link2
-                    to="https://dribbble.com/shreethemes"
-                    target="_blank"
-                    className="btn btn-icon btn-sm text-gray-400 hover:text-white border border-gray-800 dark:border-gray-700 rounded-md hover:border-green-600 dark:hover:border-green-600 hover:bg-green-600 dark:hover:bg-green-600"
-                  >
-                    <Dribbble className="h-4 w-4"></Dribbble>
-                  </Link2>
-                </li>
-                <li className="inline ms-1">
-                  <Link2
-                    to="https://www.behance.net/shreethemes"
-                    target="_blank"
-                    className="btn btn-icon btn-sm text-gray-400 hover:text-white border border-gray-800 dark:border-gray-700 rounded-md hover:border-green-600 dark:hover:border-green-600 hover:bg-green-600 dark:hover:bg-green-600"
-                  >
-                    <BiLogoBehance className="align-baseline" />
-                  </Link2>
-                </li>
-                <li className="inline ms-1">
-                  <Link2
-                    to="http://linkedin.com/company/shreethemes"
+                    to="https://www.linkedin.com/in/svm-builders-and-developers-4a59481a0/?originalSubdomain=in"
                     target="_blank"
                     className="btn btn-icon btn-sm text-gray-400 hover:text-white border border-gray-800 dark:border-gray-700 rounded-md hover:border-green-600 dark:hover:border-green-600 hover:bg-green-600 dark:hover:bg-green-600"
                   >
@@ -315,7 +281,7 @@ export default function Footer() {
                 </li>
                 <li className="inline ms-1">
                   <Link2
-                    to="https://www.facebook.com/shreethemes"
+                    to="https://www.facebook.com/profile.php?id=100064151886759"
                     target="_blank"
                     className="btn btn-icon btn-sm text-gray-400 hover:text-white border border-gray-800 dark:border-gray-700 rounded-md hover:border-green-600 dark:hover:border-green-600 hover:bg-green-600 dark:hover:bg-green-600"
                   >
@@ -324,7 +290,7 @@ export default function Footer() {
                 </li>
                 <li className="inline ms-1">
                   <Link2
-                    to="https://www.instagram.com/shreethemes/"
+                    to="https://www.instagram.com/svmbuildersanddevelopers0326/"
                     target="_blank"
                     className="btn btn-icon btn-sm text-gray-400 hover:text-white border border-gray-800 dark:border-gray-700 rounded-md hover:border-green-600 dark:hover:border-green-600 hover:bg-green-600 dark:hover:bg-green-600"
                   >
@@ -333,7 +299,7 @@ export default function Footer() {
                 </li>
                 <li className="inline ms-1">
                   <Link2
-                    to="https://twitter.com/shreethemes"
+                    to="https://twitter.com/BuildersSvm"
                     target="_blank"
                     className="btn btn-icon btn-sm text-gray-400 hover:text-white border border-gray-800 dark:border-gray-700 rounded-md hover:border-green-600 dark:hover:border-green-600 hover:bg-green-600 dark:hover:bg-green-600"
                   >
@@ -342,16 +308,17 @@ export default function Footer() {
                 </li>
                 <li className="inline ms-1">
                   <Link2
-                    to="mailto:support@shreethemes.in"
+                    to="https://www.youtube.com/@svmbuildersdevelopers4478"
+                    target="_blank"
                     className="btn btn-icon btn-sm text-gray-400 hover:text-white border border-gray-800 dark:border-gray-700 rounded-md hover:border-green-600 dark:hover:border-green-600 hover:bg-green-600 dark:hover:bg-green-600"
                   >
-                    <Mail className="h-4 w-4"></Mail>
+                    <Youtube className="h-4 w-4" />
                   </Link2>
                 </li>
               </ul>
             </div>
           </div>
-        </div> */}
+        </div>
       </footer>
     </>
   );

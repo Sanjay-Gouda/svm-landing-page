@@ -1,13 +1,18 @@
 import React, { useState, useEffect } from "react";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink, Link, useNavigate } from "react-router-dom";
 
 import LogoLight from "../assets/images/logo-light.png";
 import LogoDark from "../assets/images/logo-dark.png";
 import Svmlogo from "../assets/images/svm-head-logo.png";
 import SvmlogoDark from "../assets/images/svm-logo-dark.png";
+
+import GreenLogo from "../assets/images/black-green.png";
+import WhiteLogo from "../assets/images/white-green.png";
+
 import { User } from "react-feather";
 
 export default function Navbar(props) {
+  const navigate = useNavigate();
   const { navClass, topnavClass } = props;
   const [isOpen, setMenu] = useState(true);
   window.addEventListener("scroll", windowScroll);
@@ -158,7 +163,6 @@ export default function Navbar(props) {
         id="topnav"
         className={`defaultscroll is-sticky ${topnavClass ? topnavClass : ""}`}
       >
-        {console.log(topnavClass)}
         <div
           className={`${
             topnavClass !== "" && topnavClass !== undefined
@@ -186,7 +190,8 @@ export default function Navbar(props) {
 
               <div style={{ width: "160px" }}>
                 <img
-                  src={Svmlogo}
+                  // src={Svmlogo}
+                  src={GreenLogo}
                   className="l-dark w-full h-full object-contain"
                   height="24"
                   alt=""
@@ -194,7 +199,8 @@ export default function Navbar(props) {
               </div>
               <div style={{ width: "160px" }}>
                 <img
-                  src={SvmlogoDark}
+                  src={WhiteLogo}
+                  // src={GreenLogo}
                   className="l-light w-full h-full object-contain"
                   height="24"
                   alt=""
@@ -205,13 +211,15 @@ export default function Navbar(props) {
             <Link className="logo" to="#">
               <div style={{ width: "160px" }}>
                 <img
-                  src={Svmlogo}
+                  // src={Svmlogo}
+                  src={GreenLogo}
                   className="l-dark w-full h-full object-contain"
                   height="24"
                   alt=""
                 />
                 <img
-                  src={SvmlogoDark}
+                  src={WhiteLogo}
+                  // src={GreenLogo}
                   className="l-light w-full h-full object-contain"
                   height="24"
                   alt=""
@@ -381,17 +389,39 @@ export default function Navbar(props) {
                 <span className="menu-arrow"></span>
                 <ul className="submenu">
                   <li className="has-submenu parent-menu-item">
-                    <Link to="#"> Completed </Link>
+                    <p
+                      className="px-5 py-2 cursor-pointer hover:text-green-600"
+                      style={{ padding: "10px 1.25rem" }}
+                      onClick={() => navigate("/grid/:Completed")}
+                    >
+                      Completed
+                    </p>
                     <span className="submenu-arrow"></span>
                   </li>
                   <li className="has-submenu parent-menu-item">
-                    <Link to="#"> Running </Link>
+                    <p
+                      className="px-5 py-2 cursor-pointer hover:text-green-600"
+                      style={{ padding: "10px 1.25rem" }}
+                      onClick={() => navigate("/grid/:Running")}
+                    >
+                      Running
+                    </p>
                     <span className="submenu-arrow"></span>
                   </li>
                   <li className="has-submenu parent-menu-item">
-                    <Link to="#"> Upcoming </Link>
+                    <p
+                      className="px-5 py-2 cursor-pointer hover:text-green-600"
+                      style={{ padding: "8px 1.25rem" }}
+                      onClick={() => navigate("/grid/:Upcoming")}
+                    >
+                      Upcoming
+                    </p>
                     <span className="submenu-arrow"></span>
                   </li>
+                  {/* <li className="has-submenu parent-menu-item">
+                    <Link to="grid/:UpComing"> Upcoming </Link>
+                    <span className="submenu-arrow"></span>
+                  </li> */}
                 </ul>
               </li>
               <li>

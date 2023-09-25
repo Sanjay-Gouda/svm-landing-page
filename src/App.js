@@ -5,16 +5,11 @@ import "./App.css";
 import "./assets/css/tailwind.css";
 import "./assets/css/icons.css";
 
-import Index from "./pages/index.js";
 import PropertyDetail from "./pages/property-detail";
 import IndexTwo from "./pages/index-two";
-import IndexFour from "./pages/index-four";
-import IndexFive from "./pages/index-five";
-import Buy from "./pages/buy";
-import Sell from "./pages/sell";
+
 import Aboutus from "./pages/aboutus";
 import Features from "./pages/features";
-import Pricing from "./pages/pricing";
 import Login from "./pages/auth/login";
 import Signup from "./pages/auth/signup";
 import ResetPassword from "./pages/auth/reset-password";
@@ -28,6 +23,7 @@ import Grid from "./pages/grid";
 import Blogs from "./pages/blogs";
 
 import ScrollToTop from "./component/Scroll-top";
+import Feature from "./component/Feature";
 
 function App() {
   useEffect(() => {
@@ -54,12 +50,12 @@ function App() {
         <Route path="/knowmore-aboutus" element={<Privacy />} />
 
         <Route path="/404" element={<Page404 />} />
-
         <Route path="/auth-login" element={<Login />} />
         <Route path="/auth-signup" element={<Signup />} />
         <Route path="/auth-reset-password" element={<ResetPassword />} />
         <Route path="/comingsoon" element={<Comingsoon />} />
         <Route path="/maintenance" element={<Maintenance />} />
+        <Route path="/features" element={<Feature />} />
       </Routes>
     </BrowserRouter>
   );

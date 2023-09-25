@@ -1,5 +1,5 @@
 import React from "react";
-import { Link as Link2 } from "react-router-dom";
+import { Link as Link2, useNavigate } from "react-router-dom";
 import ResidentialImage from "../assets/images/property/residential.jpg";
 import LandImage from "../assets/images/property/land.jpg";
 import CommercialImage from "../assets/images/property/commercial.jpg";
@@ -110,6 +110,7 @@ const SERVICES = [
 ];
 
 const Category = () => {
+  const navigate = useNavigate();
   return (
     <>
       <div className="relative md:pt-24 pt-16">
@@ -130,9 +131,16 @@ const Category = () => {
             <TinySlider settings={settings}>
               {SERVICES?.map((item) => {
                 return (
-                  <div className="tiny-slide" key={item.id}>
+                  <div
+                    className="tiny-slide"
+                    key={item.id}
+                    onClick={() => navigate("/our-services")}
+                  >
                     <div className="group rounded-xl cursor-pointer bg-white dark:bg-slate-900 shadow hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700 overflow-hidden ease-in-out duration-500">
-                      <div style={{ width: "213px", height: "146px" }}>
+                      <div
+                        style={{ width: "213px", height: "146px" }}
+                        className="sm:w-full"
+                      >
                         <img
                           src={item.imgURL}
                           alt=""
