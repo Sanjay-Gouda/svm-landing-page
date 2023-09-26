@@ -1,5 +1,5 @@
 import React from "react";
-import { Link as Link2 } from "react-router-dom";
+import { Link as Link2, useNavigate } from "react-router-dom";
 import CountUp from "react-countup";
 
 import Navbar from "../component/Navbar";
@@ -21,6 +21,8 @@ import Member3 from "../assets/images/client/06.jpg";
 import Member4 from "../assets/images/client/07.jpg";
 import GetInTuch from "../component/Get-in-tuch";
 import { LuArrowRight } from "react-icons/lu";
+import { MEMBERS } from "../constants/members";
+import MemberList from "../component/memberList";
 
 const aboutus = [
   {
@@ -108,6 +110,12 @@ const mission = [
 ];
 
 export default function Aboutus() {
+  const navigate = useNavigate();
+
+  const handleRidrect = (id) => {
+    navigate(`/profile-detail/${id}`);
+  };
+
   return (
     <>
       <Navbar navClass="navbar-white" />
@@ -292,238 +300,66 @@ export default function Aboutus() {
 
           <div className="w-full flex justify-center">
             <div className="lg:col-span-3 md:col-span-6">
-              <div className="group text-center">
-                <div className="relative inline-block mx-auto h-52 w-52 rounded-full overflow-hidden">
-                  <img src={Founder} className="" alt="" />
-                  <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black h-52 w-52 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out"></div>
+              {MEMBERS?.slice(0, 1).map((member) => (
+                <div className="group text-center">
+                  <div className="relative inline-block mx-auto h-52 w-52 rounded-full overflow-hidden">
+                    <img src={member.prfoilePicture} className="" alt="" />
+                    <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black h-52 w-52 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out"></div>
 
-                  <ul className="list-none absolute start-0 end-0 -bottom-20 group-hover:bottom-5 transition-all duration-500 ease-in-out">
-                    <li className="inline ms-1">
-                      <Link2
-                        to="#"
-                        className="btn btn-icon btn-sm rounded-full border border-green-600 bg-green-600 hover:border-green-600 hover:bg-green-600 text-white"
-                      >
-                        <Facebook className="h-4 w-4" />
-                      </Link2>
-                    </li>
-                    <li className="inline ms-1">
-                      <Link2
-                        to="#"
-                        className="btn btn-icon btn-sm rounded-full border border-green-600 bg-green-600 hover:border-green-600 hover:bg-green-600 text-white"
-                      >
-                        <Instagram className="h-4 w-4" />
-                      </Link2>
-                    </li>
-                    <li className="inline ms-1">
-                      <Link2
-                        to="#"
-                        className="btn btn-icon btn-sm rounded-full border border-green-600 bg-green-600 hover:border-green-600 hover:bg-green-600 text-white"
-                      >
-                        <Linkedin className="h-4 w-4" />
-                      </Link2>
-                    </li>
-                  </ul>
-                </div>
+                    <ul className="list-none absolute start-0 end-0 -bottom-20 group-hover:bottom-5 transition-all duration-500 ease-in-out">
+                      <li className="inline ms-1">
+                        <Link2
+                          to="#"
+                          className="btn btn-icon btn-sm rounded-full border border-green-600 bg-green-600 hover:border-green-600 hover:bg-green-600 text-white"
+                        >
+                          <Facebook className="h-4 w-4" />
+                        </Link2>
+                      </li>
+                      <li className="inline ms-1">
+                        <Link2
+                          to="#"
+                          className="btn btn-icon btn-sm rounded-full border border-green-600 bg-green-600 hover:border-green-600 hover:bg-green-600 text-white"
+                        >
+                          <Instagram className="h-4 w-4" />
+                        </Link2>
+                      </li>
+                      <li className="inline ms-1">
+                        <Link2
+                          to="#"
+                          className="btn btn-icon btn-sm rounded-full border border-green-600 bg-green-600 hover:border-green-600 hover:bg-green-600 text-white"
+                        >
+                          <Linkedin className="h-4 w-4" />
+                        </Link2>
+                      </li>
+                    </ul>
+                  </div>
 
-                <div className="content mt-3">
-                  <Link2
-                    to="#"
-                    className="text-xl font-medium hover:text-green-600 transition-all duration-500 ease-in-out"
-                  >
-                    Mr. B.L. Kumawat
-                  </Link2>
-                  <p className="text-slate-400">Founder / Chairman</p>
+                  <div className="content mt-3">
+                    <p
+                      onClick={() => handleRidrect(member.id)}
+                      className="text-xl cursor-pointer font-medium hover:text-green-600 transition-all duration-500 ease-in-out"
+                    >
+                      {member?.name}
+                    </p>
+                    <p className="text-slate-400">{member?.designation}</p>
+                  </div>
                 </div>
-              </div>
+              ))}
             </div>
           </div>
 
           <div className="grid md:grid-cols-12 grid-cols-1 mt-8 gap-[30px]">
-            {/* <div className="lg:col-span-3 md:col-span-6">
-              <div className="group text-center">
-                <div className="relative inline-block mx-auto h-52 w-52 rounded-full overflow-hidden">
-                  <img src={Founder} className="" alt="" />
-                  <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black h-52 w-52 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out"></div>
-
-                  <ul className="list-none absolute start-0 end-0 -bottom-20 group-hover:bottom-5 transition-all duration-500 ease-in-out">
-                    <li className="inline ms-1">
-                      <Link2
-                        to="#"
-                        className="btn btn-icon btn-sm rounded-full border border-green-600 bg-green-600 hover:border-green-600 hover:bg-green-600 text-white"
-                      >
-                        <Facebook className="h-4 w-4" />
-                      </Link2>
-                    </li>
-                    <li className="inline ms-1">
-                      <Link2
-                        to="#"
-                        className="btn btn-icon btn-sm rounded-full border border-green-600 bg-green-600 hover:border-green-600 hover:bg-green-600 text-white"
-                      >
-                        <Instagram className="h-4 w-4" />
-                      </Link2>
-                    </li>
-                    <li className="inline ms-1">
-                      <Link2
-                        to="#"
-                        className="btn btn-icon btn-sm rounded-full border border-green-600 bg-green-600 hover:border-green-600 hover:bg-green-600 text-white"
-                      >
-                        <Linkedin className="h-4 w-4" />
-                      </Link2>
-                    </li>
-                  </ul>
-                </div>
-
-                <div className="content mt-3">
-                  <Link2
-                    to="#"
-                    className="text-xl font-medium hover:text-green-600 transition-all duration-500 ease-in-out"
-                  >
-                    Jack John
-                  </Link2>
-                  <p className="text-slate-400">Designer</p>
-                </div>
-              </div>
-            </div> */}
-
-            <div className="lg:col-span-4 md:col-span-6">
-              <div className="group text-center">
-                <div className="relative inline-block mx-auto h-52 w-52 rounded-full overflow-hidden">
-                  <img src={MDirector} className="" alt="" />
-                  <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black h-52 w-52 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out"></div>
-
-                  <ul className="list-none absolute start-0 end-0 -bottom-20 group-hover:bottom-5 transition-all duration-500 ease-in-out">
-                    <li className="inline ms-1">
-                      <Link2
-                        to="#"
-                        className="btn btn-icon btn-sm rounded-full border border-green-600 bg-green-600 hover:border-green-600 hover:bg-green-600 text-white"
-                      >
-                        <Facebook className="h-4 w-4" />
-                      </Link2>
-                    </li>
-                    <li className="inline ms-1">
-                      <Link2
-                        to="#"
-                        className="btn btn-icon btn-sm rounded-full border border-green-600 bg-green-600 hover:border-green-600 hover:bg-green-600 text-white"
-                      >
-                        <Instagram className="h-4 w-4" />
-                      </Link2>
-                    </li>
-                    <li className="inline ms-1">
-                      <Link2
-                        to="#"
-                        className="btn btn-icon btn-sm rounded-full border border-green-600 bg-green-600 hover:border-green-600 hover:bg-green-600 text-white"
-                      >
-                        <Linkedin className="h-4 w-4" />
-                      </Link2>
-                    </li>
-                  </ul>
-                </div>
-
-                <div className="content mt-3">
-                  <Link2
-                    to="#"
-                    className="text-xl font-medium hover:text-green-600 transition-all duration-500 ease-in-out"
-                  >
-                    Mr.Vikram B. Kumawat
-                  </Link2>
-                  <p className="text-slate-400">Managing Director</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="lg:col-span-4 md:col-span-6">
-              <div className="group text-center">
-                <div className="relative inline-block mx-auto h-52 w-52 rounded-full overflow-hidden">
-                  <img src={DDirector} className="" alt="" />
-                  <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black h-52 w-52 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out"></div>
-
-                  <ul className="list-none absolute start-0 end-0 -bottom-20 group-hover:bottom-5 transition-all duration-500 ease-in-out">
-                    <li className="inline ms-1">
-                      <Link2
-                        to="#"
-                        className="btn btn-icon btn-sm rounded-full border border-green-600 bg-green-600 hover:border-green-600 hover:bg-green-600 text-white"
-                      >
-                        <Facebook className="h-4 w-4" />
-                      </Link2>
-                    </li>
-                    <li className="inline ms-1">
-                      <Link2
-                        to="#"
-                        className="btn btn-icon btn-sm rounded-full border border-green-600 bg-green-600 hover:border-green-600 hover:bg-green-600 text-white"
-                      >
-                        <Instagram className="h-4 w-4" />
-                      </Link2>
-                    </li>
-                    <li className="inline ms-1">
-                      <Link2
-                        to="#"
-                        className="btn btn-icon btn-sm rounded-full border border-green-600 bg-green-600 hover:border-green-600 hover:bg-green-600 text-white"
-                      >
-                        <Linkedin className="h-4 w-4" />
-                      </Link2>
-                    </li>
-                  </ul>
-                </div>
-
-                <div className="content mt-3">
-                  <Link2
-                    to="#"
-                    className="text-xl font-medium hover:text-green-600 transition-all duration-500 ease-in-out"
-                  >
-                    Mr.Sanjay B. Kumawat
-                  </Link2>
-                  <p className="text-slate-400">
-                    Operations & Development Director
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="lg:col-span-4 md:col-span-6">
-              <div className="group text-center">
-                <div className="relative inline-block mx-auto h-52 w-52 rounded-full overflow-hidden">
-                  <img src={HRD} className="" alt="" />
-                  <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black h-52 w-52 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out"></div>
-
-                  <ul className="list-none absolute start-0 end-0 -bottom-20 group-hover:bottom-5 transition-all duration-500 ease-in-out">
-                    <li className="inline ms-1">
-                      <Link2
-                        to="#"
-                        className="btn btn-icon btn-sm rounded-full border border-green-600 bg-green-600 hover:border-green-600 hover:bg-green-600 text-white"
-                      >
-                        <Facebook className="h-4 w-4" />
-                      </Link2>
-                    </li>
-                    <li className="inline ms-1">
-                      <Link2
-                        to="#"
-                        className="btn btn-icon btn-sm rounded-full border border-green-600 bg-green-600 hover:border-green-600 hover:bg-green-600 text-white"
-                      >
-                        <Instagram className="h-4 w-4" />
-                      </Link2>
-                    </li>
-                    <li className="inline ms-1">
-                      <Link2
-                        to="#"
-                        className="btn btn-icon btn-sm rounded-full border border-green-600 bg-green-600 hover:border-green-600 hover:bg-green-600 text-white"
-                      >
-                        <Linkedin className="h-4 w-4" />
-                      </Link2>
-                    </li>
-                  </ul>
-                </div>
-
-                <div className="content mt-3">
-                  <Link2
-                    to="#"
-                    className="text-xl font-medium hover:text-green-600 transition-all duration-500 ease-in-out"
-                  >
-                    Mr.Mahendra M Kumawat
-                  </Link2>
-                  <p className="text-slate-400">HRD & Marketing Director</p>
-                </div>
-              </div>
-            </div>
+            {MEMBERS.slice(1, 4)?.map((member) => (
+              <MemberList
+                name={member.name}
+                profile={member.prfoilePicture}
+                designation={member.designation}
+                linkedin={member.linkedin}
+                fb={member.fb}
+                ig={member.ig}
+                handleRidrect={() => handleRidrect(member.id)}
+              />
+            ))}
           </div>
         </div>
         {/* <ClientTwo /> */}

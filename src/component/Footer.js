@@ -1,7 +1,7 @@
 import React from "react";
 import { Link as Link2 } from "react-router-dom";
 // import LogoLight from "../assets/images/logo-light.png";
-import LogoDark from "../assets/images/svm-logo-dark.png";
+import LogoDark from "../assets/images/d-logo.png";
 // import LogoLight from "../assets/images/svm-head-logo.png";
 import {
   MapPin,

@@ -56,7 +56,7 @@ function App() {
         <Route path="/auth-reset-password" element={<ResetPassword />} />
         <Route path="/comingsoon" element={<Comingsoon />} />
         <Route path="/maintenance" element={<Maintenance />} />
-        <Route path="/profile-detail" element={<ProfileDetail />} />
+        <Route path="/profile-detail/:id" element={<ProfileDetail />} />
       </Routes>
     </BrowserRouter>
   );

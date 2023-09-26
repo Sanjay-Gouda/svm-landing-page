@@ -1,13 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { NavLink, Link, useNavigate } from "react-router-dom";
 
-import LogoLight from "../assets/images/logo-light.png";
-import LogoDark from "../assets/images/logo-dark.png";
-import Svmlogo from "../assets/images/svm-head-logo.png";
-import SvmlogoDark from "../assets/images/svm-logo-dark.png";
-
-import GreenLogo from "../assets/images/black-green.png";
-import WhiteLogo from "../assets/images/white-green.png";
+import GreenLogo from "../assets/images/l-logo.png";
+import WhiteLogo from "../assets/images/d-logo.png";
 
 import { User } from "react-feather";
 
@@ -199,8 +194,8 @@ export default function Navbar(props) {
               </div>
               <div style={{ width: "160px" }}>
                 <img
-                  src={WhiteLogo}
-                  // src={GreenLogo}
+                  // src={WhiteLogo}
+                  src={GreenLogo}
                   className="l-light w-full h-full object-contain"
                   height="24"
                   alt=""
