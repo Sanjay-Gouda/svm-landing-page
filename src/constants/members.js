@@ -60,7 +60,7 @@ export const MEMBERS = [
     fb: "#",
     ig: "#",
     about: `
-    “Mr. Sanjay B Kumawat” ,entired the ral estate industry with a passion to build dream abodes for the homebuyers, Being a commited,passionate and hard-working person, he is true innovator and a farsighted man, Who excels in bringing the best practices around customers relations in business. Apart from his passion of building sustainable homes for buyers, his interests include sports, social causes, cultural activites, travelling and art.    
+    “Mr. Sanjay B Kumawat” ,entired the real estate industry with a passion to build dream abodes for the homebuyers, Being a commited,passionate and hard-working person, he is true innovator and a farsighted man, Who excels in bringing the best practices around customers relations in business. Apart from his passion of building sustainable homes for buyers, his interests include sports, social causes, cultural activites, travelling and art.    
     `,
     tagline: `
     “Mr.S B Kumawat”, plays a major role in building confidence and good relationships with external and internal customers and oversees the critical task of building a suitable image and reputation for the company

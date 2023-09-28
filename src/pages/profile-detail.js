@@ -13,6 +13,19 @@ const ProfileDetail = () => {
   const params = useParams();
 
   const [detail, setDetail] = useState([]);
+  const [title, setTitle] = useState("Founder");
+
+  useEffect(() => {
+    if (params.id === "1") {
+      setTitle("Founder");
+    } else if (params.id === "2") {
+      setTitle("Managing Director");
+    } else if (params.id === "3") {
+      setTitle("Operations & Development Director");
+    } else {
+      setTitle("HRD & Marketing Director");
+    }
+  }, []);
 
   const getMemberDetail = () => {
     const MemberDetail = MEMBERS?.find(
@@ -37,7 +50,8 @@ const ProfileDetail = () => {
         <div className="container">
           <div className="grid grid-cols-1 text-center mt-10">
             <h3 className="md:text-4xl text-3xl md:leading-normal leading-normal font-medium text-white">
-              Member Name
+              {/* Member Name */}
+              {title}
             </h3>
           </div>
         </div>

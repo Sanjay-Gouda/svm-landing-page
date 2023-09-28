@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "../component/Navbar";
 import Footer from "../component/Footer";
+import ClipLoader from "react-spinners/ClipLoader";
 
 import ContactImage from "../assets/images/svg/contact.svg";
 import Switcher from "../component/Switcher";
@@ -8,17 +9,33 @@ import { Hexagon } from "react-feather";
 import { BsTelephone, MdMailOutline, FiMapPin } from "../assets/icons/vander";
 import { useFormik } from "formik";
 import { httpInstance } from "../constants/httpinstances";
+import { ConfettiCompo } from "../component/Confetti";
+import ErrorComponent from "./Error";
+import * as Yup from "yup";
+
+const validationSchema = Yup.object().shape({
+  name: Yup.string().required("First Name is required "),
+  message: Yup.string().required("Please , Enter you Message "),
+  subject: Yup.string().required("Please , Select your Subject"),
+  mono: Yup.string()
+    .matches(/^[0-9]{10}$/, "Invalid Mobile number")
+    .required("Customer Mobile Number is required"),
+
+  email: Yup.string().email("Invalid email address"),
+});
 
 const initialValues = {
   name: "",
   email: "",
   message: "",
   mono: "",
-  subject: "",
+  subject: "Booking in Project",
 };
 
 export default function Contact() {
   const [showAlert, setShowAlert] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
 
   const addData = async (values) => {
     const { name, email, mono, subject, message } = values;
@@ -31,29 +48,46 @@ export default function Contact() {
       subject: subject,
     };
 
+    setLoading(true);
     try {
       const res = await httpInstance.post("website/contact-us", payload);
       console.log(res, "response");
 
       if (res.status === 200) {
+        setLoading(false);
         setShowAlert(true);
       }
 
       setTimeout(() => {
         setShowAlert(false);
-      }, 2000);
+      }, 10000);
     } catch (err) {
-      console.log(err);
+      setTimeout(() => {
+        setError(false);
+      }, 10000);
+      setError(true);
+      setLoading(false);
     }
   };
 
   const formik = useFormik({
     initialValues: initialValues,
-    onSubmit: (values) => {
+    validationSchema,
+    onSubmit: (values, { resetForm }) => {
       console.log(values);
+
       addData(values);
+      setTimeout(() => {
+        resetForm();
+      }, 5000);
     },
   });
+
+  const handleChange = (e) => {
+    // console.log(e.target.value);
+
+    formik.setFieldValue("subject", e.target.value);
+  };
 
   return (
     <>
@@ -83,7 +117,8 @@ export default function Contact() {
             </div>
 
             <div className="lg:col-span-5 md:col-span-6">
-              <div className="lg:me-5">
+              <div className="lg:me-5 relative">
+                {showAlert && <ConfettiCompo />}
                 <div className="bg-white dark:bg-slate-900 rounded-md shadow dark:shadow-gray-700 p-6">
                   <h3 className="mb-6 text-2xl leading-normal font-medium">
                     Get in touch !
@@ -91,9 +126,9 @@ export default function Contact() {
 
                   {showAlert && (
                     <div
-                      className=" mb-3  w-full rounded-lg px-6 py-5 text-base text-success-700"
+                      className=" mb-3 bg-white dark:bg-slate-900  w-full rounded-lg px-6 py-5 text-base leading-normal font-medium text-success-700"
                       style={{
-                        background: "#bbf7d0",
+                        // background: "#bbf7d0",
                         padding: "10px",
                         display: "flex ",
                         alignItems: "start !important",
@@ -118,6 +153,7 @@ export default function Contact() {
                       🙂🙂.
                     </div>
                   )}
+                  {error && <ErrorComponent />}
 
                   <div className="grid lg:grid-cols-12 lg:gap-6">
                     <div className="lg:col-span-6 mb-5">
@@ -133,6 +169,10 @@ export default function Contact() {
                         className="form-input mt-2"
                         placeholder="Name :"
                       />
+
+                      {formik.touched.name && formik.errors.name && (
+                        <div className="text-red-600">{formik.errors.name}</div>
+                      )}
                     </div>
 
                     <div className="lg:col-span-6 mb-5">
@@ -148,6 +188,12 @@ export default function Contact() {
                         className="form-input mt-2"
                         placeholder="Email :"
                       />
+
+                      {formik.touched.email && formik.errors.email && (
+                        <div className="text-red-600">
+                          {formik.errors.email}
+                        </div>
+                      )}
                     </div>
                   </div>
 
@@ -164,8 +210,11 @@ export default function Contact() {
                         className="form-input mt-2"
                         placeholder="Mobile No :"
                       />
+                      {formik.touched.mono && formik.errors.mono && (
+                        <div className="text-red-600">{formik.errors.mono}</div>
+                      )}
                     </div>
-                    <div className="mb-5">
+                    {/* <div className="mb-5">
                       <label htmlFor="subject" className="font-medium">
                         Subject:
                       </label>
@@ -177,6 +226,30 @@ export default function Contact() {
                         className="form-input mt-2"
                         placeholder="Subject :"
                       />
+                    </div> */}
+                    <div className="mb-5 flex flex-col">
+                      <label className="font-medium" htmlFor="countries">
+                        What we can help you with ?
+                      </label>
+                      <select
+                        className="form-select form-input"
+                        id="countries"
+                        onChange={handleChange}
+                      >
+                        <option selected className="py-2">
+                          Booking in Project
+                        </option>
+                        <option value="land proposal" className="py-2">
+                          Land Proposal
+                        </option>
+                        <option value="svm vendor">Become a SVM Vendor</option>
+                      </select>
+
+                      {formik.touched.subject && formik.errors.subject && (
+                        <div className="text-red-600">
+                          {formik.errors.subject}
+                        </div>
+                      )}
                     </div>
 
                     <div className="mb-5">
@@ -191,6 +264,12 @@ export default function Contact() {
                         className="form-input mt-2 textarea"
                         placeholder="Message :"
                       ></textarea>
+
+                      {formik.touched.message && formik.errors.message && (
+                        <div className="text-red-600">
+                          {formik.errors.message}
+                        </div>
+                      )}
                     </div>
                   </div>
 
@@ -202,6 +281,7 @@ export default function Contact() {
                     className="btn bg-green-600 hover:bg-green-700 text-white rounded-md"
                   >
                     Send Message
+                    {loading && <ClipLoader color="#fff" size={25} />}
                   </button>
 
                   {/* </form> */}

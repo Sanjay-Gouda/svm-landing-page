@@ -85,6 +85,12 @@ const ProfileDetailContainer = ({
 
             <div>
               <p className=" text-slate-400 text-base">{about}</p>
+
+              {tagline && (
+                <p className=" italic border-x-4 border-green-600 rounded-ss-xl rounded-ee-xl mt-3 p-3 my-4">
+                  {tagline}
+                </p>
+              )}
             </div>
           </div>
         </div>

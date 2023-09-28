@@ -79,13 +79,13 @@ export default function Footer() {
                     <img src={LogoDark} alt="" />
                   </div>
                 </Link2>
-                <p className="mt-4 text-gray-300">
+                {/* <p className="mt-4 text-gray-300">
                   "We Build Your <span className="text-green-600">Dreams</span>,
                   To Make Your <span className="text-green-600">Dreams</span>{" "}
                   Come True"
-                </p>
+                </p> */}
               </div>
-
+                
               <div className="lg:col-span-2 md:col-span-4">
                 <h5 className="tracking-[1px] text-gray-100 font-semibold">
                   Company
