@@ -57,7 +57,8 @@ const ProfileDetailContainer = ({
                 <ul className="list-none  transition-all duration-500 ease-in-out">
                   <li className="inline ms-1">
                     <Link2
-                      to="#"
+                      to={fb}
+                      target="_blank"
                       className="btn btn-icon btn-sm rounded-full border border-green-600 bg-green-600 hover:border-green-600 hover:bg-green-600 text-white "
                     >
                       <Facebook className="h-4 w-4" />
@@ -65,7 +66,8 @@ const ProfileDetailContainer = ({
                   </li>
                   <li className="inline ms-1">
                     <Link2
-                      to="#"
+                      to={ig}
+                      target="_blank"
                       className="btn btn-icon btn-sm rounded-full border border-green-600 bg-green-600 hover:border-green-600 hover:bg-green-600 text-white"
                     >
                       <Instagram className="h-4 w-4" />
@@ -73,7 +75,8 @@ const ProfileDetailContainer = ({
                   </li>
                   <li className="inline ms-1">
                     <Link2
-                      to="#"
+                      to={linkedin}
+                      target="_blank"
                       className="btn btn-icon btn-sm rounded-full border border-green-600 bg-green-600 hover:border-green-600 hover:bg-green-600 text-white"
                     >
                       <Linkedin className="h-4 w-4" />

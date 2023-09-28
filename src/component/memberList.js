@@ -2,8 +2,6 @@ import React from "react";
 import { Facebook, Instagram, Linkedin } from "react-feather";
 import { Link as Link2 } from "react-router-dom";
 
-import MDirector from "../assets/images/client/MD.jpg";
-
 const MemberList = ({
   name,
   profile,
@@ -24,7 +22,8 @@ const MemberList = ({
             <ul className="list-none absolute start-0 end-0 -bottom-20 group-hover:bottom-5 transition-all duration-500 ease-in-out">
               <li className="inline ms-1">
                 <Link2
-                  to="#"
+                  to={fb}
+                  target="_blank"
                   className="btn btn-icon btn-sm rounded-full border border-green-600 bg-green-600 hover:border-green-600 hover:bg-green-600 text-white"
                 >
                   <Facebook className="h-4 w-4" />
@@ -32,7 +31,8 @@ const MemberList = ({
               </li>
               <li className="inline ms-1">
                 <Link2
-                  to="#"
+                  to={ig}
+                  target="_blank"
                   className="btn btn-icon btn-sm rounded-full border border-green-600 bg-green-600 hover:border-green-600 hover:bg-green-600 text-white"
                 >
                   <Instagram className="h-4 w-4" />
@@ -40,7 +40,8 @@ const MemberList = ({
               </li>
               <li className="inline ms-1">
                 <Link2
-                  to="#"
+                  to={linkedin}
+                  target="_blank"
                   className="btn btn-icon btn-sm rounded-full border border-green-600 bg-green-600 hover:border-green-600 hover:bg-green-600 text-white"
                 >
                   <Linkedin className="h-4 w-4" />

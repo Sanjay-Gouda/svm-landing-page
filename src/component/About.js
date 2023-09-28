@@ -20,7 +20,7 @@ export default function About() {
                   to="#"
                   onClick={() => setOpen(true)}
                   data-type="youtube"
-                  data-id="PrVSAKS3CYc"
+                  data-id="i6PZQTJtuL8"
                   className="lightbox h-20 w-20 rounded-full shadow-md dark:shadow-gyay-700 inline-flex items-center justify-center bg-white dark:bg-slate-900 text-green-600"
                 >
                   <i className="mdi mdi-play inline-flex items-center justify-center text-2xl"></i>
@@ -58,7 +58,7 @@ export default function About() {
       <ModalVideo
         isOpen={isOpen}
         channel="youtube"
-        videoId="PrVSAKS3CYc"
+        videoId="i6PZQTJtuL8"
         onClose={() => setOpen(false)}
       />
     </>

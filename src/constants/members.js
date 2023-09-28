@@ -9,9 +9,10 @@ export const MEMBERS = [
     name: "Mr. B.L. Kumawat",
     prfoilePicture: Founder,
     designation: "Founder / Chairman",
-    linkedin: "#",
-    fb: "#",
-    ig: "#",
+    linkedin:
+      "https://www.linkedin.com/in/svm-builders-and-developers-4a59481a0/?originalSubdomain=in",
+    fb: "https://www.facebook.com/profile.php?id=100064151886759",
+    ig: "https://www.instagram.com/svmbuildersanddevelopers0326/",
     about: `
     “Mr.Babulal .L. Kumawat” has been on the Board of Directors
                 since the inception of SVM Builders & Developers. Born on April
@@ -42,9 +43,10 @@ export const MEMBERS = [
     name: "Mr.Vikram B. Kumawat",
     prfoilePicture: MDirector,
     designation: "Managing Director",
-    linkedin: "#",
-    fb: "#",
-    ig: "#",
+    linkedin:
+      "https://www.linkedin.com/in/svm-builders-and-developers-4a59481a0/?originalSubdomain=in",
+    fb: "https://www.facebook.com/profile.php?id=100064151886759",
+    ig: "https://www.instagram.com/svmbuildersanddevelopers0326/",
     about: `
     “Mr. Vikram B Kumawat” is responsible for the day to day operations of the company.His Stewardship of SVM Builders & Developers  spans over half a Decade. Mr. V B Kumawat,Has Inculcated within The company a culture of excellence and innovation,built around quality,customer centricity,technology and sustainable practices,manifested in SVM’s Customers trust winning project portfolio.He aims to offer innovative and world –class realty solutions to all its occupants.
     
@@ -56,9 +58,10 @@ export const MEMBERS = [
     name: "Mr.Sanjay B. Kumawat",
     prfoilePicture: DDirector,
     designation: "Operations & Development Director",
-    linkedin: "#",
-    fb: "#",
-    ig: "#",
+    linkedin:
+      "https://www.linkedin.com/in/svm-builders-and-developers-4a59481a0/?originalSubdomain=in",
+    fb: "https://www.facebook.com/profile.php?id=100064151886759",
+    ig: "https://www.instagram.com/svmbuildersanddevelopers0326/",
     about: `
     “Mr. Sanjay B Kumawat” ,entired the real estate industry with a passion to build dream abodes for the homebuyers, Being a commited,passionate and hard-working person, he is true innovator and a farsighted man, Who excels in bringing the best practices around customers relations in business. Apart from his passion of building sustainable homes for buyers, his interests include sports, social causes, cultural activites, travelling and art.    
     `,
@@ -71,9 +74,10 @@ export const MEMBERS = [
     name: "Mr. Mahendra M Kumawat",
     prfoilePicture: HRD,
     designation: "HRD & Marketing Director",
-    linkedin: "#",
-    fb: "#",
-    ig: "#",
+    linkedin:
+      "https://www.linkedin.com/in/svm-builders-and-developers-4a59481a0/?originalSubdomain=in",
+    fb: "https://www.facebook.com/profile.php?id=100064151886759",
+    ig: "https://www.instagram.com/svmbuildersanddevelopers0326/",
     about: `
     “Mr. Mahendra M Kumawat”, Joined the company in mid 2014, with his exceptional talent in analyzing & managing the marketing budget, and ensuring that all marketing material is in line with the companies brand identity. He also ensures the safety and good quality work as well as HRD (Human Resource Developmet) for the work force to meet the customer’s deadlines for the project completion.
     `,

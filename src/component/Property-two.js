@@ -12,6 +12,10 @@ import {
 } from "../assets/icons/vander";
 import "tiny-slider/dist/tiny-slider.css";
 
+import Running from "../assets/images/property/1.jpg";
+import Upcoming from "../assets/images/property/2.jpg";
+import Completed from "../assets/images/property/5.jpg";
+
 const settings = {
   controls: true,
   mouseDrag: true,
@@ -66,10 +70,11 @@ export default function PropertyTwo() {
         >
           <div
             style={{ width: "350px" }}
-            onClick={() => navigate("/grid/:Running")}
+            // onClick={() => navigate("/grid/:Running")}
+            onClick={() => navigate("/comingsoon")}
             className="group rounded-xl cursor-pointer  bg-white dark:bg-slate-900 shadow hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700 overflow-hidden ease-in-out duration-500"
           >
-            <img src="https://i.ibb.co/ZmtmLGK/a.jpg" alt="" />
+            <img src={Running} alt="" />
 
             <div className="p-4">
               <Link2
@@ -82,12 +87,13 @@ export default function PropertyTwo() {
           </div>
           <div
             style={{ width: "350px" }}
-            onClick={() => navigate("/grid/:Upcoming")}
+            // onClick={() => navigate("/grid/:Upcoming")}
+            onClick={() => navigate("/comingsoon")}
             className="group rounded-xl bg-white dark:bg-slate-900 shadow hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700 overflow-hidden ease-in-out duration-500"
           >
             <div style={{ width: "350px", height: "236px" }}>
               <img
-                src="https://i.ibb.co/pzGysVS/b.jpg"
+                src={Upcoming}
                 className="w-full h-full object-contain"
                 alt=""
               />
@@ -103,7 +109,8 @@ export default function PropertyTwo() {
           </div>
           <div
             style={{ width: "350px" }}
-            onClick={() => navigate("/grid/:Completed")}
+            // onClick={() => navigate("/grid/:Completed")}
+            onClick={() => navigate("/comingsoon")}
             className="image-hover group rounded-xl bg-white dark:bg-slate-900 shadow hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700 overflow-hidden ease-in-out duration-500"
           >
             <div style={{ width: "350px", height: "236px" }}>
@@ -113,7 +120,7 @@ export default function PropertyTwo() {
                 alt=""
               /> */}
               <img
-                src="https://i.ibb.co/QMrtWT1/c.jpg"
+                src={Completed}
                 className="w-full h-full object-contain"
                 alt=""
               />

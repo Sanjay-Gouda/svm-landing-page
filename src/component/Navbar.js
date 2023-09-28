@@ -152,6 +152,10 @@ export default function Navbar(props) {
   // render() {
   // const toggleClass = this.state.isOpenMenu ? 'hidden' : 'block';
 
+  const handleRedirect = () => {
+    navigate("/");
+  };
+
   return (
     <React.Fragment>
       <nav
@@ -183,7 +187,7 @@ export default function Navbar(props) {
                 alt=""
               /> */}
 
-              <div style={{ width: "160px" }}>
+              <div style={{ width: "160px" }} onClick={handleRedirect}>
                 <img
                   // src={Svmlogo}
                   src={GreenLogo}
@@ -192,7 +196,7 @@ export default function Navbar(props) {
                   alt=""
                 />
               </div>
-              <div style={{ width: "160px" }}>
+              <div style={{ width: "160px" }} onClick={handleRedirect}>
                 <img
                   // src={WhiteLogo}
                   src={GreenLogo}
@@ -203,8 +207,8 @@ export default function Navbar(props) {
               </div>
             </Link>
           ) : (
-            <Link className="logo" to="#">
-              <div style={{ width: "160px" }}>
+            <Link className="logo" to="/">
+              <div style={{ width: "160px" }} onClick={handleRedirect}>
                 <img
                   // src={Svmlogo}
                   src={GreenLogo}
@@ -387,7 +391,8 @@ export default function Navbar(props) {
                     <p
                       className="px-5 py-2 cursor-pointer hover:text-green-600"
                       style={{ padding: "10px 1.25rem" }}
-                      onClick={() => navigate("/grid/:Completed")}
+                      // onClick={() => navigate("/grid/:Completed")}
+                      onClick={() => navigate("/comingsoon")}
                     >
                       Completed
                     </p>
@@ -397,7 +402,8 @@ export default function Navbar(props) {
                     <p
                       className="px-5 py-2 cursor-pointer hover:text-green-600"
                       style={{ padding: "10px 1.25rem" }}
-                      onClick={() => navigate("/grid/:Running")}
+                      // onClick={() => navigate("/grid/:Running")}
+                      onClick={() => navigate("/comingsoon")}
                     >
                       Running
                     </p>
@@ -407,7 +413,8 @@ export default function Navbar(props) {
                     <p
                       className="px-5 py-2 cursor-pointer hover:text-green-600"
                       style={{ padding: "8px 1.25rem" }}
-                      onClick={() => navigate("/grid/:Upcoming")}
+                      // onClick={() => navigate("/grid/:Upcoming")}
+                      onClick={() => navigate("/comingsoon")}
                     >
                       Upcoming
                     </p>
