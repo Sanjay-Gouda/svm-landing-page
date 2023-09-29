@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { NavLink, Link, useNavigate } from "react-router-dom";
 
 import GreenLogo from "../assets/images/l-logo.png";
+import NewLogo from "../assets/images/svm-new-logo.png";
+
 import WhiteLogo from "../assets/images/d-logo.png";
 
 import { User } from "react-feather";
@@ -190,7 +192,7 @@ export default function Navbar(props) {
               <div style={{ width: "160px" }} onClick={handleRedirect}>
                 <img
                   // src={Svmlogo}
-                  src={GreenLogo}
+                  src={NewLogo}
                   className="l-dark w-full h-full object-contain"
                   height="24"
                   alt=""
@@ -199,7 +201,7 @@ export default function Navbar(props) {
               <div style={{ width: "160px" }} onClick={handleRedirect}>
                 <img
                   // src={WhiteLogo}
-                  src={GreenLogo}
+                  src={NewLogo}
                   className="l-light w-full h-full object-contain"
                   height="24"
                   alt=""
@@ -210,8 +212,8 @@ export default function Navbar(props) {
             <Link className="logo" to="/">
               <div style={{ width: "160px" }} onClick={handleRedirect}>
                 <img
-                  // src={Svmlogo}
-                  src={GreenLogo}
+                  src={NewLogo}
+                  // src={GreenLogo}
                   className="l-dark w-full h-full object-contain"
                   height="24"
                   alt=""

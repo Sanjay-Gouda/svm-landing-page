@@ -5,6 +5,8 @@ import withRouter from "../component/withrouter";
 import Navbar from "../component/Navbar";
 import Switcher from "../component/Switcher";
 import Footer from "../component/Footer";
+import TinySlider from "tiny-slider-react";
+import "tiny-slider/dist/tiny-slider.css";
 
 import Lightbox from "react-18-image-lightbox";
 import "react-18-image-lightbox/style.css";
@@ -23,6 +25,45 @@ import Image3 from "../assets/images/property/single/p-3.png";
 import Image4 from "../assets/images/property/single/p-4.png";
 import Image5 from "../assets/images/property/single/p-5.png";
 
+import Hc1 from "../assets/images/HappyCustomers/hc1.png";
+import Hc2 from "../assets/images/HappyCustomers/hc2.png";
+import Hc3 from "../assets/images/HappyCustomers/hc3.png";
+import Hc4 from "../assets/images/HappyCustomers/hc4.png";
+import Hc5 from "../assets/images/HappyCustomers/hc5.png";
+import Hc6 from "../assets/images/HappyCustomers/hc6.png";
+import Hc7 from "../assets/images/HappyCustomers/hc7.png";
+import Hc8 from "../assets/images/HappyCustomers/hc8.png";
+
+const customers = [Hc1, Hc2, Hc3, Hc4, Hc5, Hc6, Hc7, Hc8];
+
+const settings = {
+  controls: false,
+  mouseDrag: true,
+  loop: true,
+  rewind: false,
+
+  item: 3,
+  // mode: "gallery",
+  autoplay: true,
+  autoplayButtonOutput: false,
+  autoplayTimeout: 5000,
+  navPosition: "bottom",
+  speed: 800,
+  gutter: 14,
+  responsive: {
+    992: {
+      items: 3,
+    },
+
+    767: {
+      items: 2,
+    },
+
+    320: {
+      items: 1,
+    },
+  },
+};
 const images = [Image1, Image2, Image3, Image4, Image5];
 
 const features = [
@@ -316,13 +357,74 @@ function PropertyDetail(props) {
               </p>
 
               <div className="w-full leading-[0] border-0 mt-6">
-                <iframe
-                  title="iframe"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d39206.002432144705!2d-95.4973981212445!3d29.709510002925988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640c16de81f3ca5%3A0xf43e0b60ae539ac9!2sGerald+D.+Hines+Waterwall+Park!5e0!3m2!1sen!2sin!4v1566305861440!5m2!1sen!2sin"
-                  style={{ border: "0" }}
-                  className="w-full h-[500px]"
-                  allowFullScreen
-                ></iframe>
+                <h5 className="text-2xl font-medium mb-6">
+                  🙂 🙂 Happy Customers 🙂 🙂
+                </h5>
+
+                <TinySlider settings={settings}>
+                  {customers?.map((item) => {
+                    return (
+                      <div
+                        className="tiny-slide"
+                        key={item.id}
+                        // onClick={() => navigate("/our-services")}
+                      >
+                        <div className="group rounded-xl cursor-pointer bg-white dark:bg-slate-900 shadow hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700 overflow-hidden ease-in-out duration-500">
+                          <div
+                            style={{
+                              width: "213px",
+                              height: "146px",
+                              borderRadius: "16px",
+                              overflow: "hidden",
+                            }}
+                            className="sm:w-full"
+                          >
+                            <img
+                              src={item}
+                              alt=""
+                              className="w-full h-full object-contain"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </TinySlider>
+              </div>
+              <div className="w-full leading-[0] border-0 mt-6">
+                <h5 className="text-2xl font-medium mb-6">
+                  🚧 Project Site Development 🚧
+                </h5>
+
+                <TinySlider settings={settings}>
+                  {customers?.map((item) => {
+                    return (
+                      <div
+                        className="tiny-slide"
+                        key={item.id}
+                        // onClick={() => navigate("/our-services")}
+                      >
+                        <div className="group rounded-xl cursor-pointer bg-white dark:bg-slate-900 shadow hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700 overflow-hidden ease-in-out duration-500">
+                          <div
+                            style={{
+                              width: "213px",
+                              height: "146px",
+                              borderRadius: "16px",
+                              overflow: "hidden",
+                            }}
+                            className="sm:w-full"
+                          >
+                            <img
+                              src={item}
+                              alt=""
+                              className="w-full h-full object-contain"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </TinySlider>
               </div>
             </div>
 

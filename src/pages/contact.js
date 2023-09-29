@@ -311,7 +311,7 @@ export default function Contact() {
                 <div className="mt-5">
                   <a
                     href="tel:+91-9662320636"
-                    className="btn btn-link text-green-600 hover:text-green-600 after:bg-green-600 transition duration-500"
+                    className="btn btn-link text-slate-400 hover:text-slate-400 after:bg-green-600 transition duration-500"
                   >
                     +91-9662320636
                   </a>
@@ -337,7 +337,7 @@ export default function Contact() {
                 <div className="mt-5">
                   <a
                     href="mailto:svmbuildersanddevelopers0326@gmail.com"
-                    className="btn btn-link text-green-600 hover:text-green-600 after:bg-green-600 transition duration-500"
+                    className="btn btn-link text-slate-400 hover:text-slate-400 after:bg-green-600 transition duration-500"
                   >
                     svmbuildersanddevelopers0326@gmail.com
                   </a>
@@ -357,7 +357,8 @@ export default function Contact() {
                 <h5 className="title h5 text-xl font-medium">Location</h5>
                 <p className="text-slate-400 mt-3">
                   F-27, Sidhi Vinayak Residency, Near yes bank, Station road,
-                  Sachin,Surat, Pin – 394230{" "}
+                  Sachin,Surat, <br />
+                  Pin – 394230{" "}
                 </p>
 
                 {/* <div className="mt-5">
