@@ -71,7 +71,7 @@ export default function PropertyTwo() {
           <div
             style={{ width: "350px" }}
             // onClick={() => navigate("/grid/:Running")}
-            onClick={() => navigate("/comingsoon")}
+            onClick={() => navigate("/property-detail/1")}
             className="group rounded-xl cursor-pointer  bg-white dark:bg-slate-900 shadow hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700 overflow-hidden ease-in-out duration-500"
           >
             <img src={Running} alt="" />
@@ -88,7 +88,7 @@ export default function PropertyTwo() {
           <div
             style={{ width: "350px" }}
             // onClick={() => navigate("/grid/:Upcoming")}
-            onClick={() => navigate("/comingsoon")}
+            onClick={() => navigate("/property-detail/1")}
             className="group rounded-xl bg-white dark:bg-slate-900 shadow hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700 overflow-hidden ease-in-out duration-500"
           >
             <div style={{ width: "350px", height: "236px" }}>

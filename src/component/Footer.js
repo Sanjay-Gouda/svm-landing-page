@@ -2,6 +2,7 @@ import React from "react";
 import { Link as Link2 } from "react-router-dom";
 // import LogoLight from "../assets/images/logo-light.png";
 import LogoDark from "../assets/images/d-logo.png";
+// import LogoDark from "../assets/images/svm-w-logo.png";
 // import LogoLight from "../assets/images/svm-head-logo.png";
 import {
   MapPin,
@@ -85,7 +86,7 @@ export default function Footer() {
                   Come True"
                 </p> */}
               </div>
-                
+
               <div className="lg:col-span-2 md:col-span-4">
                 <h5 className="tracking-[1px] text-gray-100 font-semibold">
                   Company
@@ -110,7 +111,7 @@ export default function Footer() {
                   </li>
                   <li className="mt-[10px]">
                     <Link2
-                      to="/pricing"
+                      to="/contact"
                       className="text-slate-300 hover:text-slate-400 duration-500 ease-in-out flex items-center"
                     >
                       <MdKeyboardArrowRight className="me-1 text-xl" /> Contact

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link as Link2 } from "react-router-dom";
+import { Link as Link2, useNavigate } from "react-router-dom";
 import LogoLight from "../assets/images/logo-icon-64.png";
 import BackgroundImage from "../assets/images/bg/01.jpg";
 import Particles from "react-tsparticles";
@@ -7,6 +7,8 @@ import { loadFull } from "tsparticles";
 import Switcher from "../component/Switcher";
 
 export default function Comingsoon() {
+  const navigate = useNavigate();
+
   const particlesInit = async (main) => {
     console.log(main);
     // initialize the tsParticles instance
@@ -213,9 +215,10 @@ export default function Comingsoon() {
 
               <button
                 // onClick={formik.handleSubmit}
+                onClick={() => navigate("/")}
                 className="btn bg-green-600 hover:bg-green-700 text-white rounded-md"
               >
-                <Link2 to="/">Back To Home</Link2>
+                Back To Home
                 {/* {loading && <ClipLoader color="#fff" size={25} />} */}
               </button>
             </div>

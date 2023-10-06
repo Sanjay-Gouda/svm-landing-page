@@ -34,7 +34,18 @@ import Hc6 from "../assets/images/HappyCustomers/hc6.png";
 import Hc7 from "../assets/images/HappyCustomers/hc7.png";
 import Hc8 from "../assets/images/HappyCustomers/hc8.png";
 
+import Ld1 from "../assets/images/Land-Developement/Ld1.png";
+import Ld2 from "../assets/images/Land-Developement/Ld2.png";
+import Ld3 from "../assets/images/Land-Developement/Ld3.png";
+import Ld4 from "../assets/images/Land-Developement/Ld4.png";
+import Ld5 from "../assets/images/Land-Developement/Ld5.png";
+import Ld6 from "../assets/images/Land-Developement/Ld6.png";
+import Ld7 from "../assets/images/Land-Developement/Ld7.png";
+import GetInTuch from "../component/Get-in-tuch";
+
 const customers = [Hc1, Hc2, Hc3, Hc4, Hc5, Hc6, Hc7, Hc8];
+
+const landDevelopment = [Ld1, Ld2, Ld3, Ld4, Ld5, Ld6, Ld7];
 
 const settings = {
   controls: false,
@@ -316,7 +327,7 @@ function PropertyDetail(props) {
 
                 <h4 className="text-2xl font-medium">Sai Residency-1</h4>
               </div>
-              <ul className="py-6 flex items-center list-none">
+              {/* <ul className="py-6 flex items-center list-none">
                 <li className="flex items-center lg:me-6 me-4">
                   <LiaCompressArrowsAltSolid className="lg:text-3xl text-2xl me-2 text-green-600" />
                   <span className="lg:text-xl">{property?.square}sqf</span>
@@ -331,29 +342,27 @@ function PropertyDetail(props) {
                   <LiaBathSolid className="lg:text-3xl text-2xl me-2 text-green-600" />
                   <span className="lg:text-xl">{property?.baths} Baths</span>
                 </li>
-              </ul>
+              </ul> */}
 
               <p className="text-slate-400">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-                quae ab illo inventore veritatis et quasi architecto beatae
-                vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
-                voluptas sit aspernatur aut odit aut fugit, sed quia
-                consequuntur magni dolores eos qui ratione voluptatem sequi
-                nesciunt.
+                <span className="font-semibold">Prime Location</span>: Sai
+                Residency is strategically located in one of the most
+                sought-after neighborhoods in the city. Whether it's easy access
+                to major highways, proximity to schools, hospitals, or shopping
+                centers, we've got you covered.
               </p>
-              <p className="text-slate-400 mt-4">
-                But I must explain to you how all this mistaken idea of
-                denouncing pleasure and praising pain was born and I will give
-                you a complete account of the system, and expound the actual
-                teachings of the great explorer of the truth, the master-builder
-                of human happiness.
+              <p className="text-slate-400">
+                <span className="font-semibold">Security and Privacy</span>: Sai
+                Your safety is our top priority. Our project is equipped with
+                24/7 security surveillance and controlled access to ensure a
+                secure and peaceful living environment for you and your family.
               </p>
-              <p className="text-slate-400 mt-4">
-                Nor again is there anyone who loves or pursues or desires to
-                obtain pain of itself, because it is pain, but because
-                occasionally circumstances occur in which toil and pain can
-                procure him some great pleasure.
+              <p className="text-slate-400">
+                <span className="font-semibold">Investment Opportunity</span>:
+                Sai Residency isn't just a place to live; it's an investment in
+                your future. The real estate market in this area is booming,
+                making it an ideal choice for those looking to invest in
+                property.
               </p>
 
               <div className="w-full leading-[0] border-0 mt-6">
@@ -372,7 +381,7 @@ function PropertyDetail(props) {
                         <div className="group rounded-xl cursor-pointer bg-white dark:bg-slate-900 shadow hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700 overflow-hidden ease-in-out duration-500">
                           <div
                             style={{
-                              width: "213px",
+                              width: "100%",
                               height: "146px",
                               borderRadius: "16px",
                               overflow: "hidden",
@@ -397,7 +406,7 @@ function PropertyDetail(props) {
                 </h5>
 
                 <TinySlider settings={settings}>
-                  {customers?.map((item) => {
+                  {landDevelopment?.map((item) => {
                     return (
                       <div
                         className="tiny-slide"
@@ -407,7 +416,7 @@ function PropertyDetail(props) {
                         <div className="group rounded-xl cursor-pointer bg-white dark:bg-slate-900 shadow hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700 overflow-hidden ease-in-out duration-500">
                           <div
                             style={{
-                              width: "213px",
+                              width: "100%",
                               height: "146px",
                               borderRadius: "16px",
                               overflow: "hidden",
@@ -417,7 +426,7 @@ function PropertyDetail(props) {
                             <img
                               src={item}
                               alt=""
-                              className="w-full h-full object-contain"
+                              className="w-full h-full object-cover"
                             />
                           </div>
                         </div>
@@ -425,6 +434,26 @@ function PropertyDetail(props) {
                     );
                   })}
                 </TinySlider>
+              </div>
+              <div className="grid grid-cols-1 text-center mt-6">
+                <h3 className="mb-6 md:text-3xl text-2xl md:leading-normal leading-normal font-medium text-black dark:text-white">
+                  Have Question ? Get in touch!
+                </h3>
+
+                <p className="text-slate-400 max-w-xl mx-auto">
+                  Encourage inquiries and communication by inviting individuals
+                  to reach out for answers, assistance, or information regarding
+                  real estate services.
+                </p>
+
+                <div className="mt-6">
+                  <Link2
+                    to="/contact"
+                    className="btn bg-green-600 hover:bg-green-700 text-white rounded-md"
+                  >
+                    <BsTelephone className="align-middle me-2" /> Contact us
+                  </Link2>
+                </div>
               </div>
             </div>
 
@@ -435,7 +464,7 @@ function PropertyDetail(props) {
                     <div className="p-6">
                       <h5 className="text-2xl font-medium">Scheme</h5>
 
-                      <div className="flex justify-between items-center mt-4">
+                      {/* <div className="flex justify-between items-center mt-4">
                         <span className="text-xl font-medium">
                           $ {property?.price}
                         </span>
@@ -443,7 +472,7 @@ function PropertyDetail(props) {
                         <span className="bg-green-600/10 text-green-600 text-sm px-2.5 py-0.75 rounded h-6">
                           For Sale
                         </span>
-                      </div>
+                      </div> */}
 
                       <ul className="list-none mt-4">
                         <li className="flex justify-between items-center">
@@ -616,21 +645,6 @@ function PropertyDetail(props) {
                             </Link2>
                         </div>
                         </div> */}
-                  </div>
-
-                  <div className="mt-6 text-center">
-                    <h3 className="mb-6 text-xl leading-normal font-medium text-black dark:text-white">
-                      Have Question ? Get in touch!
-                    </h3>
-
-                    <div className="mt-6">
-                      <Link2
-                        to="/contact"
-                        className="btn bg-transparent hover:bg-green-600 border border-green-600 text-green-600 hover:text-white rounded-md"
-                      >
-                        <BsTelephone className="align-middle me-2" /> Contact us
-                      </Link2>
-                    </div>
                   </div>
                 </div>
               </div>
