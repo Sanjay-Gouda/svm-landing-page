@@ -104,7 +104,7 @@ export default function IndexTwo() {
         <GetInTuch />
       </section>
       <Footer />
-      <Switcher />
+      {/* <Switcher /> */}
       {/* <!-- End --> */}
     </>
   );

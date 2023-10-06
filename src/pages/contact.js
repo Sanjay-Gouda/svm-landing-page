@@ -378,7 +378,7 @@ export default function Contact() {
       {/* <!-- End Section--> */}
 
       <Footer />
-      <Switcher />
+      {/* <Switcher /> */}
     </>
   );
 }

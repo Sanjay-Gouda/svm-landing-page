@@ -21,19 +21,9 @@ const ProfileDetailContainer = ({
         className="p-6 bg-slate-200 dark:bg-slate-900 shadow dark:shadow-gray-700 rounded-md"
         style={{ backgroundColor: "#f1f5f9" }}
       >
-        <div
-          className="w-full flex gap-4 "
-          style={{ columnGap: "24px", rowGap: "24px" }}
-        >
-          <div style={{ width: "30%" }} className="w-[30%]">
-            <div
-              style={{
-                width: "300px",
-                height: "100%",
-                overflow: "hidden",
-                borderRadius: "10px",
-              }}
-            >
+        <div className="profile-wrapper">
+          <div className="profile-image-wrapper">
+            <div className="profile-image-div">
               <img
                 src={profile}
                 alt="founder"
@@ -42,17 +32,18 @@ const ProfileDetailContainer = ({
             </div>
           </div>
 
-          <div style={{ width: "70%" }} className="flex flex-col gap-6">
-            <div className="w-full flex justify-between">
-              <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-6 profile-title-wrapper">
+            <div className="w-full flex justify-between profile-social-wrapper">
+              <div className="flex flex-col gap-2 ">
                 {/* <h3 className="md:text-2xl text-2xl md:leading-normal leading-normal font-medium text-slate-400">
                       Mr.Babulal .L. Kumawat
                     </h3> */}
                 <h3 className=" md:text-2xl md:leading-normal text-2xl leading-normal font-semibold">
                   {name}
                 </h3>
-                <p className="text-xl font-light   ">{designation}</p>
+                <p className="text-xl font-light">{designation}</p>
               </div>
+
               <div>
                 <ul className="list-none  transition-all duration-500 ease-in-out">
                   <li className="inline ms-1">

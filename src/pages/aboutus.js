@@ -369,7 +369,7 @@ export default function Aboutus() {
         <GetInTuch />
       </section>
       <Footer />
-      <Switcher />
+      {/* <Switcher /> */}
     </>
   );
 }
