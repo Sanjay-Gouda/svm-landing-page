@@ -174,22 +174,7 @@ export default function Navbar(props) {
           {/* <!-- Logo container--> */}
           {navClass === "" || navClass === undefined ? (
             <Link className="logo" to="/">
-              {/* <div style={{ width: "160px" }}>
-                <img
-                  src={Svmlogo}
-                  className="l-dark w-full h-full object-contain"
-                  height="24"
-                  alt=""
-                />
-              </div> */}
-              {/* <img src={LogoDark} className="inline-block dark:hidden" alt="" /> */}
-              {/* <img
-                src={LogoLight}
-                className="hidden dark:inline-block"
-                alt=""
-              /> */}
-
-              <div style={{ width: "160px" }} onClick={handleRedirect}>
+              <div className="navbar-logo" onClick={handleRedirect}>
                 <img
                   // src={Svmlogo}
                   src={NewLogo}
@@ -198,7 +183,7 @@ export default function Navbar(props) {
                   alt=""
                 />
               </div>
-              <div style={{ width: "160px" }} onClick={handleRedirect}>
+              <div className="navbar-logo" onClick={handleRedirect}>
                 <img
                   // src={WhiteLogo}
                   src={NewLogo}
@@ -210,7 +195,7 @@ export default function Navbar(props) {
             </Link>
           ) : (
             <Link className="logo" to="/">
-              <div style={{ width: "160px" }} onClick={handleRedirect}>
+              <div className="navbar-logo" onClick={handleRedirect}>
                 <img
                   src={NewLogo}
                   // src={GreenLogo}
@@ -226,16 +211,6 @@ export default function Navbar(props) {
                   alt=""
                 />
               </div>
-              {/* <span className="inline-block dark:hidden">
-                <img src={Svmlogo} className="l-dark" height="24" alt="" />
-                <img src={Svmlogo} className="l-light" height="24" alt="" />
-              </span> */}
-              {/* <img
-                src={LogoLight}
-                height="24"
-                className="hidden dark:inline-block"
-                alt=""
-              /> */}
             </Link>
           )}
           {/* <!-- End Logo container--> */}
@@ -258,27 +233,6 @@ export default function Navbar(props) {
             </div>
           </div>
           {/* <!-- End Mobile Toggle --> */}
-
-          {/* <!-- Login button Start --> */}
-          {/* <ul className="buy-button list-none mb-0">
-            <li className="inline mb-0">
-              <Link
-                to="/auth-login"
-                className="btn btn-icon bg-green-600 hover:bg-green-700 border-green-600 dark:border-green-600 text-white rounded-full"
-              >
-                <User className="h-4 w-4 stroke-[3]"></User>
-              </Link>
-            </li>
-            <li className="sm:inline ps-1 mb-0 hidden">
-              <Link
-                to="/auth-signup"
-                className="btn bg-green-600 hover:bg-green-700 border-green-600 dark:border-green-600 text-white rounded-full"
-              >
-                Signup
-              </Link>
-            </li>
-          </ul> */}
-          {/* <!--Login button End--> */}
 
           <div
             id="navigation"
@@ -393,8 +347,7 @@ export default function Navbar(props) {
                     <p
                       className="px-5 py-2 cursor-pointer hover:text-green-600"
                       style={{ padding: "10px 1.25rem" }}
-                      // onClick={() => navigate("/grid/:Completed")}
-                      onClick={() => navigate("/comingsoon")}
+                      onClick={() => navigate("/property-detail/1")}
                     >
                       Completed
                     </p>
@@ -404,8 +357,7 @@ export default function Navbar(props) {
                     <p
                       className="px-5 py-2 cursor-pointer hover:text-green-600"
                       style={{ padding: "10px 1.25rem" }}
-                      // onClick={() => navigate("/grid/:Running")}
-                      onClick={() => navigate("/comingsoon")}
+                      onClick={() => navigate("/property-detail/1")}
                     >
                       Running
                     </p>

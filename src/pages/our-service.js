@@ -1,7 +1,7 @@
 const Services = ({ title, imageSet }) => {
   return (
     <>
-      <div className="flex flex-col gap-4 w-full ">
+      <div className="flex flex-col gap-4 w-full justify-center ">
         <h3
           className="mb-4 md:text-3xl text-center   md:leading-normal text-2xl leading-normal font-semibold"
           // style={{ backgroundColor: "#AFDEC0" }}

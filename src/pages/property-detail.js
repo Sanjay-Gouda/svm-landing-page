@@ -17,6 +17,7 @@ import {
   LiaBathSolid,
   AiOutlineCamera,
   LuArrowRight,
+  AiFillEye,
 } from "../assets/icons/vander";
 
 import Image1 from "../assets/images/property/single/p-1.png";
@@ -71,7 +72,7 @@ const settings = {
     },
 
     320: {
-      items: 1,
+      items: 2,
     },
   },
 };
@@ -130,7 +131,7 @@ function PropertyDetail(props) {
           <div className="md:flex mt-4">
             <div className="lg:w-1/2 md:w-1/2 p-1">
               <div className="group relative overflow-hidden">
-                <div className="w-full h-[750px]" style={{ height: "630px" }}>
+                <div className="w-full  property-detail-first-image">
                   <img
                     src={Image1}
                     className="w-full h-full object-cover"
@@ -144,7 +145,7 @@ function PropertyDetail(props) {
                     onClick={() => handleCLick(0)}
                     className="btn btn-icon bg-green-600 hover:bg-green-700 text-white rounded-full lightbox"
                   >
-                    <AiOutlineCamera className="text-lg" />
+                    <AiFillEye className="text-lg" />
                   </Link2>
                 </div>
               </div>
@@ -154,7 +155,7 @@ function PropertyDetail(props) {
               <div className="flex">
                 <div className="w-1/2 p-1">
                   <div className="group relative overflow-hidden">
-                    <div className="w-full" style={{ height: "310px" }}>
+                    <div className="w-full property-detail-mini-image">
                       <img
                         src={Image2}
                         alt=""
@@ -168,14 +169,14 @@ function PropertyDetail(props) {
                         onClick={() => handleCLick(1)}
                         className="btn btn-icon bg-green-600 hover:bg-green-700 text-white rounded-full lightbox"
                       >
-                        <AiOutlineCamera className="text-lg" />
+                        <AiFillEye className="text-lg" />
                       </Link2>
                     </div>
                   </div>
                 </div>
                 <div className="w-1/2 p-1">
                   <div className="group relative overflow-hidden">
-                    <div className="w-full" style={{ height: "310px" }}>
+                    <div className="w-full property-detail-mini-image">
                       <img
                         src={Image3}
                         alt=""
@@ -189,7 +190,7 @@ function PropertyDetail(props) {
                         onClick={() => handleCLick(1)}
                         className="btn btn-icon bg-green-600 hover:bg-green-700 text-white rounded-full lightbox"
                       >
-                        <AiOutlineCamera className="text-lg" />
+                        <AiFillEye className="text-lg" />
                       </Link2>
                     </div>
                   </div>
@@ -228,14 +229,14 @@ function PropertyDetail(props) {
                         onClick={() => handleCLick(1)}
                         className="btn btn-icon bg-green-600 hover:bg-green-700 text-white rounded-full lightbox"
                       >
-                        <AiOutlineCamera className="text-lg" />
+                        <AiFillEye className="text-lg" />
                       </Link2>
                     </div>
                   </div>
                 </div>
                 <div className="w-1/2 p-1">
                   <div className="group relative overflow-hidden">
-                    <div className="w-full" style={{ height: "310px" }}>
+                    <div className="w-full property-detail-mini-image">
                       <img
                         src={Image5}
                         alt=""
@@ -249,7 +250,7 @@ function PropertyDetail(props) {
                         onClick={() => handleCLick(1)}
                         className="btn btn-icon bg-green-600 hover:bg-green-700 text-white rounded-full lightbox"
                       >
-                        <AiOutlineCamera className="text-lg" />
+                        <AiFillEye className="text-lg" />
                       </Link2>
                     </div>
                   </div>
@@ -366,8 +367,8 @@ function PropertyDetail(props) {
               </p>
 
               <div className="w-full leading-[0] border-0 mt-6">
-                <h5 className="text-2xl font-medium mb-6">
-                  🙂 🙂 Happy Customers 🙂 🙂
+                <h5 className="text-2xl font-medium mb-6 ">
+                  🙂 🙂Happy Customers🙂 🙂
                 </h5>
 
                 <TinySlider settings={settings}>
@@ -379,15 +380,7 @@ function PropertyDetail(props) {
                         // onClick={() => navigate("/our-services")}
                       >
                         <div className="group rounded-xl cursor-pointer bg-white dark:bg-slate-900 shadow hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700 overflow-hidden ease-in-out duration-500">
-                          <div
-                            style={{
-                              width: "100%",
-                              height: "146px",
-                              borderRadius: "16px",
-                              overflow: "hidden",
-                            }}
-                            className="sm:w-full"
-                          >
+                          <div className="category-image-wrapper">
                             <img
                               src={item}
                               alt=""
@@ -402,7 +395,7 @@ function PropertyDetail(props) {
               </div>
               <div className="w-full leading-[0] border-0 mt-6">
                 <h5 className="text-2xl font-medium mb-6">
-                  🚧 Project Site Development 🚧
+                  🚧Project Site Development🚧
                 </h5>
 
                 <TinySlider settings={settings}>
@@ -414,15 +407,7 @@ function PropertyDetail(props) {
                         // onClick={() => navigate("/our-services")}
                       >
                         <div className="group rounded-xl cursor-pointer bg-white dark:bg-slate-900 shadow hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700 overflow-hidden ease-in-out duration-500">
-                          <div
-                            style={{
-                              width: "100%",
-                              height: "146px",
-                              borderRadius: "16px",
-                              overflow: "hidden",
-                            }}
-                            className="sm:w-full"
-                          >
+                          <div className="category-image-wrapper">
                             <img
                               src={item}
                               alt=""
@@ -669,7 +654,7 @@ function PropertyDetail(props) {
       )}
 
       <Footer />
-      <Switcher />
+      {/* <Switcher /> */}
     </>
   );
 }

@@ -153,70 +153,86 @@ export default function Aboutus() {
         </div>
       </div>
       {/* <!-- End Hero --> */}
+      <div className="container">
+        <div className="flex md:flex justify-center">
+          <div className="flex flex-col   ">
+            <div className="aboutus-inner-content flex flex-col justify-center items-center w-full ">
+              <h3 className="mb-4 md:text-3xl md:leading-normal text-2xl leading-normal font-semibold">
+                Who we are & Why ?
+              </h3>
 
-      <div
-        className="flex flex-col justify-center items-center w-full "
-        style={{ paddingTop: "6rem" }}
-      >
-        <h3 className="mb-4 md:text-3xl md:leading-normal text-2xl leading-normal font-semibold">
-          Who we are & Why ?
-        </h3>
+              <ul className="list-unstyled text-slate-400 mt-4 w-full">
+                {aboutus?.map((cont, ind) => {
+                  return (
+                    <div
+                      className="flex mt-2 items-start aboutus-list"
+                      key={ind}
+                    >
+                      <div>
+                        <LuArrowRight className="text-green-600  align-middle me-2" />
+                      </div>
+                      <p>{cont?.content}</p>
+                    </div>
+                  );
+                })}
+              </ul>
+            </div>
 
-        <ul className="list-unstyled text-slate-400 mt-4 w-[60%]">
-          {aboutus?.map((cont, ind) => {
-            return (
-              <li className="flex mt-2 items-center text-xl" key={ind}>
-                <LuArrowRight className="text-green-600  align-middle me-2" />
-                {cont?.content}
-              </li>
-            );
-          })}
-        </ul>
-      </div>
+            <div className="aboutus-inner-content flex flex-col justify-center items-center w-full ">
+              <h3 className="mb-4 md:text-3xl md:leading-normal text-2xl leading-normal font-semibold">
+                Why Choose SVM ?
+              </h3>
 
-      <div
-        className="flex flex-col justify-center items-center w-full "
-        style={{ paddingTop: "6rem" }}
-      >
-        <h3 className="mb-4 md:text-3xl md:leading-normal text-2xl leading-normal font-semibold">
-          Why Choose SVM ?
-        </h3>
+              <ul className="list-unstyled text-slate-400 mt-4 w-full">
+                {whySvm?.map((cont, ind) => {
+                  return (
+                    <div>
+                      <li
+                        className="flex mt-2 items-start aboutus-list"
+                        key={ind}
+                      >
+                        <div>
+                          <LuArrowRight className="text-green-600  align-middle me-2" />
+                        </div>
+                        <p>{cont?.content}</p>
+                      </li>
+                    </div>
+                  );
+                })}
+              </ul>
+            </div>
+            <div className="flex flex-col justify-center items-center  w-full aboutus-inner-content">
+              <h3 className="mb-4 md:text-3xl  md:leading-normal text-2xl leading-normal font-semibold">
+                Our Mission & Vision
+              </h3>
 
-        <ul className="list-unstyled text-slate-400 mt-4 w-1/2">
-          {whySvm?.map((cont, ind) => {
-            return (
-              <li className="flex mt-2 items-center text-xl" key={ind}>
-                <LuArrowRight className="text-green-600  align-middle me-2" />
-                {cont?.content}
-              </li>
-            );
-          })}
-        </ul>
-      </div>
-      <div className="flex flex-col justify-center items-center w-full py-24">
-        <h3 className="mb-4 md:text-3xl md:leading-normal text-2xl leading-normal font-semibold">
-          Our Mission & Vision
-        </h3>
+              <ul className="list-unstyled text-slate-400 mt-4  w-full ">
+                {mission?.map((cont, ind) => {
+                  return (
+                    <li
+                      className="flex mt-2 items-start aboutus-list"
+                      key={ind}
+                    >
+                      <div>
+                        <LuArrowRight className="text-green-600  align-middle me-2" />
+                      </div>
+                      <p>{cont?.content}</p>
+                    </li>
+                  );
+                })}
+              </ul>
 
-        <ul className="list-unstyled text-slate-400 mt-4 w-[60%]">
-          {mission?.map((cont, ind) => {
-            return (
-              <li className="flex mt-2 items-center text-xl" key={ind}>
-                <LuArrowRight className="text-green-600  align-middle me-2" />
-                {cont?.content}
-              </li>
-            );
-          })}
-        </ul>
-
-        <div className="mt-6">
-          <Link2
-            to="/knowmore-aboutus"
-            className="btn bg-green-600 hover:bg-green-700 text-white rounded-md w-full flex items-center justify-center"
-          >
-            Know More About Us &nbsp;
-            <LuArrowRight className="text-white  align-middle me-2" />
-          </Link2>
+              <div className="mt-6 mb-6">
+                <Link2
+                  to="/knowmore-aboutus"
+                  className="btn bg-green-600 hover:bg-green-700 text-white rounded-md w-full flex items-center justify-center"
+                >
+                  Know More About Us &nbsp;
+                  <LuArrowRight className="text-white  align-middle me-2" />
+                </Link2>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 

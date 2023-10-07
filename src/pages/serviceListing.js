@@ -2,14 +2,25 @@ import React, { useEffect, useState } from "react";
 import Navbar from "../component/Navbar";
 import BackgroudImage from "../assets/images/bg/01.jpg";
 import Footer from "../component/Footer";
-import Switcher from "../component/Switcher";
-import Founder from "../assets/images/client/founder.jpg";
+import {
+  lowRiseBuilding,
+  bunglow,
+  farmHouse,
+  gardens,
+  highRiseBuilding,
+  openPlotting,
+  partyPlot,
+  playArea,
+  rowHouse,
+  gym,
+  swimmingPool,
+} from "../constants/serviceImages";
 import { Link as Link2, useParams } from "react-router-dom";
 
-import { Linkedin, Facebook, Twitter, Instagram, Youtube } from "react-feather";
 import ProfileDetailContainer from "../component/profile-detail";
 import { MEMBERS } from "../constants/members";
-const ProfileDetail = () => {
+import Services from "./our-service";
+const ServiceListing = () => {
   const params = useParams();
 
   const [detail, setDetail] = useState([]);
@@ -17,13 +28,15 @@ const ProfileDetail = () => {
 
   useEffect(() => {
     if (params.id === "1") {
-      setTitle("Founder");
+      setTitle("Open Plotting");
     } else if (params.id === "2") {
-      setTitle("Managing Director");
+      setTitle("Residential");
+    } else if (params.id === "5") {
+      setTitle("Commerical");
     } else if (params.id === "3") {
-      setTitle("Operations & Development Director");
-    } else {
-      setTitle("HRD & Marketing Director");
+      setTitle("Industrial");
+    } else if (params.id === "4") {
+      setTitle("Land Developing");
     }
   }, []);
 
@@ -73,18 +86,28 @@ const ProfileDetail = () => {
 
       <section className="relative lg:py-24 py-16">
         <div className="container">
-          {detail?.map((member) => (
-            <ProfileDetailContainer
-              name={member.name}
-              profile={member.prfoilePicture}
-              designation={member.designation}
-              linkedin={member.linkedin}
-              about={member.about}
-              tagline={member.tagline}
-              fb={member.fb}
-              ig={member.ig}
-            />
-          ))}
+          {params.id === "1" ? (
+            <Services title="Open Ploting" imageSet={openPlotting} />
+          ) : params.id === "2" ? (
+            <div className="flex flex-col gap-6 justify-center">
+              <Services title="Farm House" imageSet={farmHouse} />
+              <Services title="Banglows" imageSet={bunglow} />
+              <Services title="Swimming Pools" imageSet={swimmingPool} />
+              <Services title="Play Area" imageSet={playArea} />
+            </div>
+          ) : params.id === "3" ? (
+            <Services title="Highrise Building" imageSet={highRiseBuilding} />
+          ) : params.id === "4" ? (
+            <Services title="Land Developing" imageSet={openPlotting} />
+          ) : params.id === "5" ? (
+            <div className="flex flex-col gap-6 justify-center">
+              <Services title="Gardens" imageSet={gardens} />
+              <Services title="Play Area" imageSet={playArea} />
+              <Services title="Party Plot" imageSet={partyPlot} />
+              <Services title="Swimming Pools" imageSet={swimmingPool} />
+              <Services title="Gymnasium" imageSet={gym} />
+            </div>
+          ) : null}
         </div>
       </section>
       <Footer />
@@ -93,4 +116,4 @@ const ProfileDetail = () => {
   );
 };
 
-export default ProfileDetail;
+export default ServiceListing;

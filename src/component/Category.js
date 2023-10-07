@@ -44,7 +44,7 @@ const settings = {
     },
 
     320: {
-      items: 1,
+      items: 2,
     },
   },
 };
@@ -137,10 +137,7 @@ const Category = () => {
                     onClick={() => navigate("/our-services")}
                   >
                     <div className="group rounded-xl cursor-pointer bg-white dark:bg-slate-900 shadow hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700 overflow-hidden ease-in-out duration-500">
-                      <div
-                        style={{ width: "213px", height: "146px" }}
-                        className="sm:w-full"
-                      >
+                      <div className="category-image-wrapper">
                         <img
                           src={item.imgURL}
                           alt=""
@@ -150,7 +147,7 @@ const Category = () => {
                       <div className="p-4">
                         <Link2
                           href="#"
-                          className="text-xl font-medium hover:text-green-600"
+                          className="  text-xl font-medium hover:text-green-600  service-title "
                         >
                           {item.name}
                         </Link2>

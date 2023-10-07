@@ -1,5 +1,5 @@
 import React from "react";
-import { Link as Link2 } from "react-router-dom";
+import { Link as Link2, useNavigate } from "react-router-dom";
 import Navbar from "../component/Navbar";
 import BackgroudImage from "../assets/images/bg/01.jpg";
 import { Hexagon } from "react-feather";
@@ -124,450 +124,481 @@ import sp9 from "../assets/images/property/our service/swimingPool/sp9.png";
 import sp10 from "../assets/images/property/our service/swimingPool/sp10.png";
 
 import Services from "./our-service";
+import ServiceCard from "../component/Services";
 
-const gym = [
-  {
-    id: 1,
-    image: gym1,
-  },
-  {
-    id: 2,
-    image: gym2,
-  },
-  {
-    id: 3,
-    image: gym3,
-  },
-  {
-    id: 4,
-    image: gym4,
-  },
-  {
-    id: 5,
-    image: gym5,
-  },
-  {
-    id: 6,
-    image: gym6,
-  },
-  {
-    id: 7,
-    image: gym7,
-  },
-  {
-    id: 8,
-    image: gym8,
-  },
-];
+// const gym = [
+//   {
+//     id: 1,
+//     image: gym1,
+//   },
+//   {
+//     id: 2,
+//     image: gym2,
+//   },
+//   {
+//     id: 3,
+//     image: gym3,
+//   },
+//   {
+//     id: 4,
+//     image: gym4,
+//   },
+//   // {
+//   //   id: 5,
+//   //   image: gym5,
+//   // },
+//   // {
+//   //   id: 6,
+//   //   image: gym6,
+//   // },
+//   // {
+//   //   id: 7,
+//   //   image: gym7,
+//   // },
+//   // {
+//   //   id: 8,
+//   //   image: gym8,
+//   // },
+// ];
 
-const lowRiseBuilding = [
+// const lowRiseBuilding = [
+//   {
+//     id: 1,
+//     image: lb1,
+//   },
+//   {
+//     id: 2,
+//     image: lb2,
+//   },
+//   {
+//     id: 3,
+//     image: lb3,
+//   },
+//   {
+//     id: 4,
+//     image: lb4,
+//   },
+//   // {
+//   //   id: 5,
+//   //   image: lb5,
+//   // },
+//   // {
+//   //   id: 6,
+//   //   image: lb6,
+//   // },
+//   // {
+//   //   id: 7,
+//   //   image: lb7,
+//   // },
+//   // {
+//   //   id: 8,
+//   //   image: lb8,
+//   // },
+//   // {
+//   //   id: 9,
+//   //   image: lb9,
+//   // },
+//   // {
+//   //   id: 10,
+//   //   image: lb10,
+//   // },
+// ];
+// const highRiseBuilding = [
+//   {
+//     id: 1,
+//     image: hb1,
+//   },
+//   {
+//     id: 2,
+//     image: hb2,
+//   },
+//   {
+//     id: 3,
+//     image: hb3,
+//   },
+//   {
+//     id: 4,
+//     image: hb4,
+//   },
+//   // {
+//   //   id: 5,
+//   //   image: hb5,
+//   // },
+//   // {
+//   //   id: 6,
+//   //   image: hb6,
+//   // },
+//   // {
+//   //   id: 7,
+//   //   image: hb7,
+//   // },
+//   // {
+//   //   id: 8,
+//   //   image: hb8,
+//   // },
+//   // {
+//   //   id: 9,
+//   //   image: hb9,
+//   // },
+//   // {
+//   //   id: 10,
+//   //   image: hb10,
+//   // },
+// ];
+// const rowHouse = [
+//   {
+//     id: 1,
+//     image: rh1,
+//   },
+//   {
+//     id: 2,
+//     image: rh2,
+//   },
+//   {
+//     id: 3,
+//     image: rh3,
+//   },
+//   {
+//     id: 4,
+//     image: rh4,
+//   },
+//   // {
+//   //   id: 5,
+//   //   image: rh5,
+//   // },
+//   // {
+//   //   id: 6,
+//   //   image: rh6,
+//   // },
+//   // {
+//   //   id: 7,
+//   //   image: rh7,
+//   // },
+//   // {
+//   //   id: 8,
+//   //   image: rh8,
+//   // },
+//   // {
+//   //   id: 9,
+//   //   image: rh9,
+//   // },
+//   // {
+//   //   id: 10,
+//   //   image: rh10,
+//   // },
+// ];
+// const farmHouse = [
+//   {
+//     id: 1,
+//     image: fh1,
+//   },
+//   {
+//     id: 2,
+//     image: fh2,
+//   },
+//   {
+//     id: 3,
+//     image: fh3,
+//   },
+//   {
+//     id: 4,
+//     image: fh4,
+//   },
+//   // {
+//   //   id: 5,
+//   //   image: fh5,
+//   // },
+//   // {
+//   //   id: 6,
+//   //   image: fh6,
+//   // },
+//   // {
+//   //   id: 7,
+//   //   image: fh7,
+//   // },
+//   // {
+//   //   id: 8,
+//   //   image: fh8,
+//   // },
+// ];
+
+// const bunglow = [
+//   {
+//     id: 1,
+//     image: bl1,
+//   },
+//   {
+//     id: 2,
+//     image: bl2,
+//   },
+//   {
+//     id: 3,
+//     image: bl3,
+//   },
+//   {
+//     id: 4,
+//     image: bl4,
+//   },
+//   // {
+//   //   id: 5,
+//   //   image: bl5,
+//   // },
+//   // {
+//   //   id: 6,
+//   //   image: bl6,
+//   // },
+//   // {
+//   //   id: 7,
+//   //   image: bl7,
+//   // },
+//   // {
+//   //   id: 8,
+//   //   image: bl8,
+//   // },
+//   // {
+//   //   id: 9,
+//   //   image: bl9,
+//   // },
+//   // {
+//   //   id: 10,
+//   //   image: bl10,
+//   // },
+// ];
+// const openPlotting = [
+//   {
+//     id: 1,
+//     image: dn1,
+//   },
+//   {
+//     id: 2,
+//     image: dn2,
+//   },
+//   {
+//     id: 3,
+//     image: dn3,
+//   },
+//   {
+//     id: 4,
+//     image: dn4,
+//   },
+//   // {
+//   //   id: 5,
+//   //   image: dn5,
+//   // },
+//   // {
+//   //   id: 6,
+//   //   image: dn6,
+//   // },
+//   // {
+//   //   id: 7,
+//   //   image: dn7,
+//   // },
+//   // {
+//   //   id: 8,
+//   //   image: dn8,
+//   // },
+// ];
+
+// const gardens = [
+//   {
+//     id: 1,
+//     image: g1,
+//   },
+//   {
+//     id: 2,
+//     image: g2,
+//   },
+//   {
+//     id: 3,
+//     image: g3,
+//   },
+//   {
+//     id: 4,
+//     image: g4,
+//   },
+//   // {
+//   //   id: 5,
+//   //   image: g5,
+//   // },
+//   // {
+//   //   id: 6,
+//   //   image: g6,
+//   // },
+//   // {
+//   //   id: 7,
+//   //   image: g7,
+//   // },
+//   // {
+//   //   id: 8,
+//   //   image: g8,
+//   // },
+//   // {
+//   //   id: 9,
+//   //   image: g9,
+//   // },
+//   // {
+//   //   id: 10,
+//   //   image: g10,
+//   // },
+// ];
+// const partyPlot = [
+//   {
+//     id: 1,
+//     image: pp1,
+//   },
+//   {
+//     id: 2,
+//     image: pp2,
+//   },
+//   {
+//     id: 3,
+//     image: pp3,
+//   },
+//   {
+//     id: 4,
+//     image: pp4,
+//   },
+//   // {
+//   //   id: 5,
+//   //   image: pp5,
+//   // },
+//   // {
+//   //   id: 6,
+//   //   image: pp6,
+//   // },
+//   // {
+//   //   id: 7,
+//   //   image: pp7,
+//   // },
+//   // {
+//   //   id: 8,
+//   //   image: pp8,
+//   // },
+//   // {
+//   //   id: 9,
+//   //   image: pp9,
+//   // },
+//   // {
+//   //   id: 10,
+//   //   image: pp10,
+//   // },
+// ];
+// const playArea = [
+//   {
+//     id: 1,
+//     image: pg1,
+//   },
+//   {
+//     id: 2,
+//     image: pg2,
+//   },
+//   {
+//     id: 3,
+//     image: pg3,
+//   },
+//   {
+//     id: 4,
+//     image: pg4,
+//   },
+//   // {
+//   //   id: 5,
+//   //   image: pg5,
+//   // },
+//   // {
+//   //   id: 6,
+//   //   image: pg6,
+//   // },
+//   // {
+//   //   id: 7,
+//   //   image: pg7,
+//   // },
+//   // {
+//   //   id: 8,
+//   //   image: pg8,
+//   // },
+//   // {
+//   //   id: 9,
+//   //   image: pg9,
+//   // },
+//   // {
+//   //   id: 10,
+//   //   image: pg10,
+//   // },
+// ];
+// const swimmingPool = [
+//   {
+//     id: 1,
+//     image: sp1,
+//   },
+//   {
+//     id: 2,
+//     image: sp2,
+//   },
+//   {
+//     id: 3,
+//     image: sp3,
+//   },
+//   {
+//     id: 4,
+//     image: sp4,
+//   },
+//   // {
+//   //   id: 5,
+//   //   image: sp5,
+//   // },
+//   // {
+//   //   id: 6,
+//   //   image: sp6,
+//   // },
+//   // {
+//   //   id: 7,
+//   //   image: sp7,
+//   // },
+//   // {
+//   //   id: 8,
+//   //   image: sp8,
+//   // },
+//   // {
+//   //   id: 9,
+//   //   image: sp9,
+//   // },
+//   // {
+//   //   id: 10,
+//   //   image: sp10,
+//   // },
+// ];
+
+const ServicesCategory = [
   {
     id: 1,
-    image: lb1,
+    title: "Open Ploting",
+    image: dn4,
   },
   {
     id: 2,
-    image: lb2,
-  },
-  {
-    id: 3,
-    image: lb3,
-  },
-  {
-    id: 4,
-    image: lb4,
-  },
-  {
-    id: 5,
-    image: lb5,
-  },
-  {
-    id: 6,
-    image: lb6,
-  },
-  {
-    id: 7,
-    image: lb7,
-  },
-  {
-    id: 8,
-    image: lb8,
-  },
-  {
-    id: 9,
-    image: lb9,
-  },
-  {
-    id: 10,
-    image: lb10,
-  },
-];
-const highRiseBuilding = [
-  {
-    id: 1,
-    image: hb1,
-  },
-  {
-    id: 2,
-    image: hb2,
-  },
-  {
-    id: 3,
-    image: hb3,
-  },
-  {
-    id: 4,
-    image: hb4,
-  },
-  {
-    id: 5,
-    image: hb5,
-  },
-  {
-    id: 6,
-    image: hb6,
-  },
-  {
-    id: 7,
-    image: hb7,
-  },
-  {
-    id: 8,
-    image: hb8,
-  },
-  {
-    id: 9,
-    image: hb9,
-  },
-  {
-    id: 10,
-    image: hb10,
-  },
-];
-const rowHouse = [
-  {
-    id: 1,
-    image: rh1,
-  },
-  {
-    id: 2,
+    title: "Residential",
     image: rh2,
   },
   {
     id: 3,
-    image: rh3,
+    title: "Industrial",
+    image: lb3,
   },
   {
     id: 4,
-    image: rh4,
-  },
-  {
-    id: 5,
-    image: rh5,
-  },
-  {
-    id: 6,
-    image: rh6,
-  },
-  {
-    id: 7,
-    image: rh7,
-  },
-  {
-    id: 8,
-    image: rh8,
-  },
-  {
-    id: 9,
-    image: rh9,
-  },
-  {
-    id: 10,
-    image: rh10,
-  },
-];
-const farmHouse = [
-  {
-    id: 1,
-    image: fh1,
-  },
-  {
-    id: 2,
-    image: fh2,
-  },
-  {
-    id: 3,
-    image: fh3,
-  },
-  {
-    id: 4,
-    image: fh4,
-  },
-  {
-    id: 5,
-    image: fh5,
-  },
-  {
-    id: 6,
-    image: fh6,
-  },
-  {
-    id: 7,
-    image: fh7,
-  },
-  {
-    id: 8,
-    image: fh8,
-  },
-];
-
-const bunglow = [
-  {
-    id: 1,
-    image: bl1,
-  },
-  {
-    id: 2,
-    image: bl2,
-  },
-  {
-    id: 3,
-    image: bl3,
-  },
-  {
-    id: 4,
-    image: bl4,
-  },
-  {
-    id: 5,
-    image: bl5,
-  },
-  {
-    id: 6,
-    image: bl6,
-  },
-  {
-    id: 7,
-    image: bl7,
-  },
-  {
-    id: 8,
-    image: bl8,
-  },
-  {
-    id: 9,
-    image: bl9,
-  },
-  {
-    id: 10,
-    image: bl10,
-  },
-];
-const openPlotting = [
-  {
-    id: 1,
-    image: dn1,
-  },
-  {
-    id: 2,
+    title: "Land Developing",
     image: dn2,
   },
   {
-    id: 3,
-    image: dn3,
-  },
-  {
-    id: 4,
-    image: dn4,
-  },
-  {
     id: 5,
-    image: dn5,
-  },
-  {
-    id: 6,
-    image: dn6,
-  },
-  {
-    id: 7,
-    image: dn7,
-  },
-  {
-    id: 8,
-    image: dn8,
-  },
-];
-
-const gardens = [
-  {
-    id: 1,
-    image: g1,
-  },
-  {
-    id: 2,
-    image: g2,
-  },
-  {
-    id: 3,
-    image: g3,
-  },
-  {
-    id: 4,
-    image: g4,
-  },
-  {
-    id: 5,
-    image: g5,
-  },
-  {
-    id: 6,
-    image: g6,
-  },
-  {
-    id: 7,
-    image: g7,
-  },
-  {
-    id: 8,
-    image: g8,
-  },
-  {
-    id: 9,
-    image: g9,
-  },
-  {
-    id: 10,
-    image: g10,
-  },
-];
-const partyPlot = [
-  {
-    id: 1,
-    image: pp1,
-  },
-  {
-    id: 2,
-    image: pp2,
-  },
-  {
-    id: 3,
-    image: pp3,
-  },
-  {
-    id: 4,
-    image: pp4,
-  },
-  {
-    id: 5,
-    image: pp5,
-  },
-  {
-    id: 6,
-    image: pp6,
-  },
-  {
-    id: 7,
-    image: pp7,
-  },
-  {
-    id: 8,
-    image: pp8,
-  },
-  {
-    id: 9,
-    image: pp9,
-  },
-  {
-    id: 10,
-    image: pp10,
-  },
-];
-const playArea = [
-  {
-    id: 1,
-    image: pg1,
-  },
-  {
-    id: 2,
-    image: pg2,
-  },
-  {
-    id: 3,
-    image: pg3,
-  },
-  {
-    id: 4,
-    image: pg4,
-  },
-  {
-    id: 5,
-    image: pg5,
-  },
-  {
-    id: 6,
-    image: pg6,
-  },
-  {
-    id: 7,
-    image: pg7,
-  },
-  {
-    id: 8,
-    image: pg8,
-  },
-  {
-    id: 9,
-    image: pg9,
-  },
-  {
-    id: 10,
-    image: pg10,
-  },
-];
-const swimmingPool = [
-  {
-    id: 1,
-    image: sp1,
-  },
-  {
-    id: 2,
-    image: sp2,
-  },
-  {
-    id: 3,
-    image: sp3,
-  },
-  {
-    id: 4,
-    image: sp4,
-  },
-  {
-    id: 5,
-    image: sp5,
-  },
-  {
-    id: 6,
-    image: sp6,
-  },
-  {
-    id: 7,
-    image: sp7,
-  },
-  {
-    id: 8,
-    image: sp8,
-  },
-  {
-    id: 9,
-    image: sp9,
-  },
-  {
-    id: 10,
-    image: sp10,
+    title: "Commercial",
+    image: lb4,
   },
 ];
 
 export default function Features() {
+  const navigate = useNavigate();
+
   return (
     <>
       <Navbar navClass="navbar-white" />
@@ -603,7 +634,20 @@ export default function Features() {
 
       <section className="relative lg:py-24 py-16">
         <div className="container">
-          <div className="flex flex-col gap-6">
+          <div
+            className="flex w-full flex-wrap gap-4 "
+            style={{ columnGap: "16px", rowGap: "16px" }}
+          >
+            {ServicesCategory.map((cat) => (
+              <ServiceCard
+                title={cat.title}
+                image={cat.image}
+                onClick={() => navigate(`/our-services-list/${cat.id}`)}
+              />
+            ))}
+          </div>
+
+          {/* <div className="flex flex-col gap-6">
             <Services title="Low Rise Buildings" imageSet={lowRiseBuilding} />
             <Services title="High Rise Buildings" imageSet={highRiseBuilding} />
             <Services title="Raw Houses" imageSet={rowHouse} />
@@ -615,7 +659,7 @@ export default function Features() {
             <Services title="Play Area" imageSet={playArea} />
             <Services title="Gymnasium" imageSet={gym} />
             <Services title="Swimming Pool" imageSet={swimmingPool} />
-          </div>
+          </div> */}
           {/* <div className="container">
           <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-x-[30px] gap-y-[50px]">
             <div className="group relative lg:px-10 transition-all duration-500 ease-in-out rounded-xl bg-white dark:bg-slate-900 overflow-hidden">
@@ -779,7 +823,8 @@ export default function Features() {
           </div> */}
         </div>
 
-        <Client />
+        {/* <Client />
+         */}
 
         <GetInTuch />
       </section>
