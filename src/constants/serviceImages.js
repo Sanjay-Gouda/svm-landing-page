@@ -160,14 +160,14 @@ export const highRiseBuilding = [
     id: 8,
     image: hb8,
   },
-  {
-    id: 9,
-    image: hb9,
-  },
-  {
-    id: 10,
-    image: hb10,
-  },
+  // {
+  //   id: 9,
+  //   image: hb9,
+  // },
+  // {
+  //   id: 10,
+  //   image: hb10,
+  // },
 ];
 export const rowHouse = [
   {
