@@ -226,7 +226,7 @@ export default function Comingsoon() {
         </div>
       </section>
       {/* <!--end section --> */}
-      <Switcher />
+      {/* <Switcher /> */}
     </>
   );
 }

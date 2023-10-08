@@ -9,18 +9,14 @@ const Services = ({ title, imageSet }) => {
           {title}
         </h3>
         <div
-          className="flex flex-wrap gap-4"
+          className="flex flex-wrap gap-4 justify-center"
           style={{ columnGap: "16px", rowGap: "16px" }}
         >
           {imageSet.map((item) => {
             return (
               <div
                 key={item.id}
-                className=" w-64 h-52  overflow-hidden transition transform scale-1"
-                style={{
-                  width: "250px",
-                  borderRadius: "20px",
-                }}
+                className="service-list-img w-64 h-52  overflow-hidden transition transform scale-1"
               >
                 <img
                   className="w-full h-full object-contain hover:scale-110"

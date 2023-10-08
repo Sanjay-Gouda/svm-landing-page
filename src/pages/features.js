@@ -12,6 +12,7 @@ import lb1 from "../assets/images/property/our service/lowRiseBuilding/lb-1.png"
 import lb2 from "../assets/images/property/our service/lowRiseBuilding/lb-2.jpg";
 import lb3 from "../assets/images/property/our service/lowRiseBuilding/lb-3.png";
 import lb4 from "../assets/images/property/our service/lowRiseBuilding/lb-4.png";
+import r4 from "../assets/images/property/our service/realestate/r3.png";
 import lb5 from "../assets/images/property/our service/lowRiseBuilding/lb-5.png";
 import lb6 from "../assets/images/property/our service/lowRiseBuilding/lb-6.png";
 import lb7 from "../assets/images/property/our service/lowRiseBuilding/lb-7.png";
@@ -593,6 +594,11 @@ const ServicesCategory = [
     id: 5,
     title: "Commercial",
     image: lb4,
+  },
+  {
+    id: 6,
+    title: "All Kind of Realestate [Sale-Purchase]",
+    image: r4,
   },
 ];
 

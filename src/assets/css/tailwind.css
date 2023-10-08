@@ -549,6 +549,11 @@ video {
 
 }
 
+.service-list-img{
+  width:250px;
+  border-radius: 20px;
+}
+
 .aboutus-list{
   font-size: 1.25rem;
   line-height: 1.75rem; 
@@ -576,8 +581,14 @@ video {
     font-size: 1rem;
     line-height: 1.2rem; 
   }
+  .service-list-img{
+    width:100%;
+  }
 }
 @media (max-width: 640px){
+  .service-list-img{
+    width:100%;
+  }
   .profile-wrapper{
     flex-direction: column;
   }

@@ -11,11 +11,12 @@ import {
   openPlotting,
   partyPlot,
   playArea,
+  realestate,
   rowHouse,
   gym,
   swimmingPool,
 } from "../constants/serviceImages";
-import { Link as Link2, useParams } from "react-router-dom";
+import { Link as Link2, useNavigate, useParams } from "react-router-dom";
 
 import ProfileDetailContainer from "../component/profile-detail";
 import { MEMBERS } from "../constants/members";
@@ -28,29 +29,21 @@ const ServiceListing = () => {
 
   useEffect(() => {
     if (params.id === "1") {
-      setTitle("Open Plotting");
+      setTitle("Open Plotting Projects");
     } else if (params.id === "2") {
-      setTitle("Residential");
+      setTitle("Residential Projects");
     } else if (params.id === "5") {
-      setTitle("Commerical");
+      setTitle("Commerical Projects");
     } else if (params.id === "3") {
-      setTitle("Industrial");
+      setTitle("Industrial Projects");
     } else if (params.id === "4") {
-      setTitle("Land Developing");
+      setTitle("Land Developing Projects");
+    } else if (params.id === "6") {
+      setTitle("Realestate [Sale-Purchase]");
     }
   }, []);
 
-  const getMemberDetail = () => {
-    const MemberDetail = MEMBERS?.find(
-      (member) => member.id === Number(params.id)
-    );
-
-    setDetail([...detail, MemberDetail]);
-  };
-
-  useEffect(() => {
-    getMemberDetail();
-  }, [params]);
+  const navigate = useNavigate();
 
   return (
     <>
@@ -107,7 +100,20 @@ const ServiceListing = () => {
               <Services title="Swimming Pools" imageSet={swimmingPool} />
               <Services title="Gymnasium" imageSet={gym} />
             </div>
+          ) : params.id === "6" ? (
+            <Services title="Land Purchase & Sale" imageSet={realestate} />
           ) : null}
+
+          <div className="w-full flex justify-center items-center">
+            <button
+              // onClick={formik.handleSubmit}
+              onClick={() => navigate("/our-services")}
+              className="btn bg-green-600 hover:bg-green-700 mt-6 text-white rounded-md"
+            >
+              Explore Other Services
+              {/* {loading && <ClipLoader color="#fff" size={25} />} */}
+            </button>
+          </div>
         </div>
       </section>
       <Footer />

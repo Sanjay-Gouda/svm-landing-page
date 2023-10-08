@@ -61,6 +61,30 @@ import pg2 from "../assets/images/property/our service/playArea/pg2.png";
 import pg3 from "../assets/images/property/our service/playArea/pg3.png";
 import pg4 from "../assets/images/property/our service/playArea/pg4.png";
 
+import r1 from "../assets/images/property/our service/realestate/r1.png";
+import r2 from "../assets/images/property/our service/realestate/r2.png";
+import r3 from "../assets/images/property/our service/realestate/r3.png";
+import r4 from "../assets/images/property/our service/realestate/r4.png";
+
+export const realestate = [
+  {
+    id: 1,
+    image: r1,
+  },
+  {
+    id: 2,
+    image: r2,
+  },
+  {
+    id: 3,
+    image: r3,
+  },
+  {
+    id: 4,
+    image: r4,
+  },
+];
+
 export const lowRiseBuilding = [
   {
     id: 1,
