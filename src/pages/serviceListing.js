@@ -83,6 +83,7 @@ const ServiceListing = () => {
             <Services title="Open Ploting" imageSet={openPlotting} />
           ) : params.id === "2" ? (
             <div className="flex flex-col gap-6 justify-center">
+              <Services title="Low Rise Buildings" imageSet={lowRiseBuilding} />
               <Services title="Farm House" imageSet={farmHouse} />
               <Services title="Banglows" imageSet={bunglow} />
               <Services title="Swimming Pools" imageSet={swimmingPool} />
