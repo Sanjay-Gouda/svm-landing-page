@@ -167,7 +167,7 @@ export default function Contact() {
                         onChange={formik.handleChange}
                         type="text"
                         className="form-input mt-2"
-                        placeholder="Name :"
+                        placeholder="Name"
                       />
 
                       {formik.touched.name && formik.errors.name && (
@@ -186,7 +186,7 @@ export default function Contact() {
                         onChange={formik.handleChange}
                         type="email"
                         className="form-input mt-2"
-                        placeholder="Email :"
+                        placeholder="Email"
                       />
 
                       {formik.touched.email && formik.errors.email && (
@@ -208,7 +208,7 @@ export default function Contact() {
                         value={formik.values.mono}
                         onChange={formik.handleChange}
                         className="form-input mt-2"
-                        placeholder="Mobile No :"
+                        placeholder="Mobile No"
                       />
                       {formik.touched.mono && formik.errors.mono && (
                         <div className="text-red-600">{formik.errors.mono}</div>
@@ -262,7 +262,7 @@ export default function Contact() {
                         value={formik.values.message}
                         onChange={formik.handleChange}
                         className="form-input mt-2 textarea"
-                        placeholder="Message :"
+                        placeholder="Message"
                       ></textarea>
 
                       {formik.touched.message && formik.errors.message && (

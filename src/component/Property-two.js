@@ -69,7 +69,7 @@ export default function PropertyTwo() {
           style={{ columnGap: "16px" }}
         >
           <div
-            style={{ width: "350px" }}
+            style={{ width: "350px", cursor: "pointer" }}
             // onClick={() => navigate("/grid/:Running")}
             onClick={() => navigate("/property-detail/1")}
             className="group rounded-xl cursor-pointer  bg-white dark:bg-slate-900 shadow hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700 overflow-hidden ease-in-out duration-500"
@@ -86,7 +86,7 @@ export default function PropertyTwo() {
             </div>
           </div>
           <div
-            style={{ width: "350px" }}
+            style={{ width: "350px", cursor: "pointer" }}
             // onClick={() => navigate("/grid/:Upcoming")}
             onClick={() => navigate("/property-detail/1")}
             className="group rounded-xl bg-white dark:bg-slate-900 shadow hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700 overflow-hidden ease-in-out duration-500"
@@ -108,7 +108,7 @@ export default function PropertyTwo() {
             </div>
           </div>
           <div
-            style={{ width: "350px" }}
+            style={{ width: "350px", cursor: "pointer" }}
             // onClick={() => navigate("/grid/:Completed")}
             onClick={() => navigate("/comingsoon")}
             className="image-hover group rounded-xl bg-white dark:bg-slate-900 shadow hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700 overflow-hidden ease-in-out duration-500"

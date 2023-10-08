@@ -43,6 +43,7 @@ import Ld5 from "../assets/images/Land-Developement/Ld5.png";
 import Ld6 from "../assets/images/Land-Developement/Ld6.png";
 import Ld7 from "../assets/images/Land-Developement/Ld7.png";
 import GetInTuch from "../component/Get-in-tuch";
+import plan from "../assets/images/plan-2.png";
 
 const customers = [Hc1, Hc2, Hc3, Hc4, Hc5, Hc6, Hc7, Hc8];
 
@@ -558,7 +559,7 @@ function PropertyDetail(props) {
                         >
                           <img
                             className="w-full h-full object-contain"
-                            src="http://svmdevelopers.in/wp-content/uploads/2022/06/plan-2.png"
+                            src={plan}
                             alt="layout"
                           />
                         </a>

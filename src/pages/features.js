@@ -572,7 +572,7 @@ import ServiceCard from "../component/Services";
 const ServicesCategory = [
   {
     id: 1,
-    title: "Open Ploting",
+    title: "Open Plotting",
     image: dn4,
   },
   {
