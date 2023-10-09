@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Select from "react-select";
 import Navbar from "../component/Navbar";
 import Footer from "../component/Footer";
 
-import properties from "../config/grid-data";
+import { properties, completed } from "../config/grid-data";
 import Pagination from "../component/Pagination";
 import Switcher from "../component/Switcher";
 
@@ -40,7 +40,16 @@ const maxPrice = [
 
 export default function Grid() {
   const params = useParams();
-  console.log(params);
+  const [title, setTitle] = useState("");
+
+  useEffect(() => {
+    if (params.id === "1") {
+      setTitle("Completed Projects");
+    } else {
+      setTitle("Running Projects");
+    }
+  }, [params]);
+
   return (
     <>
       <Navbar navClass="navbar-white" />
@@ -49,7 +58,8 @@ export default function Grid() {
         <div className="container">
           <div className="grid grid-cols-1 text-center mt-10">
             <h3 className="md:text-4xl text-3xl md:leading-normal leading-normal font-medium text-white">
-              {params.name.split(":")[1]}
+              {title}
+              {/* {params.name.split(":")[1]} */}
             </h3>
           </div>
         </div>
@@ -121,7 +131,7 @@ export default function Grid() {
         <div className="container">
           <Pagination
             itemsPerPage={6}
-            items={properties}
+            items={params.id === "1" ? completed : properties}
             gridClass={`grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-[30px]`}
           />
         </div>

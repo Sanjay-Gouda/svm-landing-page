@@ -70,47 +70,8 @@ export default function PropertyTwo() {
         >
           <div
             style={{ width: "350px", cursor: "pointer" }}
-            // onClick={() => navigate("/grid/:Running")}
-            onClick={() => navigate("/property-detail/1")}
-            className="group rounded-xl cursor-pointer  bg-white dark:bg-slate-900 shadow hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700 overflow-hidden ease-in-out duration-500"
-          >
-            <img src={Running} alt="" />
-
-            <div className="p-4">
-              <Link2
-                href="#"
-                className="text-xl font-medium hover:text-green-600"
-              >
-                Ongoing
-              </Link2>
-            </div>
-          </div>
-          <div
-            style={{ width: "350px", cursor: "pointer" }}
-            // onClick={() => navigate("/grid/:Upcoming")}
-            onClick={() => navigate("/property-detail/1")}
-            className="group rounded-xl bg-white dark:bg-slate-900 shadow hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700 overflow-hidden ease-in-out duration-500"
-          >
-            <div style={{ width: "350px", height: "236px" }}>
-              <img
-                src={Upcoming}
-                className="w-full h-full object-contain"
-                alt=""
-              />
-            </div>
-            <div className="p-4">
-              <Link2
-                href="#"
-                className="text-xl font-medium hover:text-green-600"
-              >
-                Upcoming
-              </Link2>
-            </div>
-          </div>
-          <div
-            style={{ width: "350px", cursor: "pointer" }}
-            // onClick={() => navigate("/grid/:Completed")}
-            onClick={() => navigate("/comingsoon")}
+            onClick={() => navigate("/grid/1")}
+            // onClick={() => navigate("/comingsoon")}
             className="image-hover group rounded-xl bg-white dark:bg-slate-900 shadow hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700 overflow-hidden ease-in-out duration-500"
           >
             <div style={{ width: "350px", height: "236px" }}>
@@ -134,6 +95,46 @@ export default function PropertyTwo() {
               </Link2>
             </div>
           </div>
+          <div
+            style={{ width: "350px", cursor: "pointer" }}
+            onClick={() => navigate("/grid/2")}
+            // onClick={() => navigate("/property-detail/1")}
+            className="group rounded-xl cursor-pointer  bg-white dark:bg-slate-900 shadow hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700 overflow-hidden ease-in-out duration-500"
+          >
+            <img src={Running} alt="" />
+
+            <div className="p-4">
+              <Link2
+                href="#"
+                className="text-xl font-medium hover:text-green-600"
+              >
+                Ongoing
+              </Link2>
+            </div>
+          </div>
+          <div
+            style={{ width: "350px", cursor: "pointer" }}
+            // onClick={() => navigate("/grid/:Upcoming")}
+            onClick={() => navigate("/comingsoon")}
+            className="group rounded-xl bg-white dark:bg-slate-900 shadow hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700 overflow-hidden ease-in-out duration-500"
+          >
+            <div style={{ width: "350px", height: "236px" }}>
+              <img
+                src={Upcoming}
+                className="w-full h-full object-contain"
+                alt=""
+              />
+            </div>
+            <div className="p-4">
+              <Link2
+                href="#"
+                className="text-xl font-medium hover:text-green-600"
+              >
+                Upcoming
+              </Link2>
+            </div>
+          </div>
+
           {/* <div className="" style={{ width: "350px", borderRadius: "20px" }}>
             <div style={{ width: "100%", height: "250px" }}>
               <img

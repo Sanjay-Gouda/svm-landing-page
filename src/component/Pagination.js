@@ -1,9 +1,12 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import {
   LiaCompressArrowsAltSolid,
   BiBed,
   LiaBathSolid,
+  MdOutlinePayments,
+  // HiLocationMarker,
+  MdLocationPin,
   MdKeyboardArrowLeft,
   MdKeyboardArrowRight,
 } from "../assets/icons/vander";
@@ -36,13 +39,16 @@ export default function Pagination({ itemsPerPage, items, gridClass }) {
     )
   );
 
+  const navigate = useNavigate();
+
   return (
     <>
       <div className={gridClass}>
         {currentItems.map((item, index) => (
           <div
             key={index}
-            className="group rounded-xl bg-white dark:bg-slate-900 shadow hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700 overflow-hidden ease-in-out duration-500"
+            className="group cursor-pointer rounded-xl bg-white dark:bg-slate-900 shadow hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700 overflow-hidden ease-in-out duration-500"
+            onClick={() => navigate(`/property-detail/${item.id}`)}
           >
             <div className="relative">
               <img src={item.image} alt="" />
@@ -69,13 +75,13 @@ export default function Pagination({ itemsPerPage, items, gridClass }) {
                 </li>
 
                 <li className="flex items-center me-4">
-                  <BiBed className="text-2xl me-2 text-green-600" />
-                  <span>{item.beds} Beds</span>
+                  <MdOutlinePayments className="text-2xl me-2 text-green-600" />
+                  <span>{item.downPayment}</span>
                 </li>
 
                 <li className="flex items-center">
-                  <LiaBathSolid className="text-2xl me-2 text-green-600" />
-                  <span>{item.baths} Baths</span>
+                  <MdLocationPin className="text-2xl me-2 text-green-600" />
+                  <span>{item.location}</span>
                 </li>
               </ul>
 
@@ -104,7 +110,7 @@ export default function Pagination({ itemsPerPage, items, gridClass }) {
                       <i className="mdi mdi-star"></i>
                     </li>
                     <li className="inline ms-1 text-black dark:text-white">
-                      {item.rating}(30)
+                      {item.rating}
                     </li>
                   </ul>
                 </li>
@@ -113,7 +119,7 @@ export default function Pagination({ itemsPerPage, items, gridClass }) {
           </div>
         ))}
       </div>
-      <div className="grid md:grid-cols-12 grid-cols-1 mt-8">
+      {/* <div className="grid md:grid-cols-12 grid-cols-1 mt-8">
         <div className="md:col-span-12 text-center">
           <nav>
             <ul className="inline-flex items-center -space-x-px">
@@ -137,7 +143,7 @@ export default function Pagination({ itemsPerPage, items, gridClass }) {
             </ul>
           </nav>
         </div>
-      </div>
+      </div> */}
     </>
   );
 }

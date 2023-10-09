@@ -43,7 +43,7 @@ function App() {
 
         {/*For  Projects detail page and listing page */}
         <Route path="/blogs" element={<Blogs />} />
-        <Route path="/grid/:name" element={<Grid />} />
+        <Route path="/grid/:id" element={<Grid />} />
         <Route path="/property-detail/:id" element={<PropertyDetail />} />
         {/*For  Projects detail page and listing page */}
 
