@@ -137,7 +137,7 @@ const Category = () => {
                     onClick={() => navigate("/our-services")}
                   >
                     <div className="group rounded-xl cursor-pointer bg-white dark:bg-slate-900 shadow hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700 overflow-hidden ease-in-out duration-500">
-                      <div className="category-image-wrapper">
+                      <div className="category-image-wrapper transition-image">
                         <img
                           src={item.imgURL}
                           alt=""

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link as Link2 } from "react-router-dom";
+import { Link as Link2, useParams } from "react-router-dom";
 import { properties } from "../config/grid-data";
 import withRouter from "../component/withrouter";
 import Navbar from "../component/Navbar";
@@ -115,6 +115,8 @@ const features = [
 ];
 
 function PropertyDetail(props) {
+  const params = useParams();
+
   const [photoIndex, setActiveIndex] = useState(0);
   const [isOpen, setOpen] = useState(false);
 
@@ -331,9 +333,9 @@ function PropertyDetail(props) {
                   />
                 </div> */}
 
-                <h5 className="text-2xl font-medium flex">
+                <h5 className="text-2xl font-medium flex mb-4">
                   <LuArrowRight className=" text-green-600  align-middle me-2 " />
-                  Sai Residency-1
+                  Sai Residency-{params.id}
                 </h5>
               </div>
               {/* <ul className="py-6 flex items-center list-none">
@@ -403,7 +405,7 @@ function PropertyDetail(props) {
                 </TinySlider>
               </div>
               <div className="w-full leading-[0] border-0 mt-6">
-                <h5 className=" text-2xl font-medium mb-6 flex   ">
+                <h5 className=" text-2xl font-medium mb-4 flex   ">
                   <LuArrowRight className=" text-green-600  align-middle me-2 " />
                   Happy Customers
                 </h5>
@@ -431,7 +433,7 @@ function PropertyDetail(props) {
                 </TinySlider>
               </div>
               <div className="w-full leading-[0] border-0 mt-6">
-                <h5 className="text-2xl font-medium mb-6 flex ">
+                <h5 className="text-2xl font-medium mb-4 flex ">
                   <LuArrowRight className="text-green-600  align-middle me-2" />
                   Project Site Development
                 </h5>

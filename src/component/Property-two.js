@@ -74,12 +74,10 @@ export default function PropertyTwo() {
             // onClick={() => navigate("/comingsoon")}
             className="image-hover group rounded-xl bg-white dark:bg-slate-900 shadow hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700 overflow-hidden ease-in-out duration-500"
           >
-            <div style={{ width: "350px", height: "236px" }}>
-              {/* <img
-                src="https://i.ibb.co/pzGysVS/b.jpg"
-                className="w-full h-full object-contain"
-                alt=""
-              /> */}
+            <div
+              className="transition-image"
+              style={{ width: "350px", height: "236px" }}
+            >
               <img
                 src={Completed}
                 className="w-full h-full object-contain"
@@ -99,9 +97,11 @@ export default function PropertyTwo() {
             style={{ width: "350px", cursor: "pointer" }}
             onClick={() => navigate("/grid/2")}
             // onClick={() => navigate("/property-detail/1")}
-            className="group rounded-xl cursor-pointer  bg-white dark:bg-slate-900 shadow hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700 overflow-hidden ease-in-out duration-500"
+            className="group  rounded-xl cursor-pointer  bg-white dark:bg-slate-900 shadow hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700 overflow-hidden ease-in-out duration-500"
           >
-            <img src={Running} alt="" />
+            <div className="transition-image">
+              <img src={Running} alt="" />
+            </div>
 
             <div className="p-4">
               <Link2
@@ -118,7 +118,10 @@ export default function PropertyTwo() {
             onClick={() => navigate("/comingsoon")}
             className="group rounded-xl bg-white dark:bg-slate-900 shadow hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700 overflow-hidden ease-in-out duration-500"
           >
-            <div style={{ width: "350px", height: "236px" }}>
+            <div
+              style={{ width: "350px", height: "236px" }}
+              className="transition-image"
+            >
               <img
                 src={Upcoming}
                 className="w-full h-full object-contain"

@@ -10,7 +10,7 @@ const ServiceCard = ({ title, image, onClick }) => {
         // onClick={() => navigate("/property-detail/1")}
         className="group rounded-xl cursor-pointer  bg-white dark:bg-slate-900 shadow hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700 overflow-hidden ease-in-out duration-500"
       >
-        <div className="w-full " style={{ height: "250px" }}>
+        <div className="w-full transition-image " style={{ height: "250px" }}>
           <img src={image} alt="" className="w-full h-full object-contain" />
         </div>
 

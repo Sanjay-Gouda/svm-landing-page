@@ -16,7 +16,7 @@ const Services = ({ title, imageSet }) => {
             return (
               <div
                 key={item.id}
-                className="service-list-img w-64 h-52  overflow-hidden transition transform scale-1"
+                className="service-list-img w-64 h-52  overflow-hidden transition transform scale-1 transition-image"
               >
                 <img
                   className="w-full h-full object-contain hover:scale-110"

@@ -567,6 +567,20 @@ video {
   width:70%;
 }
 
+
+.transition-image{
+   transition: 0.8s ease;
+
+ 
+}
+
+.transition-image:hover{
+  transform: scale(1.08);
+}
+
+
+
+
 @media (max-width: 540px){
   .profile-wrapper{
     flex-direction: column;
