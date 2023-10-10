@@ -30,6 +30,7 @@ const initialValues = {
   message: "",
   mono: "",
   subject: "Booking in Project",
+  additionalSubject: "",
 };
 
 export default function Contact() {
@@ -214,19 +215,7 @@ export default function Contact() {
                         <div className="text-red-600">{formik.errors.mono}</div>
                       )}
                     </div>
-                    {/* <div className="mb-5">
-                      <label htmlFor="subject" className="font-medium">
-                        Subject:
-                      </label>
-                      <input
-                        name="subject"
-                        id="subject"
-                        value={formik.values.subject}
-                        onChange={formik.handleChange}
-                        className="form-input mt-2"
-                        placeholder="Subject :"
-                      />
-                    </div> */}
+
                     <div className="mb-5 flex flex-col">
                       <label className="font-medium" htmlFor="countries">
                         What we can help you with ?
@@ -250,6 +239,19 @@ export default function Contact() {
                           {formik.errors.subject}
                         </div>
                       )}
+                    </div>
+                    <div className="mb-5">
+                      <label htmlFor="subject" className="font-medium">
+                        Subject:
+                      </label>
+                      <input
+                        name="subject"
+                        id="subject"
+                        value={formik.values.additionalSubject}
+                        onChange={formik.handleChange}
+                        className="form-input mt-2"
+                        placeholder="Subject :"
+                      />
                     </div>
 
                     <div className="mb-5">

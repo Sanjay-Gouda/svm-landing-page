@@ -51,7 +51,9 @@ export default function Pagination({ itemsPerPage, items, gridClass }) {
             onClick={() => navigate(`/property-detail/${item.id}`)}
           >
             <div className="relative">
-              <img src={item.image} alt="" />
+              <div className="transition-image">
+                <img src={item.image} alt="" />
+              </div>
               {/* 
                             <div className="absolute top-4 end-4">
                                 <Link to="#" className="btn btn-icon bg-white dark:bg-slate-900 shadow dark:shadow-gray-700 rounded-full text-slate-100 dark:text-slate-700 focus:text-red-600 dark:focus:text-red-600 hover:text-red-600 dark:hover:text-red-600"><i className="mdi mdi-heart mdi-18px"></i></Link>

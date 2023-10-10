@@ -138,7 +138,7 @@ export default function Grid() {
       </section>
       {/* <!-- End --> */}
       <Footer />
-      <Switcher />
+      {/* <Switcher /> */}
     </>
   );
 }
