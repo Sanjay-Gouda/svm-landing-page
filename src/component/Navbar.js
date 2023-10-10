@@ -347,7 +347,7 @@ export default function Navbar(props) {
                     <p
                       className="px-5 py-2 cursor-pointer hover:text-green-600"
                       style={{ padding: "10px 1.25rem" }}
-                      onClick={() => navigate("/property-detail/1")}
+                      onClick={() => navigate("/grid/1")}
                     >
                       Completed
                     </p>
@@ -357,7 +357,7 @@ export default function Navbar(props) {
                     <p
                       className="px-5 py-2 cursor-pointer hover:text-green-600"
                       style={{ padding: "10px 1.25rem" }}
-                      onClick={() => navigate("/property-detail/1")}
+                      onClick={() => navigate("/grid/2")}
                     >
                       Running
                     </p>

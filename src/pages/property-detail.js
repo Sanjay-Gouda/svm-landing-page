@@ -8,6 +8,8 @@ import Footer from "../component/Footer";
 import TinySlider from "tiny-slider-react";
 import "tiny-slider/dist/tiny-slider.css";
 
+import Completed from "../assets/images/property/3.jpg";
+
 import Lightbox from "react-18-image-lightbox";
 import "react-18-image-lightbox/style.css";
 import {
@@ -44,7 +46,7 @@ import Ld6 from "../assets/images/Land-Developement/Ld6.png";
 import Ld7 from "../assets/images/Land-Developement/Ld7.png";
 import GetInTuch from "../component/Get-in-tuch";
 import plan from "../assets/images/plan-2.png";
-
+import ProjectLogo from "../assets/images/sai-resendency.png";
 const customers = [Hc1, Hc2, Hc3, Hc4, Hc5, Hc6, Hc7, Hc8];
 
 const landDevelopment = [Ld1, Ld2, Ld3, Ld4, Ld5, Ld6, Ld7];
@@ -77,7 +79,9 @@ const settings = {
     },
   },
 };
-const images = [Image1, Image2, Image3, Image4, Image5];
+
+const Elevation = [Image1, Image2, Image3, Image4, Image5];
+const images = [Completed, ProjectLogo, Image3, Image4, Image5];
 
 const features = [
   {
@@ -134,7 +138,7 @@ function PropertyDetail(props) {
               <div className="group relative overflow-hidden">
                 <div className="w-full  property-detail-first-image">
                   <img
-                    src={Image1}
+                    src={Completed}
                     className="w-full h-full object-cover"
                     alt=""
                   />
@@ -158,7 +162,7 @@ function PropertyDetail(props) {
                   <div className="group relative overflow-hidden">
                     <div className="w-full property-detail-mini-image">
                       <img
-                        src={Image2}
+                        src={ProjectLogo}
                         alt=""
                         className="w-full h-full object-cover"
                       />
@@ -319,15 +323,18 @@ function PropertyDetail(props) {
                 className="w-full flex gap-2 items-center"
                 style={{ columnGap: "8px" }}
               >
-                <div style={{ width: "200px", height: "100px" }}>
+                {/* <div style={{ width: "200px", height: "100px" }}>
                   <img
                     src="http://svmdevelopers.in/wp-content/uploads/2018/06/Sai-residensy-e1528611858388.jpg"
                     alt="logo"
                     className="w-full h-full object-contain"
                   />
-                </div>
+                </div> */}
 
-                <h4 className="text-2xl font-medium">Sai Residency-1</h4>
+                <h5 className="text-2xl font-medium flex">
+                  <LuArrowRight className=" text-green-600  align-middle me-2 " />
+                  Sai Residency-1
+                </h5>
               </div>
               {/* <ul className="py-6 flex items-center list-none">
                 <li className="flex items-center lg:me-6 me-4">
@@ -367,6 +374,34 @@ function PropertyDetail(props) {
                 property.
               </p>
 
+              <div className="w-full leading-[0] border-0 mt-6">
+                <h5 className=" text-2xl font-medium mb-6 flex   ">
+                  <LuArrowRight className=" text-green-600  align-middle me-2 " />
+                  Plan And Elevation
+                </h5>
+
+                <TinySlider settings={settings}>
+                  {Elevation?.map((item) => {
+                    return (
+                      <div
+                        className="tiny-slide"
+                        key={item.id}
+                        // onClick={() => navigate("/our-services")}
+                      >
+                        <div className="group rounded-xl cursor-pointer bg-white dark:bg-slate-900 shadow hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700 overflow-hidden ease-in-out duration-500">
+                          <div className="category-image-wrapper">
+                            <img
+                              src={item}
+                              alt=""
+                              className="w-full h-full object-contain"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </TinySlider>
+              </div>
               <div className="w-full leading-[0] border-0 mt-6">
                 <h5 className=" text-2xl font-medium mb-6 flex   ">
                   <LuArrowRight className=" text-green-600  align-middle me-2 " />

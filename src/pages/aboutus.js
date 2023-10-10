@@ -152,6 +152,101 @@ export default function Aboutus() {
           </svg>
         </div>
       </div>
+
+      <section className="relative md:pb-24 pb-16">
+        <div className="container lg:mt-24 mt-16">
+          <div className="w-full flex justify-center mb-4">
+            <div className="lg:col-span-3 md:col-span-6">
+              <div className="grid grid-cols-1 pb-8 text-center">
+                <h3 className=" md:text-3xl md:leading-normal text-2xl leading-normal font-semibold">
+                  Our Leader
+                </h3>
+
+                {/* <p className="text-slate-400 max-w-xl mx-auto">
+                  <span className="font-bold">“Mr.Babulal .L. Kumawat”</span>{" "}
+                  has been on the Board of Directors since the inception of SVM
+                  Builders & Developers
+                </p> */}
+              </div>
+              {MEMBERS?.slice(0, 1).map((member) => (
+                <div className="group text-center">
+                  <div className="relative inline-block mx-auto h-52 w-52 rounded-full overflow-hidden">
+                    <img src={member.prfoilePicture} className="" alt="" />
+                    <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black h-52 w-52 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out"></div>
+
+                    <ul className="list-none absolute start-0 end-0 -bottom-20 group-hover:bottom-5 transition-all duration-500 ease-in-out">
+                      <li className="inline ms-1">
+                        <Link2
+                          to={member.fb}
+                          target="_blank"
+                          className="btn btn-icon btn-sm rounded-full border border-green-600 bg-green-600 hover:border-green-600 hover:bg-green-600 text-white"
+                        >
+                          <Facebook className="h-4 w-4" />
+                        </Link2>
+                      </li>
+                      <li className="inline ms-1">
+                        <Link2
+                          to={member.ig}
+                          target="_blank"
+                          className="btn btn-icon btn-sm rounded-full border border-green-600 bg-green-600 hover:border-green-600 hover:bg-green-600 text-white"
+                        >
+                          <Instagram className="h-4 w-4" />
+                        </Link2>
+                      </li>
+                      <li className="inline ms-1">
+                        <Link2
+                          to={member.linkedin}
+                          target="_blank"
+                          className="btn btn-icon btn-sm rounded-full border border-green-600 bg-green-600 hover:border-green-600 hover:bg-green-600 text-white"
+                        >
+                          <Linkedin className="h-4 w-4" />
+                        </Link2>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div className="content mt-3">
+                    <p
+                      onClick={() => handleRidrect(member.id)}
+                      className="text-xl cursor-pointer font-medium hover:text-green-600 transition-all duration-500 ease-in-out"
+                    >
+                      {member?.name}
+                    </p>
+                    <p className="text-slate-400">{member?.designation}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="grid grid-cols-1 pb-8 text-center">
+            <h3 className="mb-4 md:text-3xl md:leading-normal text-2xl leading-normal font-semibold">
+              Meet The Team
+            </h3>
+
+            <p className="text-slate-400 max-w-xl mx-auto">
+              Introduce the dedicated team of real estate agents, highlighting
+              their qualifications, specialties, and commitment to serving
+              clients effectively.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-12 grid-cols-1 mt-8 gap-[30px]">
+            {MEMBERS.slice(1, 4)?.map((member) => (
+              <MemberList
+                name={member.name}
+                profile={member.prfoilePicture}
+                designation={member.designation}
+                linkedin={member.linkedin}
+                fb={member.fb}
+                ig={member.ig}
+                handleRidrect={() => handleRidrect(member.id)}
+              />
+            ))}
+          </div>
+        </div>
+        {/* <ClientTwo /> */}
+      </section>
+
       {/* <!-- End Hero --> */}
       <div className="container">
         <div className="flex md:flex justify-center">
@@ -227,7 +322,7 @@ export default function Aboutus() {
                   to="/knowmore-aboutus"
                   className="btn bg-green-600 hover:bg-green-700 text-white rounded-md w-full flex items-center justify-center"
                 >
-                  Know More About Us &nbsp;
+                  Know More About SVM &nbsp;
                   <LuArrowRight className="text-white  align-middle me-2" />
                 </Link2>
               </div>
@@ -298,92 +393,10 @@ export default function Aboutus() {
           </div>
         </div>
       </section>
+      <GetInTuch />
+
       {/* <!-- End CTA --> */}
 
-      <section className="relative md:pb-24 pb-16">
-        <div className="container lg:mt-24 mt-16">
-          <div className="grid grid-cols-1 pb-8 text-center">
-            <h3 className="mb-4 md:text-3xl md:leading-normal text-2xl leading-normal font-semibold">
-              Meet The Agent Team
-            </h3>
-
-            <p className="text-slate-400 max-w-xl mx-auto">
-              Introduce the dedicated team of real estate agents, highlighting
-              their qualifications, specialties, and commitment to serving
-              clients effectively.
-            </p>
-          </div>
-
-          <div className="w-full flex justify-center">
-            <div className="lg:col-span-3 md:col-span-6">
-              {MEMBERS?.slice(0, 1).map((member) => (
-                <div className="group text-center">
-                  <div className="relative inline-block mx-auto h-52 w-52 rounded-full overflow-hidden">
-                    <img src={member.prfoilePicture} className="" alt="" />
-                    <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black h-52 w-52 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out"></div>
-
-                    <ul className="list-none absolute start-0 end-0 -bottom-20 group-hover:bottom-5 transition-all duration-500 ease-in-out">
-                      <li className="inline ms-1">
-                        <Link2
-                          to={member.fb}
-                          target="_blank"
-                          className="btn btn-icon btn-sm rounded-full border border-green-600 bg-green-600 hover:border-green-600 hover:bg-green-600 text-white"
-                        >
-                          <Facebook className="h-4 w-4" />
-                        </Link2>
-                      </li>
-                      <li className="inline ms-1">
-                        <Link2
-                          to={member.ig}
-                          target="_blank"
-                          className="btn btn-icon btn-sm rounded-full border border-green-600 bg-green-600 hover:border-green-600 hover:bg-green-600 text-white"
-                        >
-                          <Instagram className="h-4 w-4" />
-                        </Link2>
-                      </li>
-                      <li className="inline ms-1">
-                        <Link2
-                          to={member.linkedin}
-                          target="_blank"
-                          className="btn btn-icon btn-sm rounded-full border border-green-600 bg-green-600 hover:border-green-600 hover:bg-green-600 text-white"
-                        >
-                          <Linkedin className="h-4 w-4" />
-                        </Link2>
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div className="content mt-3">
-                    <p
-                      onClick={() => handleRidrect(member.id)}
-                      className="text-xl cursor-pointer font-medium hover:text-green-600 transition-all duration-500 ease-in-out"
-                    >
-                      {member?.name}
-                    </p>
-                    <p className="text-slate-400">{member?.designation}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="grid md:grid-cols-12 grid-cols-1 mt-8 gap-[30px]">
-            {MEMBERS.slice(1, 4)?.map((member) => (
-              <MemberList
-                name={member.name}
-                profile={member.prfoilePicture}
-                designation={member.designation}
-                linkedin={member.linkedin}
-                fb={member.fb}
-                ig={member.ig}
-                handleRidrect={() => handleRidrect(member.id)}
-              />
-            ))}
-          </div>
-        </div>
-        {/* <ClientTwo /> */}
-        <GetInTuch />
-      </section>
       <Footer />
       {/* <Switcher /> */}
     </>
