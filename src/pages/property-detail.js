@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link as Link2, useParams } from "react-router-dom";
+import { Link as Link2, useNavigate, useParams } from "react-router-dom";
 import { properties } from "../config/grid-data";
 import withRouter from "../component/withrouter";
 import Navbar from "../component/Navbar";
@@ -127,6 +127,11 @@ function PropertyDetail(props) {
   const handleCLick = (index) => {
     setActiveIndex(index);
     setOpen(true);
+  };
+
+  const navigate = useNavigate();
+  const handleRedirect = (type) => {
+    navigate(`/project-cutomers?type=${type}`);
   };
 
   return (
@@ -377,7 +382,10 @@ function PropertyDetail(props) {
               </p>
 
               <div className="w-full leading-[0] border-0 mt-6">
-                <h5 className=" text-2xl font-medium mb-6 flex   ">
+                <h5
+                  className=" text-2xl font-medium mb-6 flex "
+                  onClick={() => handleRedirect("plan-elevation")}
+                >
                   <LuArrowRight className=" text-green-600  align-middle me-2 " />
                   Plan And Elevation
                 </h5>
@@ -388,6 +396,8 @@ function PropertyDetail(props) {
                       <div
                         className="tiny-slide"
                         key={item.id}
+                        onClick={() => handleRedirect("plan-elevation")}
+
                         // onClick={() => navigate("/our-services")}
                       >
                         <div className="group rounded-xl cursor-pointer bg-white dark:bg-slate-900 shadow hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700 overflow-hidden ease-in-out duration-500">
@@ -405,7 +415,10 @@ function PropertyDetail(props) {
                 </TinySlider>
               </div>
               <div className="w-full leading-[0] border-0 mt-6">
-                <h5 className=" text-2xl font-medium mb-4 flex   ">
+                <h5
+                  className=" text-2xl font-medium mb-4 flex   "
+                  onClick={() => handleRedirect("happy-customers")}
+                >
                   <LuArrowRight className=" text-green-600  align-middle me-2 " />
                   Happy Customers
                 </h5>
@@ -416,6 +429,8 @@ function PropertyDetail(props) {
                       <div
                         className="tiny-slide"
                         key={item.id}
+                        onClick={() => handleRedirect("happy-customers")}
+
                         // onClick={() => navigate("/our-services")}
                       >
                         <div className="group rounded-xl cursor-pointer bg-white dark:bg-slate-900 shadow hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700 overflow-hidden ease-in-out duration-500">
@@ -434,7 +449,10 @@ function PropertyDetail(props) {
               </div>
               <div className="w-full leading-[0] border-0 mt-6">
                 <h5 className="text-2xl font-medium mb-4 flex ">
-                  <LuArrowRight className="text-green-600  align-middle me-2" />
+                  <LuArrowRight
+                    className="text-green-600  align-middle me-2"
+                    onClick={() => handleRedirect("land-development")}
+                  />
                   Project Site Development
                 </h5>
 
@@ -444,6 +462,8 @@ function PropertyDetail(props) {
                       <div
                         className="tiny-slide"
                         key={item.id}
+                        onClick={() => handleRedirect("land-development")}
+
                         // onClick={() => navigate("/our-services")}
                       >
                         <div className="group rounded-xl cursor-pointer bg-white dark:bg-slate-900 shadow hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700 overflow-hidden ease-in-out duration-500">
@@ -521,7 +541,9 @@ function PropertyDetail(props) {
                             Total Price
                           </span>
                           <span className="font-medium text-base">
-                            RS.151000 /-
+                            {params.id === "1"
+                              ? "RS.151000 /-"
+                              : "RS.251000 /-"}
                           </span>
                         </li>
                       </ul>

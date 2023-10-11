@@ -26,6 +26,7 @@ import ScrollToTop from "./component/Scroll-top";
 import Feature from "./component/Feature";
 import ProfileDetail from "./pages/profile-detail";
 import ServiceListing from "./pages/serviceListing";
+import ProjectImageListing from "./pages/ProjectImagesListing";
 
 function App() {
   useEffect(() => {
@@ -40,6 +41,7 @@ function App() {
         <Route path="/" element={<IndexTwo />} />
         <Route path="/our-services" element={<Features />} />
         <Route path="/our-services-list/:id" element={<ServiceListing />} />
+        <Route path="/project-cutomers" element={<ProjectImageListing />} />
 
         {/*For  Projects detail page and listing page */}
         <Route path="/blogs" element={<Blogs />} />
