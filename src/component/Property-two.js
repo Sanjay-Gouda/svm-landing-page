@@ -57,7 +57,7 @@ export default function PropertyTwo() {
             Our Projects
           </h3>
 
-          <p className="text-slate-400 max-w-xl mx-auto">
+          <p className="text-slate-400 max-w-xl mx-auto capitalize">
             Explore our ongoing or completed projects, and know more about our
             unique features, locations, and potential for investment or
             purchase.

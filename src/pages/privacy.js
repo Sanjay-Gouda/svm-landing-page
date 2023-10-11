@@ -20,7 +20,7 @@ export default function Privacy() {
         <div className="container">
           <div className="grid grid-cols-1 text-center mt-10">
             <h3 className="md:text-4xl text-3xl md:leading-normal leading-normal font-medium text-white">
-              Know More About Us
+              Know More About SVM
             </h3>
           </div>
         </div>
@@ -217,7 +217,7 @@ export default function Privacy() {
       <GetInTuch />
 
       <Footer />
-      <Switcher />
+      {/* <Switcher /> */}
     </>
   );
 }

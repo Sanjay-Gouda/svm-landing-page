@@ -11,7 +11,7 @@ export default function Feature() {
             How We Work
           </h3>
 
-          <p className="text-slate-400 max-w-xl mx-auto">
+          <p className="text-slate-400 max-w-xl mx-auto capitalize">
             Real estate transactions involve property evaluation, negotiation,
             legal documentation, financing, and closing to transfer ownership.
           </p>
@@ -28,10 +28,10 @@ export default function Feature() {
 
             <div className="mt-6">
               <h5 className="text-xl font-medium">Evaluate Property</h5>
-              <p className="text-slate-400 mt-3">
-                Assess real estate's value, condition, and potential for
-                investment or purchase, considering location, size, amenities,
-                and market trends.{" "}
+              <p className="text-slate-400 mt-3 capitalize">
+                Assess Real Estate's value, Condition, and Potential for
+                investment or Purchase, considering Location, Size, Amenities,
+                and Market Trends.{" "}
               </p>
             </div>
           </div>
@@ -45,7 +45,7 @@ export default function Feature() {
             </div>
             <div className="mt-6">
               <h5 className="text-xl font-medium">Meeting with Executive</h5>
-              <p className="text-slate-400 mt-3">
+              <p className="text-slate-400 mt-3 capitalize">
                 Scheduled discussion with the company's top executive to address
                 strategic decisions, project updates, and key business matters
               </p>
@@ -62,7 +62,7 @@ export default function Feature() {
 
             <div className="mt-6">
               <h5 className="text-xl font-medium">Close the Deal</h5>
-              <p className="text-slate-400 mt-3">
+              <p className="text-slate-400 mt-3 capitalize">
                 Finalize the real estate transaction by reaching an agreement
                 between buyer and seller, ensuring legal compliance, and
                 exchanging ownership.

@@ -223,7 +223,7 @@ export default function Aboutus() {
               Meet The Team
             </h3>
 
-            <p className="text-slate-400 max-w-xl mx-auto">
+            <p className="text-slate-400 max-w-xl mx-auto capitalize">
               Introduce the dedicated team of real estate agents, highlighting
               their qualifications, specialties, and commitment to serving
               clients effectively.

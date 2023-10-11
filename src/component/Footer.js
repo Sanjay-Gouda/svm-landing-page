@@ -173,7 +173,7 @@ export default function Footer() {
                       </a>
                     </div>
                   </div>
-                  <div className="flex">
+                  {/* <div className="flex">
                     <Phone className="w-5 h-5 text-green-600 me-3"></Phone>
                     <div className="">
                       <a
@@ -205,7 +205,7 @@ export default function Footer() {
                         +91-9712342563
                       </a>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
                 {/* <ul className="list-none footer-list mt-6">
                       <li>

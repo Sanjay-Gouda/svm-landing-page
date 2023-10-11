@@ -90,7 +90,7 @@ export default function Pagination({ itemsPerPage, items, gridClass }) {
               <ul className="pt-6 flex justify-between items-center list-none">
                 <li>
                   <span className="text-slate-400">Price</span>
-                  <p className="text-lg font-medium">${item.price}</p>
+                  <p className="text-lg font-medium">{item.price}</p>
                 </li>
 
                 <li>
