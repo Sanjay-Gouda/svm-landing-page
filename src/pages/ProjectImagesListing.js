@@ -21,7 +21,11 @@ import { Link as Link2, useNavigate, useParams } from "react-router-dom";
 import ProfileDetailContainer from "../component/profile-detail";
 import Services from "./our-service";
 
-import { Customers, PlanElevation } from "../config/grid-data";
+import {
+  Customers,
+  LandDevelopement,
+  PlanElevation,
+} from "../config/grid-data";
 import { useQueryParams } from "../hook/useQuery";
 const ProjectImageListing = () => {
   const params = useQueryParams();
@@ -37,7 +41,7 @@ const ProjectImageListing = () => {
     } else if (paramType === "happy-customers") {
       setTitle("Happy Customers");
     } else {
-      setTitle("Land Developement");
+      setTitle("Project Site Developement");
     }
   }, []);
 
@@ -104,20 +108,29 @@ const ProjectImageListing = () => {
           ) : null} */}
 
           <Services
-            title="Happy Customers"
+            title={
+              paramType === "happy-customers"
+                ? "Happy Customer"
+                : paramType === "plan-elevation"
+                ? "Plan & Elevation Details"
+                : "Project Site Developement"
+            }
             imageSet={
-              paramType === "happy-customers" ? Customers : PlanElevation
+              paramType === "happy-customers"
+                ? Customers
+                : paramType === "plan-elevation"
+                ? PlanElevation
+                : LandDevelopement
             }
           />
 
           <div className="w-full flex justify-center items-center">
             <button
               // onClick={formik.handleSubmit}
-              onClick={() => navigate("/our-services")}
+              onClick={() => navigate(-1)}
               className="btn bg-green-600 hover:bg-green-700 mt-6 text-white rounded-md"
             >
-              Explore Other Services
-              {/* {loading && <ClipLoader color="#fff" size={25} />} */}
+              Back To Projects
             </button>
           </div>
         </div>

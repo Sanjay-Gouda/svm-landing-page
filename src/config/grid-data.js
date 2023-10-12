@@ -36,6 +36,23 @@ import Image3 from "../assets/images/property/single/p-3.png";
 import Image4 from "../assets/images/property/single/p-4.png";
 import Image5 from "../assets/images/property/single/p-5.png";
 
+import Ld1 from "../assets/images/Land-Developement/Ld1.png";
+import Ld2 from "../assets/images/Land-Developement/Ld2.png";
+import Ld3 from "../assets/images/Land-Developement/Ld3.png";
+import Ld4 from "../assets/images/Land-Developement/Ld4.png";
+import Ld5 from "../assets/images/Land-Developement/Ld5.png";
+import Ld6 from "../assets/images/Land-Developement/Ld6.png";
+import Ld7 from "../assets/images/Land-Developement/Ld7.png";
+import Ld8 from "../assets/images/Land-Developement/ld8.png";
+import Ld9 from "../assets/images/Land-Developement/ld10.png";
+import Ld10 from "../assets/images/Land-Developement/ld11.png";
+import Ld11 from "../assets/images/Land-Developement/ld12.png";
+import Ld12 from "../assets/images/Land-Developement/ld13.png";
+import Ld13 from "../assets/images/Land-Developement/ld14.png";
+import Ld14 from "../assets/images/Land-Developement/ld15.png";
+import Ld15 from "../assets/images/Land-Developement/ld16.png";
+import Ld16 from "../assets/images/Land-Developement/ld17.png";
+
 export const properties = [
   {
     id: 1,
@@ -277,5 +294,72 @@ export const PlanElevation = [
   {
     id: 4,
     image: Image4,
+  },
+];
+
+export const LandDevelopement = [
+  {
+    id: 1,
+    image: Ld1,
+  },
+  {
+    id: 2,
+    image: Ld2,
+  },
+  {
+    id: 3,
+    image: Ld3,
+  },
+  {
+    id: 4,
+    image: Ld4,
+  },
+  {
+    id: 5,
+    image: Ld5,
+  },
+  {
+    id: 6,
+    image: Ld6,
+  },
+  {
+    id: 7,
+    image: Ld8,
+  },
+  {
+    id: 8,
+    image: Ld8,
+  },
+  {
+    id: 9,
+    image: Ld9,
+  },
+  {
+    id: 10,
+    image: Ld10,
+  },
+  {
+    id: 11,
+    image: Ld11,
+  },
+  {
+    id: 12,
+    image: Ld12,
+  },
+  {
+    id: 13,
+    image: Ld13,
+  },
+  {
+    id: 14,
+    image: Ld14,
+  },
+  {
+    id: 15,
+    image: Ld15,
+  },
+  {
+    id: 16,
+    image: Ld16,
   },
 ];

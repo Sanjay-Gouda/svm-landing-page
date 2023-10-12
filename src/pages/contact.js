@@ -245,7 +245,7 @@ export default function Contact() {
                         Subject:
                       </label>
                       <input
-                        name="subject"
+                        name="additionalSubject"
                         id="subject"
                         value={formik.values.additionalSubject}
                         onChange={formik.handleChange}

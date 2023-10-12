@@ -48,15 +48,17 @@ export default function Privacy() {
               style={{ rowGap: "16px" }}
             >
               <div className="p-6 bg-white dark:bg-slate-900 shadow dark:shadow-gray-700 rounded-md">
-                <h5 className="text-xl font-medium mb-4">Who We Are & Why:</h5>
-                <p className="text-slate-400 italic border-x-4 border-green-600 rounded-ss-xl rounded-ee-xl mt-3 p-3 my-4">
+                <h5 className="text-xl font-semibold mb-4 text-center">
+                  Who We Are & Why ?
+                </h5>
+                <p className="text-green-600 italic border-x-4 border-green-600 rounded-ss-xl rounded-ee-xl mt-3 p-3 my-4">
                   "SVM Builders & Developers ,is achieving milestones under the
                   dynamic leadership of &nbsp;
                   <br />
                   <span className="font-bold">Mr. Babulal .L. Kumawat.</span> "
                 </p>
                 <div
-                  className="w-full overflow-hidden mt-4"
+                  className="w-full overflow-hidden mt-4 "
                   style={{
                     height: "300px",
                     borderRadius: "10px",
@@ -64,13 +66,14 @@ export default function Privacy() {
                   }}
                 >
                   <img
-                    src="https://demo.htmlcodex.com/1625/construction-company-website-template-free/img/service-3.jpg"
+                    // src="https://images.pexels.com/photos/9729197/pexels-photo-9729197.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                    src="https://images.pexels.com/photos/396303/pexels-photo-396303.jpeg?auto=compress&cs=tinysrgb&w=1600"
                     alt="construction"
-                    className="w-full h-full object-contain"
+                    className="w-full h-full object-contain transition-image"
                   />
                 </div>
 
-                <p className="text-slate-400 mt-4">
+                <p className="text-dark mt-4">
                   “SVM Builders & Developers”, India’s leading real estate
                   developer was founded 16 years back in 2004 in Surat,Gujarat
                   and since then has been scaling new heights by each passing
@@ -87,7 +90,7 @@ export default function Privacy() {
                   innovative designing and architectural finesse it has brought
                   in to the Indian real estate industry.
                 </p>
-                <p className="text-slate-400 mt-2">
+                <p className="text-dark mt-2">
                   “SVM Builders & Developers”, as the name suggests, stand for
                   quality and punctuality. These are two words that are the
                   mantras for a successful venture in the construction &
@@ -104,13 +107,15 @@ export default function Privacy() {
               </div>
 
               <div className="p-6 bg-white dark:bg-slate-900 shadow  dark:shadow-gray-700 rounded-md">
-                <h5 className="text-xl font-medium mb-4">Why Choose SVM:</h5>
-                <p className="text-slate-400 italic border-x-4 border-green-600 rounded-ss-xl rounded-ee-xl mt-3 p-3 my-4">
+                <h5 className="text-xl font-semibold mb-4 text-center">
+                  Why Choose SVM ?
+                </h5>
+                <p className="text-green-600 italic border-x-4 border-green-600 rounded-ss-xl rounded-ee-xl mt-3 p-3 my-4">
                   " Our Principles are Built on Providing Financial Security,
                   Customer Satisfaction and Delivering Promises."
                 </p>
                 <div
-                  className="w-full overflow-hidden mt-4"
+                  className="w-full overflow-hidden mt-4 "
                   style={{
                     height: "300px",
                     borderRadius: "10px",
@@ -118,20 +123,20 @@ export default function Privacy() {
                   }}
                 >
                   <img
-                    src="https://demo.htmlcodex.com/1625/construction-company-website-template-free/img/service-6.jpg"
+                    src="https://media.istockphoto.com/id/1403293578/photo/person-icon-on-wooden-cube-with-hand-picked-different-from-the-crowd.jpg?s=612x612&w=0&k=20&c=llJ830jnNf_x_Ha4EUyU3ipCpmvDAoYREJdVKPvCabA="
                     alt="construction"
-                    className="w-full h-full object-contain"
+                    className="w-full h-full object-contain transition-image"
                   />
                 </div>
 
-                <p className="text-slate-400 mt-4">
+                <p className="text-dark mt-4">
                   “SVM Builders & Developers” is a name that resonates among the
                   prominent residential and commercial developers in
                   Surat,Gujarat.Our ability to deliver on-time affordable and
                   luxurious housing projects in all over Gujarat has ensured a
                   continual interest from our customers.
                 </p>
-                <p className="text-slate-400 mt-4">
+                <p className="text-dark mt-4">
                   “SVM Builders & Developers” Have Maintained a Single Guiding
                   line of thought for all its operations & Gratifications of its
                   customers.To creat abodes that are crafted keeping the
@@ -139,7 +144,7 @@ export default function Privacy() {
                   core is its primary intent.It also aims to provide a valuable
                   exchange for the buyers (customers) investments.
                 </p>
-                <p className="text-slate-400 mt-4">
+                <p className="text-dark mt-4">
                   Our products are created and developed by the very same people
                   that use them. Our expertise in acquisition of
                   land,appointment of architects,designers,construction and
@@ -150,7 +155,7 @@ export default function Privacy() {
                   solutions for our customers around the world in less than 24
                   hours.
                 </p>
-                <p className="text-slate-400 mt-4">
+                <p className="text-dark mt-4">
                   Our Company “SVM Builders & Developers” Opens an
                   inter-operable and accessible procedure with a vision to
                   provide affordable housing to everyone and provide gated
@@ -165,17 +170,17 @@ export default function Privacy() {
               </div>
 
               <div className="p-6 bg-white dark:bg-slate-900 shadow  dark:shadow-gray-700 rounded-md">
-                <h5 className="text-xl font-medium mb-4">
+                <h5 className="text-xl font-semibold mb-4 text-center">
                   Our Missions & Vision:
                 </h5>
-                <p className="text-slate-400 italic border-x-4 border-green-600 rounded-ss-xl rounded-ee-xl mt-3 p-3 my-4">
+                <p className="text-green-600 italic border-x-4 border-green-600 rounded-ss-xl rounded-ee-xl mt-3 p-3 my-4">
                   " To build long-lasting relations with buyers in exchange for
                   their trust investments and emotions, To offer complete
                   fulfillment of aspiration and lend happiness to all the
                   customers”
                 </p>
                 <div
-                  className="w-full overflow-hidden mt-4"
+                  className="w-full overflow-hidden mt-4 "
                   style={{
                     height: "300px",
                     borderRadius: "10px",
@@ -183,13 +188,13 @@ export default function Privacy() {
                   }}
                 >
                   <img
-                    src="https://demo.htmlcodex.com/1625/construction-company-website-template-free/img/service-5.jpg"
+                    src="https://images.pexels.com/photos/7666429/pexels-photo-7666429.jpeg?auto=compress&cs=tinysrgb&w=1600"
                     alt="construction"
-                    className="w-full h-full object-contain"
+                    className="w-full h-full object-contain transition-image"
                   />
                 </div>
 
-                <p className="text-slate-400 mt-4">
+                <p className="text-dark mt-4">
                   “SVM Builders & Builders” Aims “To Continuously expand the
                   role as a leading developers in developing and construction
                   industry by building long lasting relationships with our
@@ -198,7 +203,7 @@ export default function Privacy() {
                   the loyalty of its clients and the appreciation of its
                   visitors
                 </p>
-                <p className="text-slate-400 mt-4">
+                <p className="text-dark mt-4">
                   “SVM Builders & Developers” Mission to develop quality
                   properties based on realistic values for its owners,
                   investment affiliates, as well as its joint venture partners.
