@@ -2,8 +2,11 @@ import React from "react";
 import { Link as Link2 } from "react-router-dom";
 import Navbar from "../component/Navbar";
 import Footer from "../component/Footer";
-import BackgroudImage from "../assets/images/bg/01.jpg";
 import Switcher from "../component/Switcher";
+import BackgroudImage from "../assets/images/bg/01.jpg";
+import Why from "../assets/images/why.jpeg";
+import Choose from "../assets/images/choose.jpg";
+import Mission from "../assets/images/mission.jpeg";
 import { LuArrowRight } from "../assets/icons/vander";
 import GetInTuch from "../component/Get-in-tuch";
 
@@ -66,8 +69,8 @@ export default function Privacy() {
                   }}
                 >
                   <img
-                    // src="https://images.pexels.com/photos/9729197/pexels-photo-9729197.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                    src="https://images.pexels.com/photos/396303/pexels-photo-396303.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                    src={Why}
+                    // src="https://images.pexels.com/photos/396303/pexels-photo-396303.jpeg?auto=compress&cs=tinysrgb&w=1600"
                     alt="construction"
                     className="w-full h-full object-contain transition-image"
                   />
@@ -123,7 +126,8 @@ export default function Privacy() {
                   }}
                 >
                   <img
-                    src="https://media.istockphoto.com/id/1403293578/photo/person-icon-on-wooden-cube-with-hand-picked-different-from-the-crowd.jpg?s=612x612&w=0&k=20&c=llJ830jnNf_x_Ha4EUyU3ipCpmvDAoYREJdVKPvCabA="
+                    src={Choose}
+                    // src="https://media.istockphoto.com/id/1403293578/photo/person-icon-on-wooden-cube-with-hand-picked-different-from-the-crowd.jpg?s=612x612&w=0&k=20&c=llJ830jnNf_x_Ha4EUyU3ipCpmvDAoYREJdVKPvCabA="
                     alt="construction"
                     className="w-full h-full object-contain transition-image"
                   />
@@ -188,7 +192,8 @@ export default function Privacy() {
                   }}
                 >
                   <img
-                    src="https://images.pexels.com/photos/7666429/pexels-photo-7666429.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                    src={Mission}
+                    // src="https://images.pexels.com/photos/7666429/pexels-photo-7666429.jpeg?auto=compress&cs=tinysrgb&w=1600"
                     alt="construction"
                     className="w-full h-full object-contain transition-image"
                   />

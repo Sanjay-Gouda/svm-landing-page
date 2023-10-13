@@ -61,7 +61,7 @@ export const properties = [
     square: 8000,
     downPayment: "2100/-",
     location: "Bharuch",
-    price: 251000,
+    price: "2,51,000/-",
     // rating: 5.0,
   },
   {
@@ -71,7 +71,7 @@ export const properties = [
     square: 8000,
     downPayment: "2100/-",
     location: "Bharuch",
-    price: 251000,
+    price: "2,51,000/-",
     // rating: 5.0,
   },
   // {
@@ -186,7 +186,7 @@ export const completed = [
     square: 3000,
     downPayment: "2100/-",
     location: "Bharuch",
-    price: 151000,
+    price: "1,51,000/-",
     // rating: 5.0,
   },
 ];

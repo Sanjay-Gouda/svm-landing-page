@@ -315,7 +315,8 @@ export default function Contact() {
                     href="tel:+91-9662320636"
                     className="btn btn-link text-slate-400 hover:text-slate-400 after:bg-green-600 transition duration-500"
                   >
-                    +91-9662320636
+                    0261-2393140
+                    {/* +91-9662320636 */}
                   </a>
                 </div>
               </div>

@@ -137,6 +137,8 @@ export default function Footer() {
                     <a
                       href="https://www.google.com/maps/dir//SVM+Builders+%26+Developers+F-27+,Sidhivinayak+Residency,+Sachin+Char+Rasta+Station+Rd,+near+Auto,+Sachin+Surat,+Gujarat+394230/@21.0847634,72.8815967,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3be0510b1f27ec87:0xb8d717b767ac8626!2m2!1d72.8815967!2d21.0847634?entry=ttu"
                       data-type="iframe"
+                      target="_blank"
+                      rel="noreferrer"
                       className="text-green-600 hover:text-green-700 duration-500 ease-in-out lightbox"
                     >
                       View on Google map
