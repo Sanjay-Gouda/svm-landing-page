@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link as Link2, useNavigate, useParams } from "react-router-dom";
-import { properties } from "../config/grid-data";
+import { ProjectPlannLayouts, properties } from "../config/grid-data";
 import withRouter from "../component/withrouter";
 import Navbar from "../component/Navbar";
 import Switcher from "../component/Switcher";
@@ -46,7 +46,14 @@ import Ld6 from "../assets/images/Land-Developement/Ld6.png";
 import Ld7 from "../assets/images/Land-Developement/Ld7.png";
 import GetInTuch from "../component/Get-in-tuch";
 import plan from "../assets/images/plan-2.png";
+import planLayout3 from "../assets/images/plan-3.png";
+
+import planLayout1 from "../assets/images/projects-2-plan.png";
+import planLayout2 from "../assets/images/projects-2-plan1.png";
+
 import ProjectLogo from "../assets/images/sai-resendency.png";
+import ProjectLogo2 from "../assets/images/sai-resendency2.png";
+import ProjectLogo3 from "../assets/images/sai-resendency3.png";
 const customers = [Hc1, Hc2, Hc3, Hc4, Hc5, Hc6, Hc7, Hc8];
 
 const landDevelopment = [Ld1, Ld2, Ld3, Ld4, Ld5, Ld6, Ld7];
@@ -116,7 +123,6 @@ const features = [
 
 function PropertyDetail(props) {
   const params = useParams();
-
   const [photoIndex, setActiveIndex] = useState(0);
   const [isOpen, setOpen] = useState(false);
 
@@ -133,6 +139,12 @@ function PropertyDetail(props) {
   const handleRedirect = (type) => {
     navigate(`/project-cutomers?type=${type}`);
   };
+
+  // useEffect(() => {
+  //   const layoutList = ProjectPlannLayouts?.find((layout) => layout.id === 1);
+
+  //   console.log(layoutList, "Layout", params.id);
+  // }, []);
 
   return (
     <>
@@ -166,7 +178,13 @@ function PropertyDetail(props) {
               <div className="group relative overflow-hidden">
                 <div className="w-full  property-detail-first-image">
                   <img
-                    src={Completed}
+                    src={
+                      params.id === "1"
+                        ? ProjectLogo
+                        : params.id === "2"
+                        ? ProjectLogo2
+                        : ProjectLogo3
+                    }
                     className="w-full h-full object-cover"
                     alt=""
                   />
@@ -497,8 +515,10 @@ function PropertyDetail(props) {
                           </span>
                           <span className="font-medium text-base">
                             {params.id === "1"
-                              ? "RS.151000 /-"
-                              : "RS.251000 /-"}
+                              ? "RS.1,51,000 -"
+                              : "RS.2,51,000 /-"}
+
+                            {params.id === "1" ? " 2,51,000/-" : null}
                           </span>
                         </li>
                       </ul>
@@ -570,23 +590,59 @@ function PropertyDetail(props) {
                         style={{ width: "300px", height: "300px" }}
                       >
                         <a
-                          href="http://svmdevelopers.in/wp-content/uploads/2022/06/Booking-Plan.pdf"
+                          href={
+                            params.id === "1"
+                              ? "http://svmdevelopers.in/wp-content/uploads/2022/06/Booking-Plan.pdf"
+                              : params.id === "2"
+                              ? "http://svmdevelopers.in/wp-content/uploads/2023/02/B-.NO_.65-LAY-OUT-PLAN.pdf"
+                              : "http://svmdevelopers.in/wp-content/uploads/2022/06/Booking-Plan.pdf"
+                          }
                           target="_blank"
                         >
                           <img
                             className="w-full h-full object-contain"
-                            src={plan}
+                            src={
+                              params.id === "1"
+                                ? plan
+                                : params.id === "2"
+                                ? planLayout1
+                                : planLayout3
+                            }
                             alt="layout"
                           />
                         </a>
                       </div>
+
+                      {params.id === "2" ? (
+                        <div
+                          className="w-[300px] h-[300px] cursor-pointer"
+                          style={{ width: "300px", height: "300px" }}
+                        >
+                          <a
+                            href="http://svmdevelopers.in/wp-content/uploads/2023/02/B-.NO_.66-LAY-OUT-PLAN.pdf"
+                            target="_blank"
+                          >
+                            <img
+                              className="w-full h-full object-contain"
+                              src={planLayout2}
+                              alt="layout"
+                            />
+                          </a>
+                        </div>
+                      ) : null}
 
                       <h5 className="text-2xl font-medium">Location</h5>
 
                       <div className="w-full">
                         <iframe
                           title="iframe"
-                          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3013.4891879942898!2d72.74012531426018!3d21.8584759643124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjHCsDUxJzMwLjUiTiA3MsKwNDQnMzIuMyJF!5e1!3m2!1sen!2sin!4v1568985072906!5m2!1sen!2sin"
+                          src={
+                            params.id === "1"
+                              ? "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3013.4891879942898!2d72.74012531426018!3d21.8584759643124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjHCsDUxJzMwLjUiTiA3MsKwNDQnMzIuMyJF!5e1!3m2!1sen!2sin!4v1568985072906!5m2!1sen!2sin"
+                              : params.id === "2"
+                              ? "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2141.780222363149!2d72.698343237726!3d21.876471531252456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjHCsDUyJzM1LjMiTiA3MsKwNDEnNTkuNiJF!5e1!3m2!1sen!2sin!4v1568985235646!5m2!1sen!2sin&maptype=satellite"
+                              : "https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d5759.639270379331!2d72.69764991113628!3d21.87745974200172!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sin!4v1697385373829!5m2!1sen!2sin"
+                          }
                           style={{ border: "0" }}
                           className="w-full h-[500px]"
                           allowFullScreen

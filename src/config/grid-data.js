@@ -60,7 +60,7 @@ import planLayout2 from "../assets/images/projects-2-plan1.png";
 
 export const properties = [
   {
-    id: 1,
+    id: 2,
     image: Property1,
     name: "Sai Resedency 2",
     square: 8000,
@@ -73,7 +73,7 @@ export const properties = [
     // rating: 5.0,
   },
   {
-    id: 2,
+    id: 3,
     image: Property2,
     name: "Sai Resedency 3",
     square: 8000,
@@ -276,5 +276,23 @@ export const LandDevelopement = [
   {
     id: 16,
     image: Ld16,
+  },
+];
+
+export const ProjectPlannLayouts = [
+  {
+    id: 1,
+    layout: planLayout,
+    link: "http://svmdevelopers.in/wp-content/uploads/2022/06/Booking-Plan.pdf",
+  },
+  {
+    id: 2,
+    layout: planLayout1,
+    link: "http://svmdevelopers.in/wp-content/uploads/2023/02/B-.NO_.65-LAY-OUT-PLAN.pdf",
+  },
+  {
+    id: 3,
+    layout: planLayout,
+    link: "http://svmdevelopers.in/wp-content/uploads/2022/06/Booking-Plan.pdf",
   },
 ];
