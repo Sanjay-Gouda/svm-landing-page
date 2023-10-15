@@ -106,22 +106,6 @@ export const completed = [
   },
 ];
 
-// Hc15,
-// Hc1,
-// Hc2,
-// Hc3,
-// Hc4,
-// Hc5,
-// Hc6,
-// Hc7,
-// Hc8,
-// Hc9,
-// Hc10,
-// Hc11,
-// Hc12,
-// Hc13,
-// Hc14,
-// Hc1,
 export const Customers = [
   {
     id: 1,
@@ -296,3 +280,13 @@ export const ProjectPlannLayouts = [
     link: "http://svmdevelopers.in/wp-content/uploads/2022/06/Booking-Plan.pdf",
   },
 ];
+
+export const SR1Layout =
+  "https://svm-bucket.blr1.cdn.digitaloceanspaces.com/planningAndLayout/Booking-Plan.pdf";
+export const SR2Layout =
+  "https://svm-bucket.blr1.cdn.digitaloceanspaces.com/planningAndLayout/B-.NO_.65-LAY-OUT-PLAN.pdf";
+export const SR21Layout =
+  "https://svm-bucket.blr1.cdn.digitaloceanspaces.com/planningAndLayout/B-.NO_.66-LAY-OUT-PLAN.pdf";
+
+export const Sr3Layout =
+  "https://svm-bucket.blr1.cdn.digitaloceanspaces.com/planningAndLayout/Dastavej%20Layout%20plan.pdf";

@@ -1,6 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { Link as Link2, useNavigate, useParams } from "react-router-dom";
-import { ProjectPlannLayouts, properties } from "../config/grid-data";
+import {
+  ProjectPlannLayouts,
+  SR1Layout,
+  SR21Layout,
+  SR2Layout,
+  Sr3Layout,
+  properties,
+} from "../config/grid-data";
 import withRouter from "../component/withrouter";
 import Navbar from "../component/Navbar";
 import Switcher from "../component/Switcher";
@@ -28,6 +35,13 @@ import Image3 from "../assets/images/property/single/p-3.png";
 import Image4 from "../assets/images/property/single/p-4.png";
 import Image5 from "../assets/images/property/single/p-5.png";
 
+/* sai resendency-2  */
+import pe1 from "../assets/images/sai-resedency-2/elevation-2.png";
+import pe2 from "../assets/images/sai-resedency-2/elevation-3.png";
+import pe3 from "../assets/images/sai-resedency-2/elevation-4.png";
+
+/* sai resendency-2  */
+
 import Hc1 from "../assets/images/HappyCustomers/hc1.png";
 import Hc2 from "../assets/images/HappyCustomers/hc2.png";
 import Hc3 from "../assets/images/HappyCustomers/hc3.png";
@@ -54,7 +68,20 @@ import planLayout2 from "../assets/images/projects-2-plan1.png";
 import ProjectLogo from "../assets/images/sai-resendency.png";
 import ProjectLogo2 from "../assets/images/sai-resendency2.png";
 import ProjectLogo3 from "../assets/images/sai-resendency3.png";
+import Sr1 from "../assets/images/HappyCustomers/sai-2/hcc1.jpeg";
+import Sr2 from "../assets/images/HappyCustomers/sai-2/hcc2.jpeg";
+import Sr3 from "../assets/images/HappyCustomers/sai-2/hcc3.jpeg";
+import Sr4 from "../assets/images/HappyCustomers/sai-2/hcc4.jpeg";
+import Sr5 from "../assets/images/HappyCustomers/sai-2/hcc5.jpeg";
+import Sr6 from "../assets/images/HappyCustomers/sai-2/hcc6.jpeg";
+import Sr7 from "../assets/images/HappyCustomers/sai-2/hcc7.jpeg";
+import Sr8 from "../assets/images/HappyCustomers/sai-2/hcc8.jpeg";
+
+import HcSr3 from "../assets/images/HappyCustomers/sai-3/hcc3.jpeg";
+
 const customers = [Hc1, Hc2, Hc3, Hc4, Hc5, Hc6, Hc7, Hc8];
+const sr2Customer = [Sr1, Sr2, Sr4, Sr3, Sr5, Sr6, Sr7, Sr8];
+const sr3Customer = [HcSr3];
 
 const landDevelopment = [Ld1, Ld2, Ld3, Ld4, Ld5, Ld6, Ld7];
 
@@ -87,7 +114,9 @@ const settings = {
   },
 };
 
-const Elevation = [Image1, Image2, Image3, Image4, Image5];
+const Elevation = [Image1, Image2, Image3];
+const se2Elevation = [pe3, pe1, pe2];
+
 const images = [Completed, ProjectLogo, Image3, Image4, Image5];
 
 const features = [
@@ -125,6 +154,20 @@ function PropertyDetail(props) {
   const params = useParams();
   const [photoIndex, setActiveIndex] = useState(0);
   const [isOpen, setOpen] = useState(false);
+
+  const happyCustomers =
+    params.id === "1"
+      ? customers
+      : params.id === "2"
+      ? sr2Customer
+      : sr3Customer;
+
+  const planElevation =
+    params.id === "1"
+      ? Elevation
+      : params.id === "2"
+      ? se2Elevation
+      : se2Elevation;
 
   const property = properties.find(
     (user) => user.id === parseInt(props.params.id)
@@ -364,7 +407,7 @@ function PropertyDetail(props) {
                 </h5>
 
                 <TinySlider settings={settings}>
-                  {Elevation?.map((item) => {
+                  {planElevation?.map((item) => {
                     return (
                       <div
                         className="tiny-slide"
@@ -397,7 +440,7 @@ function PropertyDetail(props) {
                 </h5>
 
                 <TinySlider settings={settings}>
-                  {customers?.map((item) => {
+                  {happyCustomers?.map((item) => {
                     return (
                       <div
                         className="tiny-slide"
@@ -420,39 +463,40 @@ function PropertyDetail(props) {
                   })}
                 </TinySlider>
               </div>
-              <div className="w-full leading-[0] border-0 mt-6">
-                <h5 className="text-2xl font-medium mb-4 flex ">
-                  <LuArrowRight
-                    className="text-green-600  align-middle me-2"
-                    onClick={() => handleRedirect("land-development")}
-                  />
-                  Project Site Development
-                </h5>
+              {params.id === "1" && (
+                <div className="w-full leading-[0] border-0 mt-6">
+                  <h5 className="text-2xl font-medium mb-4 flex ">
+                    <LuArrowRight
+                      className="text-green-600  align-middle me-2"
+                      onClick={() => handleRedirect("land-development")}
+                    />
+                    Project Site Development
+                  </h5>
+                  <TinySlider settings={settings}>
+                    {landDevelopment?.map((item) => {
+                      return (
+                        <div
+                          className="tiny-slide"
+                          key={item.id}
+                          onClick={() => handleRedirect("land-development")}
 
-                <TinySlider settings={settings}>
-                  {landDevelopment?.map((item) => {
-                    return (
-                      <div
-                        className="tiny-slide"
-                        key={item.id}
-                        onClick={() => handleRedirect("land-development")}
-
-                        // onClick={() => navigate("/our-services")}
-                      >
-                        <div className="group rounded-xl cursor-pointer bg-white dark:bg-slate-900 shadow hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700 overflow-hidden ease-in-out duration-500">
-                          <div className="category-image-wrapper">
-                            <img
-                              src={item}
-                              alt=""
-                              className="w-full h-full object-cover"
-                            />
+                          // onClick={() => navigate("/our-services")}
+                        >
+                          <div className="group rounded-xl cursor-pointer bg-white dark:bg-slate-900 shadow hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700 overflow-hidden ease-in-out duration-500">
+                            <div className="category-image-wrapper">
+                              <img
+                                src={item}
+                                alt=""
+                                className="w-full h-full object-cover"
+                              />
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    );
-                  })}
-                </TinySlider>
-              </div>
+                      );
+                    })}
+                  </TinySlider>
+                </div>
+              )}
               <div className="grid grid-cols-1 text-center mt-6">
                 <h3 className="mb-6 md:text-3xl text-2xl md:leading-normal leading-normal font-medium text-black dark:text-white">
                   Have Question ? Get in touch!
@@ -592,10 +636,10 @@ function PropertyDetail(props) {
                         <a
                           href={
                             params.id === "1"
-                              ? "http://svmdevelopers.in/wp-content/uploads/2022/06/Booking-Plan.pdf"
+                              ? SR1Layout
                               : params.id === "2"
-                              ? "http://svmdevelopers.in/wp-content/uploads/2023/02/B-.NO_.65-LAY-OUT-PLAN.pdf"
-                              : "http://svmdevelopers.in/wp-content/uploads/2022/06/Booking-Plan.pdf"
+                              ? SR2Layout
+                              : Sr3Layout
                           }
                           target="_blank"
                         >
@@ -618,10 +662,7 @@ function PropertyDetail(props) {
                           className="w-[300px] h-[300px] cursor-pointer"
                           style={{ width: "300px", height: "300px" }}
                         >
-                          <a
-                            href="http://svmdevelopers.in/wp-content/uploads/2023/02/B-.NO_.66-LAY-OUT-PLAN.pdf"
-                            target="_blank"
-                          >
+                          <a href={SR21Layout} target="_blank">
                             <img
                               className="w-full h-full object-contain"
                               src={planLayout2}
