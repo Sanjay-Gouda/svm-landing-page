@@ -7,11 +7,11 @@ export default function Feature() {
     <>
       <div className="container lg:mt-24 mt-16">
         <div className="grid grid-cols-1 pb-8 text-center">
-          <h3 className="mb-4 md:text-3xl md:leading-normal text-2xl leading-normal font-semibold">
+          <h3 className="mb-4 text-dark md:text-3xl md:leading-normal text-2xl leading-normal font-semibold">
             How We Work
           </h3>
 
-          <p className="text-slate-400 max-w-xl mx-auto capitalize">
+          <p className="text-dark max-w-xl mx-auto capitalize">
             Real estate transactions involve property evaluation, negotiation,
             legal documentation, financing, and closing to transfer ownership.
           </p>
@@ -28,7 +28,7 @@ export default function Feature() {
 
             <div className="mt-6">
               <h5 className="text-xl font-medium">Evaluate Property</h5>
-              <p className="text-slate-400 mt-3 capitalize">
+              <p className="text-dark mt-3 capitalize">
                 Assess Real Estate's value, Condition, and Potential for
                 investment or Purchase, considering Location, Size, Amenities,
                 and Market Trends.{" "}
@@ -45,7 +45,7 @@ export default function Feature() {
             </div>
             <div className="mt-6">
               <h5 className="text-xl font-medium">Meeting with Executive</h5>
-              <p className="text-slate-400 mt-3 capitalize">
+              <p className="text-dark mt-3 capitalize">
                 Scheduled discussion with the company's top executive to address
                 strategic decisions, project updates, and key business matters
               </p>
@@ -62,7 +62,7 @@ export default function Feature() {
 
             <div className="mt-6">
               <h5 className="text-xl font-medium">Close the Deal</h5>
-              <p className="text-slate-400 mt-3 capitalize">
+              <p className="text-dark mt-3 capitalize">
                 Finalize the real estate transaction by reaching an agreement
                 between buyer and seller, ensuring legal compliance, and
                 exchanging ownership.

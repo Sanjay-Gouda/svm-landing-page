@@ -10,7 +10,7 @@ export default function GetInTuch() {
           Have Question ? Get in touch!
         </h3>
 
-        <p className="text-slate-400 max-w-xl mx-auto capitalize">
+        <p className="text-dark max-w-xl mx-auto capitalize">
           Encourage inquiries and communication by inviting individuals to reach
           out for answers, assistance, or information regarding real estate
           services.

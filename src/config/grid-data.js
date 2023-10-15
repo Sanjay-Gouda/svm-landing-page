@@ -53,127 +53,39 @@ import Ld14 from "../assets/images/Land-Developement/ld15.png";
 import Ld15 from "../assets/images/Land-Developement/ld16.png";
 import Ld16 from "../assets/images/Land-Developement/ld17.png";
 
+import planLayout from "../assets/images/plan-2.png";
+
+import planLayout1 from "../assets/images/projects-2-plan.png";
+import planLayout2 from "../assets/images/projects-2-plan1.png";
+
 export const properties = [
   {
     id: 1,
     image: Property1,
-    name: "Sai Resedency 1",
-    square: 8000,
-    downPayment: "2100/-",
-    location: "Bharuch",
-    price: "2,51,000/-",
-    // rating: 5.0,
-  },
-  {
-    id: 2,
-    image: Property2,
     name: "Sai Resedency 2",
     square: 8000,
     downPayment: "2100/-",
     location: "Bharuch",
     price: "2,51,000/-",
+    layout: [planLayout1, planLayout2],
+    mapLocation:
+      "https://www.google.com/maps?ll=21.876472,72.699889&z=17&t=h&hl=en&gl=IN&mapclient=embed",
     // rating: 5.0,
   },
-  // {
-  //     id: 3,
-  //     image: Property3,
-  //     name: '3723 SANDBAR DR, Addis, LA 70710, USA',
-  //     square: 8000,
-  //     beds: 4,
-  //     baths: 4,
-  //     price: 5000,
-  //     rating: 5.0,
-  // },
-  // {
-  //     id: 4,
-  //     image: Property4,
-  //     name: 'Lot 21 ROYAL OAK DR, Prairieville, LA 70769, USA',
-  //     square: 8000,
-  //     beds: 4,
-  //     baths: 4,
-  //     price: 5000,
-  //     rating: 5.0,
-  // },
-  // {
-  //     id: 5,
-  //     image: Property5,
-  //     name: '710 BOYD DR, Unit #1102, Baton Rouge, LA 70808, USA',
-  //     square: 8000,
-  //     beds: 4,
-  //     baths: 4,
-  //     price: 5000,
-  //     rating: 5.0,
-  // },
-  // {
-  //     id: 6,
-  //     image: Property6,
-  //     name: '5133 MCLAIN WAY, Baton Rouge, LA 70809, USA',
-  //     square: 8000,
-  //     beds: 4,
-  //     baths: 4,
-  //     price: 5000,
-  //     rating: 5.0,
-  // },
-  // {
-  //     id: 7,
-  //     image: Property7,
-  //     name: '2141 Fiero Street, Baton Rouge, LA 70808',
-  //     square: 8000,
-  //     beds: 4,
-  //     baths: 4,
-  //     price: 5000,
-  //     rating: 5
-  // },
-  // {
-  //     id: 8,
-  //     image: Property8,
-  //     name: '9714 Inniswold Estates Ave, Baton Rouge, LA 70809',
-  //     square: 8000,
-  //     beds: 4,
-  //     baths: 4,
-  //     price: 5000,
-  //     rating: 5
-  // },
-  // {
-  //     id: 9,
-  //     image: Property9,
-  //     name: '1433 Beckenham Dr, Baton Rouge, LA 70808, USA',
-  //     square: 8000,
-  //     beds: 4,
-  //     baths: 4,
-  //     price: 5000,
-  //     rating: 5
-  // },
-  // {
-  //     id: 10,
-  //     image: Property10,
-  //     name: '1574 Sharlo Ave, Baton Rouge, LA 70820, USA',
-  //     square: 8000,
-  //     beds: 4,
-  //     baths: 4,
-  //     price: 5000,
-  //     rating: 5
-  // },
-  // {
-  //     id: 11,
-  //     image: Property11,
-  //     name: '2528 BOCAGE LAKE DR, Baton Rouge, LA 70809, USA',
-  //     square: 8000,
-  //     beds: 4,
-  //     baths: 4,
-  //     price: 5000,
-  //     rating: 5
-  // },
-  // {
-  //     id: 11,
-  //     image: Property12,
-  //     name: '1533 NICHOLSON DR, Baton Rouge, LA 70802, USA',
-  //     square: 8000,
-  //     beds: 4,
-  //     baths: 4,
-  //     price: 5000,
-  //     rating: 5
-  // }
+  {
+    id: 2,
+    image: Property2,
+    name: "Sai Resedency 3",
+    square: 8000,
+    downPayment: "2100/-",
+    location: "Bharuch",
+    price: "2,51,000/-",
+    layout: [planLayout],
+    mapLocation:
+      "https://www.google.com/maps?ll=21.876472,72.699889&z=17&t=h&hl=en&gl=IN&mapclient=embed",
+
+    // rating: 5.0,
+  },
 ];
 
 // export default properties;
@@ -187,6 +99,9 @@ export const completed = [
     downPayment: "2100/-",
     location: "Bharuch",
     price: "1,51,000/-",
+    layout: [planLayout],
+    mapLocation:
+      "http://svmdevelopers.in/wp-content/uploads/2022/06/Booking-Plan.pdf",
     // rating: 5.0,
   },
 ];

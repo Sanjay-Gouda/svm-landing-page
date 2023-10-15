@@ -28,7 +28,7 @@ export default function Pagination({ itemsPerPage, items, gridClass }) {
   const pageButtons = Array.from({ length: numPages }, (_, i) => i + 1).map(
     (pageNum) => (
       <button
-        className="w-10 h-10 inline-flex justify-center items-center mx-1 rounded-full text-slate-400 hover:text-white bg-white dark:bg-slate-900 shadow-sm dark:shadow-gray-700 hover:border-green-600 dark:hover:border-green-600 hover:bg-green-600 dark:hover:bg-green-600"
+        className="w-10 h-10 inline-flex justify-center items-center mx-1 rounded-full text-dark hover:text-white bg-white dark:bg-slate-900 shadow-sm dark:shadow-gray-700 hover:border-green-600 dark:hover:border-green-600 hover:bg-green-600 dark:hover:bg-green-600"
         key={pageNum}
         value={pageNum}
         onClick={handlePageClick}
@@ -89,12 +89,12 @@ export default function Pagination({ itemsPerPage, items, gridClass }) {
 
               <ul className="pt-6 flex justify-between items-center list-none">
                 <li>
-                  <span className="text-slate-400">Price</span>
+                  <span className="text-dark">Price</span>
                   <p className="text-lg font-medium">{item.price}</p>
                 </li>
 
                 <li>
-                  <span className="text-slate-400">Rating</span>
+                  <span className="text-dark">Rating</span>
                   <ul className="text-lg font-medium text-amber-400 list-none">
                     <li className="inline ms-1">
                       <i className="mdi mdi-star"></i>
@@ -128,7 +128,7 @@ export default function Pagination({ itemsPerPage, items, gridClass }) {
               <li>
                 <Link
                   to="#"
-                  className="w-10 h-10 inline-flex justify-center items-center mx-1 rounded-full text-slate-400 bg-white dark:bg-slate-900 hover:text-white shadow-sm dark:shadow-gray-700 hover:border-green-600 dark:hover:border-green-600 hover:bg-green-600 dark:hover:bg-green-600"
+                  className="w-10 h-10 inline-flex justify-center items-center mx-1 rounded-full text-dark bg-white dark:bg-slate-900 hover:text-white shadow-sm dark:shadow-gray-700 hover:border-green-600 dark:hover:border-green-600 hover:bg-green-600 dark:hover:bg-green-600"
                 >
                   <MdKeyboardArrowLeft className="text-[20px]" />
                 </Link>
@@ -137,7 +137,7 @@ export default function Pagination({ itemsPerPage, items, gridClass }) {
               <li>
                 <Link
                   to="#"
-                  className="w-10 h-10 inline-flex justify-center items-center mx-1 rounded-full text-slate-400 bg-white dark:bg-slate-900 hover:text-white shadow-sm dark:shadow-gray-700 hover:border-green-600 dark:hover:border-green-600 hover:bg-green-600 dark:hover:bg-green-600"
+                  className="w-10 h-10 inline-flex justify-center items-center mx-1 rounded-full text-dark bg-white dark:bg-slate-900 hover:text-white shadow-sm dark:shadow-gray-700 hover:border-green-600 dark:hover:border-green-600 hover:bg-green-600 dark:hover:bg-green-600"
                 >
                   <MdKeyboardArrowRight className="text-[20px]" />
                 </Link>

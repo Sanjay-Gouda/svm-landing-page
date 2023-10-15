@@ -35,10 +35,10 @@ const ProfileDetailContainer = ({
           <div className="flex flex-col gap-6 profile-title-wrapper">
             <div className="w-full flex justify-between profile-social-wrapper">
               <div className="flex flex-col gap-2 ">
-                {/* <h3 className="md:text-2xl text-2xl md:leading-normal leading-normal font-medium text-slate-400">
+                {/* <h3 className="md:text-2xl text-2xl md:leading-normal leading-normal font-medium text-dark">
                       Mr.Babulal .L. Kumawat
                     </h3> */}
-                <h3 className=" md:text-2xl md:leading-normal text-2xl leading-normal font-semibold">
+                <h3 className=" md:text-2xl md:leading-normal text-green-600 text-2xl leading-normal font-semibold">
                   {name}
                 </h3>
                 <p className="text-xl font-light">{designation}</p>
@@ -77,14 +77,13 @@ const ProfileDetailContainer = ({
               </div>
             </div>
 
-            <div>
-              <p className=" text-slate-400 text-base">{about}</p>
-
+            <div className="flex flex-col" style={{ rowGap: "16px" }}>
               {tagline && (
-                <p className=" italic border-x-4 border-green-600 rounded-ss-xl rounded-ee-xl mt-3 p-3 my-4">
+                <p className=" italic border-x-4 text-green-600 border-green-600 rounded-ss-xl rounded-ee-xl mt-3 p-3 my-4">
                   {tagline}
                 </p>
               )}
+              <p className=" text-dark text-base">{about}</p>
             </div>
           </div>
         </div>

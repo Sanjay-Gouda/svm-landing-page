@@ -90,7 +90,7 @@ export default function ClientTwo() {
                 {review.map((el, index) => (
                   <div className="tiny-slide" key={index}>
                     <div className="text-center mx-3">
-                      <p className="text-lg text-slate-400 italic">
+                      <p className="text-lg text-dark italic">
                         " {el.description} "
                       </p>
 

@@ -150,8 +150,7 @@ export default function Contact() {
                           />
                         </svg>
                       </span>
-                      Thank you for reaching out, we will get back to you soon
-                      🙂🙂.
+                      Thank you for reaching out, we will get back to you soon .
                     </div>
                   )}
                   {error && <ErrorComponent />}
@@ -231,6 +230,9 @@ export default function Contact() {
                         <option value="land proposal" className="py-2">
                           Land Proposal
                         </option>
+                        <option value="land proposal" className="py-2">
+                          Construction & Developing
+                        </option>
                         <option value="svm vendor">Become a SVM Vendor</option>
                       </select>
 
@@ -305,7 +307,7 @@ export default function Contact() {
 
               <div className="content mt-7">
                 <h5 className="title h5 text-xl font-medium">Phone</h5>
-                {/* <p className="text-slate-400 mt-3">
+                {/* <p className="text-dark mt-3">
                   The phrasal sequence of the is now so that many campaign and
                   benefit
                 </p> */}
@@ -313,7 +315,7 @@ export default function Contact() {
                 <div className="mt-5">
                   <a
                     href="tel:+91-9662320636"
-                    className="btn btn-link text-slate-400 hover:text-slate-400 after:bg-green-600 transition duration-500"
+                    className="btn btn-link text-dark hover:text-dark after:bg-green-600 transition duration-500"
                   >
                     0261-2393140
                     {/* +91-9662320636 */}
@@ -332,7 +334,7 @@ export default function Contact() {
 
               <div className="content mt-7">
                 <h5 className="title h5 text-xl font-medium">Email</h5>
-                {/* <p className="text-slate-400 mt-3">
+                {/* <p className="text-dark mt-3">
                   The phrasal sequence of the is now so that many campaign and
                   benefit
                 </p> */}
@@ -340,7 +342,7 @@ export default function Contact() {
                 <div className="mt-5">
                   <a
                     href="mailto:svmbuildersanddevelopers0326@gmail.com"
-                    className="btn btn-link text-slate-400 hover:text-slate-400 after:bg-green-600 transition duration-500"
+                    className="btn btn-link text-dark hover:text-dark after:bg-green-600 transition duration-500"
                   >
                     svmbuildersanddevelopers0326@gmail.com
                   </a>
@@ -358,7 +360,7 @@ export default function Contact() {
 
               <div className="content mt-7">
                 <h5 className="title h5 text-xl font-medium">Location</h5>
-                <p className="text-slate-400 mt-3">
+                <p className="text-dark mt-3">
                   F-27, Sidhi Vinayak Residency, Near yes bank, Station road,
                   Sachin,Surat, <br />
                   Pin – 394230{" "}

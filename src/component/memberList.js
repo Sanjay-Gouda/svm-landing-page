@@ -57,7 +57,7 @@ const MemberList = ({
             >
               {name}
             </p>
-            <p className="text-slate-400">{designation}</p>
+            <p className="text-dark">{designation}</p>
           </div>
         </div>
       </div>

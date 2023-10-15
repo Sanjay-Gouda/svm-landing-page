@@ -37,6 +37,7 @@ export const MEMBERS = [
                 personally use it.
     
     `,
+    tagline: `SVM Builders & Developers, is achieving milestones under the dynamic leadership of, Mr. Babulal .L. Kumawat`,
   },
   {
     id: 2,

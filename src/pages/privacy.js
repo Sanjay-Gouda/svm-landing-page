@@ -7,6 +7,7 @@ import BackgroudImage from "../assets/images/bg/01.jpg";
 import Why from "../assets/images/why.jpeg";
 import Choose from "../assets/images/choose.jpg";
 import Mission from "../assets/images/mission.jpeg";
+import Relation from "../assets/images/trust.jpg";
 import { LuArrowRight } from "../assets/icons/vander";
 import GetInTuch from "../component/Get-in-tuch";
 
@@ -218,6 +219,42 @@ export default function Privacy() {
                   project.As Presented in our Logo Tag Line , SVM Builders &
                   Developers(Building the future with relationships).
                 </p>
+              </div>
+              <div
+                style={{ columnGap: "8px" }}
+                className="p-6 bg-white dark:bg-slate-900 shadow flex dark:shadow-gray-700 rounded-md"
+              >
+                <div
+                  className=" overflow-hidden mt-4 "
+                  style={{
+                    width: "40%",
+                    height: "300px",
+                    borderRadius: "10px",
+                    overflow: "hidden",
+                  }}
+                >
+                  <img
+                    src={Relation}
+                    // src="https://images.pexels.com/photos/7666429/pexels-photo-7666429.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                    alt="construction"
+                    className="w-full h-full object-contain transition-image"
+                  />
+                </div>
+                <div
+                  style={{ width: "60%", rowGap: "8px" }}
+                  className="flex flex-col items-center justify-center"
+                >
+                  <h5 className="text-xl font-semibold mb-4 text-center">
+                    The Vision And Mission in Capsule is
+                  </h5>
+
+                  <p className="text-green-600 italic border-x-4 border-green-600 rounded-ss-xl rounded-ee-xl mt-3 p-3 my-4">
+                    “To build long-lasting relations with buyers in exchange for
+                    their trust investments and emotions, To offer complete
+                    fulfillment of aspiration and lend happiness to all the
+                    customers”
+                  </p>
+                </div>
               </div>
             </div>
           </div>

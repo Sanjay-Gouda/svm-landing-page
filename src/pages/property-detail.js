@@ -162,8 +162,29 @@ function PropertyDetail(props) {
                 </div>
               </div>
             </div>
+            <div className="lg:w-1/2 md:w-1/2 p-1">
+              <div className="group relative overflow-hidden">
+                <div className="w-full  property-detail-first-image">
+                  <img
+                    src={Completed}
+                    className="w-full h-full object-cover"
+                    alt=""
+                  />
+                </div>
+                <div className="absolute inset-0 group-hover:bg-slate-900/70 duration-500 ease-in-out"></div>
+                <div className="absolute top-1/2 -translate-y-1/2 start-0 end-0 text-center invisible group-hover:visible">
+                  <Link2
+                    to="#"
+                    onClick={() => handleCLick(0)}
+                    className="btn btn-icon bg-green-600 hover:bg-green-700 text-white rounded-full lightbox"
+                  >
+                    <AiFillEye className="text-lg" />
+                  </Link2>
+                </div>
+              </div>
+            </div>
 
-            <div className="lg:w-1/2 md:w-1/2">
+            {/* <div className="lg:w-1/2 md:w-1/2">
               <div className="flex">
                 <div className="w-1/2 p-1">
                   <div className="group relative overflow-hidden">
@@ -207,22 +228,6 @@ function PropertyDetail(props) {
                     </div>
                   </div>
                 </div>
-
-                {/* <div className="w-1/2 p-1">
-                  <div className="group relative overflow-hidden">
-                    <img src={Image3} alt="" />
-                    <div className="absolute inset-0 group-hover:bg-slate-900/70 duration-500 ease-in-out"></div>
-                    <div className="absolute top-1/2 -translate-y-1/2 start-0 end-0 text-center invisible group-hover:visible">
-                      <Link2
-                        to="#"
-                        onClick={() => handleCLick(2)}
-                        className="btn btn-icon bg-green-600 hover:bg-green-700 text-white rounded-full lightbox"
-                      >
-                        <AiOutlineCamera className="text-lg" />
-                      </Link2>
-                    </div>
-                  </div>
-                </div> */}
               </div>
               <div className="flex">
                 <div className="w-1/2 p-1">
@@ -267,58 +272,8 @@ function PropertyDetail(props) {
                     </div>
                   </div>
                 </div>
-
-                {/* <div className="w-1/2 p-1">
-                  <div className="group relative overflow-hidden">
-                    <img src={Image3} alt="" />
-                    <div className="absolute inset-0 group-hover:bg-slate-900/70 duration-500 ease-in-out"></div>
-                    <div className="absolute top-1/2 -translate-y-1/2 start-0 end-0 text-center invisible group-hover:visible">
-                      <Link2
-                        to="#"
-                        onClick={() => handleCLick(2)}
-                        className="btn btn-icon bg-green-600 hover:bg-green-700 text-white rounded-full lightbox"
-                      >
-                        <AiOutlineCamera className="text-lg" />
-                      </Link2>
-                    </div>
-                  </div>
-                </div> */}
               </div>
-
-              {/* <div className="flex">
-                <div className="w-1/2 p-1">
-                  <div className="group relative overflow-hidden">
-                    <img src={Image4} alt="" />
-                    <div className="absolute inset-0 group-hover:bg-slate-900/70 duration-500 ease-in-out"></div>
-                    <div className="absolute top-1/2 -translate-y-1/2 start-0 end-0 text-center invisible group-hover:visible">
-                      <Link2
-                        to="#"
-                        onClick={() => handleCLick(3)}
-                        className="btn btn-icon bg-green-600 hover:bg-green-700 text-white rounded-full lightbox"
-                      >
-                        <AiOutlineCamera className="text-lg" />
-                      </Link2>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="w-1/2 p-1">
-                  <div className="group relative overflow-hidden">
-                    <img src={Image5} alt="" />
-                    <div className="absolute inset-0 group-hover:bg-slate-900/70 duration-500 ease-in-out"></div>
-                    <div className="absolute top-1/2 -translate-y-1/2 start-0 end-0 text-center invisible group-hover:visible">
-                      <Link2
-                        to="#"
-                        onClick={() => handleCLick(4)}
-                        className="btn btn-icon bg-green-600 hover:bg-green-700 text-white rounded-full lightbox"
-                      >
-                        <AiOutlineCamera className="text-lg" />
-                      </Link2>
-                    </div>
-                  </div>
-                </div>
-              </div> */}
-            </div>
+            </div> */}
           </div>
         </div>
 
@@ -360,20 +315,20 @@ function PropertyDetail(props) {
                 </li>
               </ul> */}
 
-              <p className="text-slate-400">
+              <p className="text-dark">
                 <span className="font-semibold">Prime Location</span>: Sai
                 Residency is strategically located in one of the most
                 sought-after neighborhoods in the city. Whether it's easy access
                 to major highways, proximity to schools, hospitals, or shopping
                 centers, we've got you covered.
               </p>
-              <p className="text-slate-400">
+              <p className="text-dark">
                 <span className="font-semibold">Security and Privacy</span>: Sai
                 Your safety is our top priority. Our project is equipped with
                 24/7 security surveillance and controlled access to ensure a
                 secure and peaceful living environment for you and your family.
               </p>
-              <p className="text-slate-400">
+              <p className="text-dark">
                 <span className="font-semibold">Investment Opportunity</span>:
                 Sai Residency isn't just a place to live; it's an investment in
                 your future. The real estate market in this area is booming,
@@ -485,7 +440,7 @@ function PropertyDetail(props) {
                   Have Question ? Get in touch!
                 </h3>
 
-                <p className="text-slate-400 max-w-xl mx-auto">
+                <p className="text-dark max-w-xl mx-auto">
                   Encourage inquiries and communication by inviting individuals
                   to reach out for answers, assistance, or information regarding
                   real estate services.
@@ -521,7 +476,7 @@ function PropertyDetail(props) {
 
                       <ul className="list-none mt-4">
                         <li className="flex justify-between items-center">
-                          <span className="text-slate-400 text-base">
+                          <span className="text-dark text-base">
                             Down Payment
                           </span>
                           <span className="font-medium text-base">
@@ -530,14 +485,14 @@ function PropertyDetail(props) {
                         </li>
 
                         <li className="flex justify-between items-center mt-2">
-                          <span className="text-slate-400 text-base">Emi</span>
+                          <span className="text-dark text-base">Emi</span>
                           <span className="font-medium text-base">
                             Rs.3000 /-
                           </span>
                         </li>
 
                         <li className="flex justify-between items-center mt-2">
-                          <span className="text-slate-400 text-base">
+                          <span className="text-dark text-base">
                             Total Price
                           </span>
                           <span className="font-medium text-base">
@@ -555,7 +510,7 @@ function PropertyDetail(props) {
                         return (
                           <>
                             <li
-                              className="flex mt-2 items-center text-slate-400  text-base"
+                              className="flex mt-2 items-center text-dark  text-base"
                               key={feat.id}
                             >
                               <LuArrowRight className="text-green-600  align-middle me-2" />
@@ -650,21 +605,21 @@ function PropertyDetail(props) {
                       {/* 
                       <ul className="list-none mt-4">
                         <li className="flex justify-between items-center">
-                          <span className="text-slate-400 text-sm">
+                          <span className="text-dark text-sm">
                             Days on Hously
                           </span>
                           <span className="font-medium text-sm">124 Days</span>
                         </li>
 
                         <li className="flex justify-between items-center mt-2">
-                          <span className="text-slate-400 text-sm">
+                          <span className="text-dark text-sm">
                             Price per sq ft
                           </span>
                           <span className="font-medium text-sm">$ 186</span>
                         </li>
 
                         <li className="flex justify-between items-center mt-2">
-                          <span className="text-slate-400 text-sm">
+                          <span className="text-dark text-sm">
                             Monthly Payment (estimate)
                           </span>
                           <span className="font-medium text-sm">

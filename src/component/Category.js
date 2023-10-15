@@ -120,7 +120,7 @@ const Category = () => {
               Our Services
             </h3>
 
-            <p className="text-slate-400  max-w-xl mx-auto capitalize">
+            <p className="text-dark  max-w-xl mx-auto capitalize">
               Offering real estate services such as property buying, selling,
               leasing, and consulting, tailored to clients' needs, backed by
               expertise and experience.

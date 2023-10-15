@@ -130,11 +130,11 @@ export default function Aboutus() {
             <h3 className="md:text-4xl text-3xl md:leading-normal leading-normal font-medium text-white">
               About Us
             </h3>
-            <p className="text-white/70 text-xl max-w-xl mx-auto">
+            {/* <p className="text-white/70 text-xl max-w-xl mx-auto">
               SVM Builders & Developers, is achieving milestones under the
               dynamic leadership of,{" "}
               <span className="text-green-600"> Mr. Babulal .L. Kumawat.</span>
-            </p>
+            </p> */}
           </div>
         </div>
       </section>
@@ -162,7 +162,7 @@ export default function Aboutus() {
                   Our Leader
                 </h3>
 
-                {/* <p className="text-slate-400 max-w-xl mx-auto">
+                {/* <p className="text-dark max-w-xl mx-auto">
                   <span className="font-bold">“Mr.Babulal .L. Kumawat”</span>{" "}
                   has been on the Board of Directors since the inception of SVM
                   Builders & Developers
@@ -212,7 +212,7 @@ export default function Aboutus() {
                     >
                       {member?.name}
                     </p>
-                    <p className="text-slate-400">{member?.designation}</p>
+                    <p className="text-dark">{member?.designation}</p>
                   </div>
                 </div>
               ))}
@@ -223,7 +223,7 @@ export default function Aboutus() {
               Meet The Team
             </h3>
 
-            <p className="text-slate-400 max-w-xl mx-auto capitalize">
+            <p className="text-dark max-w-xl mx-auto capitalize">
               Introduce the dedicated team of real estate agents, highlighting
               their qualifications, specialties, and commitment to serving
               clients effectively.
@@ -256,7 +256,7 @@ export default function Aboutus() {
                 Who we are & Why ?
               </h3>
 
-              <ul className="list-unstyled text-slate-400 mt-4 w-full">
+              <ul className="list-unstyled text-dark mt-4 w-full">
                 {aboutus?.map((cont, ind) => {
                   return (
                     <div
@@ -278,7 +278,7 @@ export default function Aboutus() {
                 Why Choose SVM ?
               </h3>
 
-              <ul className="list-unstyled text-slate-400 mt-4 w-full">
+              <ul className="list-unstyled text-dark mt-4 w-full">
                 {whySvm?.map((cont, ind) => {
                   return (
                     <div>
@@ -301,7 +301,7 @@ export default function Aboutus() {
                 Our Mission & Vision
               </h3>
 
-              <ul className="list-unstyled text-slate-400 mt-4  w-full ">
+              <ul className="list-unstyled text-dark mt-4  w-full ">
                 {mission?.map((cont, ind) => {
                   return (
                     <li
