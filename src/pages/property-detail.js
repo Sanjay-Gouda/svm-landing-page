@@ -183,6 +183,10 @@ function PropertyDetail(props) {
     navigate(`/project-cutomers?type=${type}`);
   };
 
+  const handleRedirectForOthers = (type) => {
+    navigate(`/project-cutomers?type=${type}`);
+  };
+
   // useEffect(() => {
   //   const layoutList = ProjectPlannLayouts?.find((layout) => layout.id === 1);
 
@@ -397,7 +401,10 @@ function PropertyDetail(props) {
                 property.
               </p>
 
-              <div className="w-full leading-[0] border-0 mt-6">
+              <div
+                className="w-full leading-[0] border-0 "
+                style={{ marginBottom: "100px" }}
+              >
                 <h5
                   className=" text-2xl font-medium mb-6 flex "
                   onClick={() => handleRedirect("plan-elevation")}
@@ -406,7 +413,7 @@ function PropertyDetail(props) {
                   Plan And Elevation
                 </h5>
 
-                <TinySlider settings={settings}>
+                {/* <TinySlider settings={settings}>
                   {planElevation?.map((item) => {
                     return (
                       <div
@@ -428,7 +435,7 @@ function PropertyDetail(props) {
                       </div>
                     );
                   })}
-                </TinySlider>
+                </TinySlider> */}
               </div>
               <div className="w-full leading-[0] border-0 mt-6">
                 <h5
@@ -445,7 +452,13 @@ function PropertyDetail(props) {
                       <div
                         className="tiny-slide"
                         key={item.id}
-                        onClick={() => handleRedirect("happy-customers")}
+                        onClick={() =>
+                          handleRedirect(
+                            params.id === "1"
+                              ? "happy-customers"
+                              : "happy-customers2"
+                          )
+                        }
 
                         // onClick={() => navigate("/our-services")}
                       >
@@ -463,15 +476,15 @@ function PropertyDetail(props) {
                   })}
                 </TinySlider>
               </div>
-              {params.id === "1" && (
-                <div className="w-full leading-[0] border-0 mt-6">
-                  <h5 className="text-2xl font-medium mb-4 flex ">
-                    <LuArrowRight
-                      className="text-green-600  align-middle me-2"
-                      onClick={() => handleRedirect("land-development")}
-                    />
-                    Project Site Development
-                  </h5>
+              <div className="w-full leading-[0] border-0 mt-6">
+                <h5 className="text-2xl font-medium mb-4 flex ">
+                  <LuArrowRight
+                    className="text-green-600  align-middle me-2"
+                    onClick={() => handleRedirect("land-development")}
+                  />
+                  Project Site Development
+                </h5>
+                {params.id === "1" && (
                   <TinySlider settings={settings}>
                     {landDevelopment?.map((item) => {
                       return (
@@ -495,9 +508,12 @@ function PropertyDetail(props) {
                       );
                     })}
                   </TinySlider>
-                </div>
-              )}
-              <div className="grid grid-cols-1 text-center mt-6">
+                )}
+              </div>
+              <div
+                className="grid grid-cols-1 text-center "
+                style={{ marginTop: "100px" }}
+              >
                 <h3 className="mb-6 md:text-3xl text-2xl md:leading-normal leading-normal font-medium text-black dark:text-white">
                   Have Question ? Get in touch!
                 </h3>

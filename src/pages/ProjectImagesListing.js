@@ -25,6 +25,7 @@ import {
   Customers,
   LandDevelopement,
   PlanElevation,
+  Sai2Customer,
 } from "../config/grid-data";
 import { useQueryParams } from "../hook/useQuery";
 const ProjectImageListing = () => {
@@ -38,7 +39,7 @@ const ProjectImageListing = () => {
   useEffect(() => {
     if (paramType === "plan-elevation") {
       setTitle("Plan & Elevation Details");
-    } else if (paramType === "happy-customers") {
+    } else if (paramType === "happy-customers" || "happy-customers2") {
       setTitle("Happy Customers");
     } else {
       setTitle("Project Site Developement");
@@ -118,6 +119,8 @@ const ProjectImageListing = () => {
             imageSet={
               paramType === "happy-customers"
                 ? Customers
+                : paramType === "happy-customers2"
+                ? Sai2Customer
                 : paramType === "plan-elevation"
                 ? PlanElevation
                 : LandDevelopement
