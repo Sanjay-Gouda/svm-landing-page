@@ -120,7 +120,7 @@ export const properties = [
     name: "Sai Resedency 2",
     square: 630,
     downPayment: "2100/-",
-    location: "Mular",
+    location: "Muler",
     price: "2,51,000/-",
     layout: [planLayout1, planLayout2],
 
