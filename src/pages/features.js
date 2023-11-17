@@ -663,7 +663,6 @@ export default function Features() {
             <Services title="Gardens" imageSet={gardens} />
             <Services title="Party Plot" imageSet={partyPlot} />
             <Services title="Play Area" imageSet={playArea} />
-            <Services title="Gymnasium" imageSet={gym} />
             <Services title="Swimming Pool" imageSet={swimmingPool} />
           </div> */}
           {/* <div className="container">
