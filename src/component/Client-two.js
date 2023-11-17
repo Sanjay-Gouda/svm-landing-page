@@ -11,7 +11,7 @@ import avatar4 from "../assets/images/client/04.jpg";
 const settings = {
   controls: false,
   mouseDrag: true,
-  loop: true,
+  loop: false,
   rewind: true,
   autoplay: true,
   autoplayButtonOutput: false,
@@ -41,7 +41,7 @@ export default function ClientTwo() {
       profile:
         "https://lh3.googleusercontent.com/a/ACg8ocJiSZ5iK7UPQlYBRe94zy24l93VPieYHiQ-GYNbnYYd=w67-h67-p-rp-mo-br100",
       name: "Sanjaysingh Patil",
-      // designation: "Manager",
+
       description:
         "Excellent and trust worthy work. Received all documents of NA plots systematically. I would be happily interested in further booking",
     },
@@ -50,7 +50,7 @@ export default function ClientTwo() {
       profile:
         "https://lh3.googleusercontent.com/a/ACg8ocIf7Y4JED2dX4Eu5bBGhIfldDM0o6cCncQjyMBRiovo=w67-h67-p-rp-mo-br100",
       name: "Mausam Limbu",
-      designation: "Manager",
+
       description:
         "Best opportunity for investment great to have invested in such great return project.",
     },
@@ -59,7 +59,7 @@ export default function ClientTwo() {
       profile:
         "https://lh3.googleusercontent.com/a-/ALV-UjW2PANcfCNQEN7nfvL6ciMUnS0hpuUwfOK5GWLSbv2W-g=w67-h67-p-rp-mo-br100",
       name: "Pardeep Hardware And Sanitary Store",
-      designation: "Manager",
+
       description:
         "Schemes for customers and I am the customer from Rajasthan I had in best in their open plotting projects sai residency 1 and 2 great project great location great company in great peoples love to invest",
     },
@@ -68,9 +68,61 @@ export default function ClientTwo() {
       profile:
         "https://lh3.googleusercontent.com/a/ACg8ocIqs_78YmqxMwoJkBVYF2fw_kWrxJH9MO7PWCUdgVck=w67-h67-p-rp-mo-br100",
       name: "Dharam kumar",
-      designation: "Manager",
       description:
         "Best deal of my life every With SVM Builders and Developers Sai Residency best Project 📣😎",
+    },
+    {
+      id: "5",
+      profile:
+        "https://lh3.googleusercontent.com/a/ACg8ocIqs_78YmqxMwoJkBVYF2fw_kWrxJH9MO7PWCUdgVck=w67-h67-p-rp-mo-br100",
+      name: "Jenish Solanki",
+      description:
+        "Budget friendly schemes and projectw and very much interested investment done",
+    },
+    {
+      id: "6",
+      profile:
+        "https://lh3.googleusercontent.com/a/ACg8ocJ9oePLHeUzRz-j-qlh5AuUwaFhIStyUCfM7C8gX7z2=w67-h67-p-rp-mo-br100",
+      name: "Mahesh Verma",
+      description: "Great offer and investment schemes for future returns",
+    },
+    {
+      id: "7",
+      profile:
+        "https://lh3.googleusercontent.com/a-/ALV-UjUhg1STk2kB-MxUR_zfWrRH5zbCvkFntIa--EJF_824=w67-h67-p-rp-mo-br100",
+      name: "Gurucharan Kumar",
+      description: "Great experience with the investment and deal done",
+    },
+    {
+      id: "8",
+      profile:
+        "https://lh3.googleusercontent.com/a/ACg8ocL7VomSf_rpG4bfaajrczmlcZD1JHGMG5F9ITCBYU6_=w67-h67-p-rp-mo-br100",
+      name: "Raj Mishra",
+      description: "1And only best developers in India in  my eyes 5 *****",
+    },
+    {
+      id: "9",
+      profile:
+        "https://lh3.googleusercontent.com/a-/ALV-UjUAD13uzX9OgNiW5jnIwlHqhJplFi0cIIwvYgEiTUA0kZA=w67-h67-p-rp-mo-br100",
+      name: "Shardaprasad Patel",
+      description: `I invested my savings in there open plotting project name Sai Residency 8 months ago in Rs 1,17,ooo.
+       ~ and after 8 my plot rate is Rs 2,11,ooo.
+       🙏Thankyou SVM Builders & Developers for such a good returns of my savings🙏`,
+    },
+    {
+      id: "10",
+      profile:
+        "https://lh3.googleusercontent.com/a/ACg8ocJF_LQqcyMeblfH2vuWOID2ObHZ-YK1DdvuYUf3iaPg=w67-h67-p-rp-mo-br100",
+      name: "Sunil Maurya",
+      description: ` Professionalism, Quality, Responsiveness, Value
+      Had a good deal svm builders and developers.. Project Sai Residency 2`,
+    },
+    {
+      id: "11",
+      profile:
+        "https://lh3.googleusercontent.com/a/ACg8ocI2tn_0c_oSjqVEFu9vwf_5QiROF2E6lEXknIXB06lj=w67-h67-p-rp-mo-br100",
+      name: "Patel Razzak",
+      description: ` I work for this company for last 10 years experience great owner great all promise on time SVM builders and developers tall like the name`,
     },
   ];
 
