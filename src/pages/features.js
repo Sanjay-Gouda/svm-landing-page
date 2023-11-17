@@ -835,7 +835,6 @@ export default function Features() {
         <GetInTuch />
       </section>
       <Footer />
-      {/* <Switcher /> */}
     </>
   );
 }
