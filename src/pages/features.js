@@ -829,9 +829,6 @@ export default function Features() {
           </div> */}
         </div>
 
-        {/* <Client />
-         */}
-
         <GetInTuch />
       </section>
       <Footer />
