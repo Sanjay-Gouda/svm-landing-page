@@ -42,14 +42,14 @@ import pe3 from "../assets/images/sai-resedency-2/elevation-4.png";
 
 /* sai resendency-2  */
 
-import Hc1 from "../assets/images/HappyCustomers/hc1.png";
-import Hc2 from "../assets/images/HappyCustomers/hc2.png";
-import Hc3 from "../assets/images/HappyCustomers/hc3.png";
-import Hc4 from "../assets/images/HappyCustomers/hc4.png";
-import Hc5 from "../assets/images/HappyCustomers/hc5.png";
-import Hc6 from "../assets/images/HappyCustomers/hc6.png";
-import Hc7 from "../assets/images/HappyCustomers/hc7.png";
-import Hc8 from "../assets/images/HappyCustomers/hc8.png";
+import Hc1 from "../assets/images/HappyCustomers/sai-1/hc1.png";
+import Hc2 from "../assets/images/HappyCustomers/sai-1/hc2.png";
+import Hc3 from "../assets/images/HappyCustomers/sai-1/hc3.png";
+import Hc4 from "../assets/images/HappyCustomers/sai-1/hc4.png";
+import Hc5 from "../assets/images/HappyCustomers/sai-1/hc5.png";
+import Hc6 from "../assets/images/HappyCustomers/sai-1/hc6.png";
+import Hc7 from "../assets/images/HappyCustomers/sai-1/hc7.png";
+import Hc8 from "../assets/images/HappyCustomers/sai-1/hc8.png";
 
 import Ld1 from "../assets/images/Land-Developement/Ld1.png";
 import Ld2 from "../assets/images/Land-Developement/Ld2.png";
@@ -77,7 +77,7 @@ import Sr6 from "../assets/images/HappyCustomers/sai-2/hcc6.jpeg";
 import Sr7 from "../assets/images/HappyCustomers/sai-2/hcc7.jpeg";
 import Sr8 from "../assets/images/HappyCustomers/sai-2/hcc8.jpeg";
 
-import HcSr3 from "../assets/images/HappyCustomers/sai-3/hcc3.jpeg";
+import HcSr3 from "../assets/images/HappyCustomers/sai-3/hcc3.JPG";
 
 const customers = [Hc1, Hc2, Hc3, Hc4, Hc5, Hc6, Hc7, Hc8];
 const sr2Customer = [Sr1, Sr2, Sr4, Sr3, Sr5, Sr6, Sr7, Sr8];
