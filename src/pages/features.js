@@ -655,7 +655,6 @@ export default function Features() {
 
           {/* <div className="flex flex-col gap-6">
             <Services title="Low Rise Buildings" imageSet={lowRiseBuilding} />
-            <Services title="High Rise Buildings" imageSet={highRiseBuilding} />
             <Services title="Raw Houses" imageSet={rowHouse} />
             <Services title="Farm Houses" imageSet={farmHouse} />
             <Services title="Banglows" imageSet={bunglow} />
