@@ -26,6 +26,7 @@ import {
   LandDevelopement,
   PlanElevation,
   Sai2Customer,
+  Sai3Customer,
 } from "../config/grid-data";
 import { useQueryParams } from "../hook/useQuery";
 const ProjectImageListing = () => {
@@ -121,6 +122,8 @@ const ProjectImageListing = () => {
                 ? Customers
                 : paramType === "happy-customers2"
                 ? Sai2Customer
+                : paramType === "happy-customers3"
+                ? Sai3Customer
                 : paramType === "plan-elevation"
                 ? PlanElevation
                 : LandDevelopement

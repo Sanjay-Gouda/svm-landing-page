@@ -456,7 +456,9 @@ function PropertyDetail(props) {
                           handleRedirect(
                             params.id === "1"
                               ? "happy-customers"
-                              : "happy-customers2"
+                              : params.id === "2"
+                              ? "happy-customers2"
+                              : "happy-customers3"
                           )
                         }
 
