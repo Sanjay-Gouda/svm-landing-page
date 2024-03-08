@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link as Link2 } from "react-router-dom";
 import ModalVideo from "react-modal-video";
 
-import Image from "../assets/images/Thumbnail/Kali.png";
+import Image from "../assets/images/Thumbnail/shiv.png";
 import "../../node_modules/react-modal-video/scss/modal-video.scss";
 
 export default function About() {
@@ -20,7 +20,7 @@ export default function About() {
                   to="#"
                   onClick={() => setOpen(true)}
                   data-type="youtube"
-                  data-id="8z8JEGU32BU"
+                  data-id="ZRm5fUnWJl4"
                   className="lightbox h-20 w-20 rounded-full shadow-md dark:shadow-gyay-700  inline-flex items-center justify-center bg-white dark:bg-slate-900 text-green-600"
                 >
                   <i className="mdi mdi-play inline-flex items-center justify-center text-2xl"></i>
@@ -34,13 +34,15 @@ export default function About() {
               <h4 className="mb-6 md:text-3xl text-2xl text-green-600 lg:leading-normal leading-normal font-semibold">
                 <span>&#8220;</span> SVM Builders And Developers
                 <br />
-                Wishing Everyone Happy Kali Chaudas.<span>&#8221;</span>
+                Wishing Everyone Happy Maha ShivRatri.<span>&#8221;</span>
               </h4>
               <p className=" max-w-xl">
-                On this day Lord Krishna and Satyabhama killed the demon named
-                Narakasura. Another most popular story is that Lord Vishnu
-                appeared in the form of Vamana and give salvation to King Bali
-                by seeing her devotion towards a dwarf or Brahmin
+                Mahashivratri is very significant for people who are on the
+                spiritual path. It is also very significant for people who are
+                in family situations, and also for the ambitious in the world.
+                People who live in family situations observe Mahashivratri as
+                Shiva’s wedding anniversary. Those with worldly ambitions see
+                that day as the day Shiva conquered all his enemies.
               </p>
 
               {/* <div className="mt-4">
@@ -58,7 +60,7 @@ export default function About() {
       <ModalVideo
         isOpen={isOpen}
         channel="youtube"
-        videoId="8z8JEGU32BU"
+        videoId="ZRm5fUnWJl4"
         onClose={() => setOpen(false)}
       />
     </>
