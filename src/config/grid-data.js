@@ -333,7 +333,7 @@ export const properties = [
     square: 630,
     downPayment: "2100/-",
     location: "Muler",
-    price: "2,51,000/-",
+    price: "2,81,000/-",
     layout: [planLayout1, planLayout2],
 
     // rating: 5.0,
@@ -345,7 +345,7 @@ export const properties = [
     square: 630,
     downPayment: "2100/-",
     location: "Chanchvel",
-    price: "2,51,000/-",
+    price: "2,81,000/-",
 
     // rating: 5.0,
   },
