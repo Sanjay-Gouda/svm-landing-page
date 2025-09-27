@@ -557,17 +557,17 @@ function PropertyDetail(props) {
                       <ul className="list-none mt-4">
                         <li className="flex justify-between items-center">
                           <span className="text-dark text-base">
-                            Down Payment
+                            Agreement Charge
                           </span>
                           <span className="font-medium text-base">
-                            Rs.2100 /-
+                            Rs.2500 /-
                           </span>
                         </li>
 
                         <li className="flex justify-between items-center mt-2">
                           <span className="text-dark text-base">Emi</span>
                           <span className="font-medium text-base">
-                            Rs.3000 /-
+                            Rs.3000* /-
                           </span>
                         </li>
 
