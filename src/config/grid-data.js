@@ -1661,4 +1661,4 @@ export const SR21Layout =
 export const Sr3Layout =
   "https://svm-bucket.blr1.cdn.digitaloceanspaces.com/planningAndLayout/Dastavej%20Layout%20plan.pdf";
 
-  export const Sr4Layout = '/RS4_Layout.pdf';
+  export const Sr4Layout = 'https://svm-bucket.blr1.cdn.digitaloceanspaces.com/planningAndLayout/ALT-4%20LAYOUT%20PLAN.pdf';
