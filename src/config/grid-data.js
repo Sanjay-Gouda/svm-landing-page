@@ -349,6 +349,17 @@ export const properties = [
 
     // rating: 5.0,
   },
+  {
+    id: 4,
+    image: Property3,
+    name: "Sai Resedency 4",
+    square: 630,
+    downPayment: "2500/-",
+    location: "Chanchvel",
+    price: "2,81,000/-",
+
+    // rating: 5.0,
+  },
 ];
 
 // export default properties;
@@ -1649,3 +1660,5 @@ export const SR21Layout =
 
 export const Sr3Layout =
   "https://svm-bucket.blr1.cdn.digitaloceanspaces.com/planningAndLayout/Dastavej%20Layout%20plan.pdf";
+
+  export const Sr4Layout = '/RS4_Layout.pdf';
