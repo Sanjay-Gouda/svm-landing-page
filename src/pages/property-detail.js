@@ -65,7 +65,7 @@ import planLayout3 from "../assets/images/plan-3.png";
 
 import planLayout1 from "../assets/images/projects-2-plan.png";
 import planLayout2 from "../assets/images/projects-2-plan1.png";
-
+import planLayout4 from "../assets/images/projectplan-4.png";
 import ProjectLogo from "../assets/images/sai-resendency.png";
 import ProjectLogo2 from "../assets/images/sai-resendency2.png";
 import ProjectLogo3 from "../assets/images/sai-resendency3.png";
@@ -675,7 +675,9 @@ function PropertyDetail(props) {
                                 ? plan
                                 : params.id === "2"
                                 ? planLayout1
-                                : planLayout3
+                                : params.id === "3"
+                                ? planLayout3
+                                : planLayout4
                             }
                             alt="layout"
                           />
