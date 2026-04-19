@@ -709,8 +709,8 @@ function PropertyDetail(props) {
                               ? "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2141.780222363149!2d72.698343237726!3d21.876471531252456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjHCsDUyJzM1LjMiTiA3MsKwNDEnNTkuNiJF!5e1!3m2!1sen!2sin!4v1568985235646!5m2!1sen!2sin&maptype=satellite"
                               : params.id === "3"
                               ? "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2141.780222363149!2d72.698343237726!3d21.876471531252456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjHCsDUyJzM1LjMiTiA3MsKwNDEnNTkuNiJF!5e1!3m2!1sen!2sin!4v1568985235646!5m2!1sen!2sin&maptype=satellite"
-                                : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2141.780222363149!2d72.72819!3d21.8872974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395f9d22b98830b7%3A0xf147db176ae4ab43!2sChanchvel%2C%20Gujarat!5e1!3m2!1sen!2sin!4v1710840000000!5m2!1sen!2sin"
-                            }
+                               :"https://maps.google.com/maps?q=21.8873875,72.7276719&z=17&output=embed"
+                              }
                           style={{ border: "0" }}
                           className="w-full h-[500px]"
                           allowFullScreen
