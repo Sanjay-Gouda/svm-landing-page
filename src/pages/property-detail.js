@@ -583,7 +583,7 @@ function PropertyDetail(props) {
                           <span className="font-medium text-base">
                             {params.id === "1"
                               ? "RS.1,51,000 -"
-                              : "RS.2,81,000 /-"}
+                              : "RS.2,91,000 /-"}
 
                             {params.id === "1" ? " 2,51,000/-" : null}
                           </span>
